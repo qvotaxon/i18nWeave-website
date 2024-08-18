@@ -1,0 +1,52 @@
+name: Deploy Website
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup SSH key for SFTP
+        env:
+          SFTP_PRIVATE_KEY: ${{ secrets.SFTP_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "${SFTP_PRIVATE_KEY}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Deploy to Stage Environment
+        if: github.event_name == 'pull_request'
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_REMOTE_DIR: ${{ secrets.SFTP_REMOTE_DIR_STAGE }}
+        run: |
+          sftp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -P ${SFTP_PORT} ${SFTP_USER}@${SFTP_HOST} <<EOF
+          rm -rf ${SFTP_REMOTE_DIR}/*
+          put -r * ${SFTP_REMOTE_DIR}
+          bye
+          EOF
+
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main'
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_REMOTE_DIR: ${{ secrets.SFTP_REMOTE_DIR_PROD }}
+        run: |
+          sftp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -P ${SFTP_PORT} ${SFTP_USER}@${SFTP_HOST} <<EOF
+          rm -rf ${SFTP_REMOTE_DIR}/*
+          put -r * ${SFTP_REMOTE_DIR}
+          bye
+          EOF

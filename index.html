@@ -48,6 +48,8 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#features">Features</a></li>
+          <li><a href="#getting-started">Getting Started</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
           <!-- <li><a href="#documentation">Documentation</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li> -->
@@ -69,18 +71,13 @@
           >Get the Extension</a
         >
       </div>
-      <!-- <img
-        src="assets/header-image.png"
-        alt="Illustration of weaving translations"
-      /> -->
       <img class="header-logo" src="assets/logo.png" width="150" alt="Logo" />
     </section>
 
-    <section id="features" data-aos="fade-up">
+    <section id="features" data-aos="fade-down">
       <h2>Features</h2>
       <div class="feature-list">
         <div class="feature-item">
-          <!-- <img src="assets/feature-icon1.png" alt="Easy Management" /> -->
           <h3>
             <i class="fa fa-object-group" aria-hidden="true"></i>
             Wizard
@@ -91,7 +88,6 @@
           </p>
         </div>
         <div class="feature-item">
-          <!-- <img src="assets/feature-icon2.png" alt="Consistency Checks" /> -->
           <h3>
             <i class="fa fa-eye" aria-hidden="true"></i>
             Key Extraction
@@ -99,7 +95,6 @@
           <p>Extract translation keys from your code files with ease.</p>
         </div>
         <div class="feature-item">
-          <!-- <img src="assets/feature-icon3.png" alt="Integration" /> -->
           <h3>
             <i class="fa fa-language" aria-hidden="true"></i>
             Translations
@@ -110,7 +105,6 @@
           </p>
         </div>
         <div class="feature-item">
-          <!-- <img src="assets/feature-icon4.png" alt="Multi-Language Support" /> -->
           <h3>
             <i class="fa fa-code" aria-hidden="true"></i>
             Wide Support
@@ -123,116 +117,186 @@
       </div>
     </section>
 
-    <!-- <section id="documentation">
-      <h2>Documentation</h2>
-      <p>
-        Find detailed usage guides, FAQs, and troubleshooting tips in our
-        <a href="docs.html">Documentation</a> section.
-      </p>
-    </section> -->
+    <section id="getting-started" data-aos="fade-up">
+      <h2>Getting Started</h2>
 
-    <!-- <section id="roadmap">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2>Roadmap</h2>
-            <ul class="timeline">
-              <li>
-                <a target="_blank" href="https://www.totoprayogo.com/#"
-                  >New Web Design</a
-                >
-                <a href="#" class="float-right">21 March, 2014</a>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Quisque scelerisque diam non nisi semper, et elementum lorem
-                  ornare. Maecenas placerat facilisis mollis. Duis sagittis
-                  ligula in sodales vehicula....
-                </p>
-              </li>
-              <li>
-                <a href="#">21 000 Job Seekers</a>
-                <a href="#" class="float-right">4 March, 2014</a>
-                <p>
-                  Curabitur purus sem, malesuada eu luctus eget, suscipit sed
-                  turpis. Nam pellentesque felis vitae justo accumsan, sed
-                  semper nisi sollicitudin...
-                </p>
-              </li>
-              <li>
-                <a href="#">Awesome Employers</a>
-                <a href="#" class="float-right">1 April, 2014</a>
-                <p>
-                  Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed
-                  nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit.
-                  Sed nec tempor nibh...
-                </p>
-              </li>
-            </ul>
+      <!-- Collapsible Header Button -->
+      <div class="collapsible-header" onclick="toggleStepContainer()">
+        Show Instructions &#9662;
+      </div>
+
+      <div class="step-container">
+        <div class="steps-wrapper">
+          <!-- Step 1 -->
+          <div class="step">
+            <h4>Step 1: Open Command Palette</h4>
+            <p>
+              Open the command palette by pressing
+              <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows/Linux) or
+              <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac).
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step">
+            <h4>Step 2: Run Configure Command</h4>
+            <p>
+              In the command palette, type
+              <strong>Configure i18nWeave</strong> and select it.
+            </p>
+            <p>
+              <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows/Linux) or
+              <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac)
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step">
+            <h4>Step 3: Single Project Configuration</h4>
+            <p>
+              If you are not using a Mono-repo, select
+              <strong>Single Project</strong> when prompted. Note that monorepos
+              are not supported yet.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step">
+            <h4>Step 4: Choose Framework</h4>
+            <p>
+              You will be prompted to choose among several frameworks. Since
+              none are implemented yet, select <strong>Other (custom)</strong>.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="step">
+            <h4>Step 5: Select Translation Files Location</h4>
+            <p>
+              Choose the location of your translation files. A folder browser
+              will appear for you to select the appropriate folder.
+            </p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="step">
+            <h4>Step 6: Select Code Files Location</h4>
+            <p>
+              Next, choose the location of your code files. A folder browser
+              will appear, and you will be allowed to select multiple folders.
+            </p>
+          </div>
+
+          <!-- Step 7 -->
+          <div class="step">
+            <h4>Step 7: Enter Default Language</h4>
+            <p>
+              You will need to enter your default language. This can be in
+              formats like <code>nl</code>, <code>en</code>, <code>nl-NL</code>,
+              or <code>en-GB</code>.
+            </p>
+          </div>
+
+          <!-- Step 8 -->
+          <div class="step">
+            <h4>Step 8: Enter Supported Languages</h4>
+            <p>
+              Enter all the supported languages you want to include, separated
+              by commas. Like <code>nl</code>, <code>en</code>, <code>fr</code>.
+            </p>
+          </div>
+
+          <!-- Step 9 -->
+          <div class="step">
+            <h4>Step 9: Enter Translation Namespaces</h4>
+            <p>
+              Finally, enter the namespaces of your translations, such as
+              <code>common</code> and <code>navigation</code>.
+            </p>
+          </div>
+
+          <div class="step final-step">
+            <p>
+              You have now succesfully configured I18nWeave. Happy weaving! 🌍
+            </p>
           </div>
         </div>
-      </div> -->
-
-      <!-- <p>
-        (Temporarily disabled) Will be re-implemented soon.
-        <ul>
-          <li>PO File Support: You have the option to use PO files for managing translations. This feature enables seamless integration with your existing localization workflows.</li>
-          <li>PO to i18n-next JSON Conversion: Effortlessly convert PO files into the i18n-next JSON format and vice versa. This conversion facilitates compatibility with a variety of localization tools and libraries.</li>
-        </ul>
-      </p>
-
-      <p>
-        Somewhere in the nearer future
-        <ul>
-          <li>Support More Automatic Configurations For Other Frameworks. Such as React and Angular.</li>
-        </ul>
-      </p>
-
-      <p>
-        Somewhere in the farther future
-        <ul>
-          <li>Implement ai features</li>
-        </ul>
-      </p> -->
+      </div>
     </section>
 
-    <!-- <section id="testimonials">
-      <h2>Testimonials</h2>
-      <div class="testimonials-list">
-        <div class="testimonial-item">
-          <p>
-            "i18nWeave has revolutionized how we handle translations. It's
-            intuitive and saves us a lot of time!"
-          </p>
-          <span>- Developer at TechCorp</span>
-        </div>
-        <div class="testimonial-item">
-          <p>
-            "An essential tool for any development team dealing with multiple
-            languages."
-          </p>
-          <span>- Lead Engineer at CodeWorks</span>
-        </div>
-      </div>
-    </section> -->
+    <section id="screenshots" data-aos="fade-down">
+      <h2>Screenshots</h2>
 
-    <!-- <section id="contact">
-      <h2>Contact Us</h2>
-      <form action="submit_form.php" method="post">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="assets/screenshots/initial.png"
+              class="d-block w-100"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/screenshots/adding_keys.png"
+              class="d-block w-100"
+              alt="Second slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/screenshots/plural_support.png"
+              class="d-block w-100"
+              alt="Third slide"
+            />
+          </div>
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit">Send</button>
-      </form>
-    </section> -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
 
     <footer>
       <p>&copy; 2024 i18nWeave. All rights reserved.</p>
@@ -246,6 +310,22 @@
 
     <script>
       AOS.init();
+
+      function toggleStepContainer() {
+        const stepContainer = document.querySelector('.step-container');
+        const headerButton = document.querySelector('.collapsible-header');
+
+        if (
+          stepContainer.style.display === 'none' ||
+          stepContainer.style.display === ''
+        ) {
+          stepContainer.style.display = 'block';
+          headerButton.innerHTML = 'Hide Instructions &#9652;';
+        } else {
+          stepContainer.style.display = 'none';
+          headerButton.innerHTML = 'Show Instructions &#9662;';
+        }
+      }
     </script>
   </body>
 </html>

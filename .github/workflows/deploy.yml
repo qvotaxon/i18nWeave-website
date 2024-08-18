@@ -31,8 +31,6 @@ jobs:
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SFTP_REMOTE_DIR: ${{ secrets.SFTP_REMOTE_DIR_STAGE }}
         run: |
-          echo ${{ secrets.SFTP_PORT }}
-
           sftp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -P ${SFTP_PORT} ${SFTP_USER}@${SFTP_HOST} <<EOF
           rm -rf ${SFTP_REMOTE_DIR}/*
           put -r * ${SFTP_REMOTE_DIR}

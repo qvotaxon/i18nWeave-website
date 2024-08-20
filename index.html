@@ -9,25 +9,26 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-
+    <!-- GLightbox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
     <meta
       name="description"
       content="i18nWeave helps developers efficiently handle translations in their projects. Increase productivity and ensure consistency across multiple languages."
@@ -256,25 +257,43 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img
-              src="assets/screenshots/initial.png"
-              class="d-block w-100"
-              alt="First slide"
-            />
+            <a
+              href="assets/screenshots/initial.png"
+              class="glightbox"
+              data-gallery="screenshots"
+            >
+              <img
+                src="assets/screenshots/initial.png"
+                class="d-block w-100"
+                alt="First slide"
+              />
+            </a>
           </div>
           <div class="carousel-item">
-            <img
-              src="assets/screenshots/adding_keys.png"
-              class="d-block w-100"
-              alt="Second slide"
-            />
+            <a
+              href="assets/screenshots/adding_keys.png"
+              class="glightbox"
+              data-gallery="screenshots"
+            >
+              <img
+                src="assets/screenshots/adding_keys.png"
+                class="d-block w-100"
+                alt="Second slide"
+              />
+            </a>
           </div>
           <div class="carousel-item">
-            <img
-              src="assets/screenshots/plural_support.png"
-              class="d-block w-100"
-              alt="Third slide"
-            />
+            <a
+              href="assets/screenshots/plural_support.png"
+              class="glightbox"
+              data-gallery="screenshots"
+            >
+              <img
+                src="assets/screenshots/plural_support.png"
+                class="d-block w-100"
+                alt="Third slide"
+              />
+            </a>
           </div>
         </div>
         <button
@@ -303,13 +322,19 @@
     </footer>
 
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Mrcxjo1Rh6CkF7QbGPrSe1SNjoXFWjyUlQquBZC8QF6oBzzQ7RX24p21bhw61nKN"
       crossorigin="anonymous"
     ></script>
-
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
       AOS.init();
+
+      // Initialize GLightbox
+      const lightbox = GLightbox({
+        selector: '.glightbox',
+      });
 
       function toggleStepContainer() {
         const stepContainer = document.querySelector('.step-container');

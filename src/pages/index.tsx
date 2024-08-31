@@ -42,8 +42,8 @@ const IndexPage: React.FC<PageProps> = () => {
 
         <nav
           ref={menuRef}
-          className={`mt-16 lg:flex lg:items-center lg:static lg:p-0 absolute top-0 left-0 w-full bg-primary lg:bg-transparent lg:flex-row lg:space-x-4 transition-transform transform lg:mt-0 ${
-            isMenuOpen ? 'translate-y-0' : '-translate-y-1 -top-48'
+          className={`mt-16 lg:flex lg:items-center lg:static lg:p-0 absolute left-0 w-full bg-primary lg:bg-transparent lg:flex-row lg:space-x-4 transition-transform transform lg:mt-0 ${
+            isMenuOpen ? 'translate-y-0 top-0' : '-translate-y-1 -top-48'
           }`}
         >
           <ul className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 p-4 lg:ml-8 lg:p-0">

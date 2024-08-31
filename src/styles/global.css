@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* In your CSS file or style section */
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.hamburger .bar {
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  position: absolute;
+}
+
+.hamburger .bar:nth-child(1) {
+  top: 0;
+}
+
+.hamburger .bar:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger .bar:nth-child(3) {
+  top: 16px;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}

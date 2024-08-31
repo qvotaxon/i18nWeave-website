@@ -15,6 +15,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # Specify your Node.js version
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build Gatsby site
+        run: pnpm run build
+
       - name: Setup SSH key for SFTP
         env:
           SFTP_PRIVATE_KEY: ${{ secrets.SFTP_PRIVATE_KEY }}
@@ -33,7 +47,7 @@ jobs:
         run: |
           sftp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -P ${SFTP_PORT} ${SFTP_USER}@${SFTP_HOST} <<EOF
           rm -rf ${SFTP_REMOTE_DIR}/*
-          put -r * ${SFTP_REMOTE_DIR}
+          put -r public/* ${SFTP_REMOTE_DIR}
           bye
           EOF
 
@@ -47,6 +61,6 @@ jobs:
         run: |
           sftp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -P ${SFTP_PORT} ${SFTP_USER}@${SFTP_HOST} <<EOF
           rm -rf ${SFTP_REMOTE_DIR}/*
-          put -r * ${SFTP_REMOTE_DIR}
+          put -r public/* ${SFTP_REMOTE_DIR}
           bye
           EOF

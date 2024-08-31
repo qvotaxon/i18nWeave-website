@@ -1,5 +1,5 @@
 import type { GatsbyConfig } from 'gatsby';
-
+/** @type {*} */
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `i18nWeave - Developer's i18n Companion`,
@@ -29,7 +29,8 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/icon.png',
+        name: 'i18nWeave',
+        icon: 'src/images/logo.png',
       },
     },
     'gatsby-plugin-sharp',

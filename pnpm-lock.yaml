@@ -9,12 +9,30 @@ overrides:
   axios@>=0.8.1 <0.28.0: '>=0.28.0'
 
 dependencies:
+  '@fortawesome/fontawesome-svg-core':
+    specifier: ^6.6.0
+    version: 6.6.0
+  '@fortawesome/free-brands-svg-icons':
+    specifier: ^6.6.0
+    version: 6.6.0
+  '@fortawesome/free-regular-svg-icons':
+    specifier: ^6.6.0
+    version: 6.6.0
+  '@fortawesome/free-solid-svg-icons':
+    specifier: ^6.6.0
+    version: 6.6.0
+  '@fortawesome/react-fontawesome':
+    specifier: ^0.2.2
+    version: 0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)
   autoprefixer:
     specifier: ^10.4.20
     version: 10.4.20(postcss@8.4.41)
   gatsby:
     specifier: ^5.13.7
     version: 5.13.7(babel-eslint@10.1.0)(react-dom@18.3.1)(react@18.3.1)(typescript@5.5.4)
+  gatsby-plugin-fontawesome-css:
+    specifier: ^1.2.0
+    version: 1.2.0(@fortawesome/fontawesome-svg-core@6.6.0)(gatsby@5.13.7)
   gatsby-plugin-google-gtag:
     specifier: ^5.13.1
     version: 5.13.1(gatsby@5.13.7)(react-dom@18.3.1)(react@18.3.1)
@@ -1619,6 +1637,50 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@fortawesome/fontawesome-common-types@6.6.0:
+    resolution: {integrity: sha512-xyX0X9mc0kyz9plIyryrRbl7ngsA9jz77mCZJsUkLl+ZKs0KWObgaEBoSgQiYWAsSmjz/yjl0F++Got0Mdp4Rw==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /@fortawesome/fontawesome-svg-core@6.6.0:
+    resolution: {integrity: sha512-KHwPkCk6oRT4HADE7smhfsKudt9N/9lm6EJ5BVg0tD1yPA5hht837fB87F8pn15D8JfTqQOjhKTktwmLMiD7Kg==}
+    engines: {node: '>=6'}
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.6.0
+    dev: false
+
+  /@fortawesome/free-brands-svg-icons@6.6.0:
+    resolution: {integrity: sha512-1MPD8lMNW/earme4OQi1IFHtmHUwAKgghXlNwWi9GO7QkTfD+IIaYpIai4m2YJEzqfEji3jFHX1DZI5pbY/biQ==}
+    engines: {node: '>=6'}
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.6.0
+    dev: false
+
+  /@fortawesome/free-regular-svg-icons@6.6.0:
+    resolution: {integrity: sha512-Yv9hDzL4aI73BEwSEh20clrY8q/uLxawaQ98lekBx6t9dQKDHcDzzV1p2YtBGTtolYtNqcWdniOnhzB+JPnQEQ==}
+    engines: {node: '>=6'}
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.6.0
+    dev: false
+
+  /@fortawesome/free-solid-svg-icons@6.6.0:
+    resolution: {integrity: sha512-IYv/2skhEDFc2WGUcqvFJkeK39Q+HyPf5GHUrT/l2pKbtgEIv1al1TKd6qStR5OIwQdN1GZP54ci3y4mroJWjA==}
+    engines: {node: '>=6'}
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.6.0
+    dev: false
+
+  /@fortawesome/react-fontawesome@0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1):
+    resolution: {integrity: sha512-EnkrprPNqI6SXJl//m29hpaNzOp1bruISWaOiRtkMi/xSvHJlzc2j2JAYS7egxt/EbjSNV/k6Xy0AQI6vB2+1g==}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ~1 || ~6
+      react: '>=16.3'
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.6.0
+      prop-types: 15.8.1
+      react: 18.3.1
     dev: false
 
   /@gatsbyjs/parcel-namer-relative-to-cwd@2.13.1(@parcel/core@2.8.3):
@@ -6309,6 +6371,16 @@ packages:
       '@parcel/runtime-js': 2.8.3(@parcel/core@2.8.3)
       '@parcel/transformer-js': 2.8.3(@parcel/core@2.8.3)
       '@parcel/transformer-json': 2.8.3(@parcel/core@2.8.3)
+    dev: false
+
+  /gatsby-plugin-fontawesome-css@1.2.0(@fortawesome/fontawesome-svg-core@6.6.0)(gatsby@5.13.7):
+    resolution: {integrity: sha512-Me7zFKPDmFQAWZmC2MQN7vWSHGFneu6FeIylkVinSMh89C0wPeoF165rpfuEdpgG0HScNg0fSh3xCIxYr5gPOQ==}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ^1.2.0
+      gatsby: ^4.0.0
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.6.0
+      gatsby: 5.13.7(babel-eslint@10.1.0)(react-dom@18.3.1)(react@18.3.1)(typescript@5.5.4)
     dev: false
 
   /gatsby-plugin-google-gtag@5.13.1(gatsby@5.13.7)(react-dom@18.3.1)(react@18.3.1):

@@ -10,6 +10,7 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-pnpm-gatsby-5',
     'gatsby-plugin-postcss',
     {
@@ -18,10 +19,9 @@ const config: GatsbyConfig = {
         trackingIds: [
           'G-GY3TDG8CD7', // Google Analytics / GA
         ],
-        // pluginConfig: {
-        //   head: true,
-        //   anonymize_ip: true,
-        // },
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     'gatsby-plugin-image',

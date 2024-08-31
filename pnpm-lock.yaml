@@ -30,6 +30,9 @@ dependencies:
   gatsby:
     specifier: ^5.13.7
     version: 5.13.7(babel-eslint@10.1.0)(react-dom@18.3.1)(react@18.3.1)(typescript@5.5.4)
+  gatsby-plugin-canonical-urls:
+    specifier: ^5.13.1
+    version: 5.13.1(gatsby@5.13.7)
   gatsby-plugin-fontawesome-css:
     specifier: ^1.2.0
     version: 1.2.0(@fortawesome/fontawesome-svg-core@6.6.0)(gatsby@5.13.7)
@@ -6371,6 +6374,16 @@ packages:
       '@parcel/runtime-js': 2.8.3(@parcel/core@2.8.3)
       '@parcel/transformer-js': 2.8.3(@parcel/core@2.8.3)
       '@parcel/transformer-json': 2.8.3(@parcel/core@2.8.3)
+    dev: false
+
+  /gatsby-plugin-canonical-urls@5.13.1(gatsby@5.13.7):
+    resolution: {integrity: sha512-rnVEfz7gIPgYk/go/fk5tM5Iv/7Qe6GonquhWMkDNPvRJPJ0qkv37Hv1l/BrC/2AHz9RNQsSZJRonVPPSHlhgA==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      gatsby: ^5.0.0-next
+    dependencies:
+      '@babel/runtime': 7.25.6
+      gatsby: 5.13.7(babel-eslint@10.1.0)(react-dom@18.3.1)(react@18.3.1)(typescript@5.5.4)
     dev: false
 
   /gatsby-plugin-fontawesome-css@1.2.0(@fortawesome/fontawesome-svg-core@6.6.0)(gatsby@5.13.7):

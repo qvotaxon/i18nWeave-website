@@ -1,7 +1,6 @@
 import * as React from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
 import { useState, useRef } from 'react';
-import logo from './../images/logo.png';
 import {
   faCode,
   faEye,
@@ -9,6 +8,7 @@ import {
   faObjectGroup,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const IndexPage: React.FC<PageProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,13 @@ const IndexPage: React.FC<PageProps> = () => {
     <main className="font-sans h-screen overflow-y-scroll snap-y snap-mandatory text-white">
       <header className="sticky top-0 w-full bg-primary py-4 z-10 flex items-center justify-between px-4">
         <div className="flex items-center space-x-4">
-          <img src={logo} alt="Logo" className="h-8" />
+          <StaticImage
+            width={32}
+            height={32}
+            src="../images/logo.png"
+            alt="Logo"
+            className="h-8"
+          />
           <span className="text-lg">i18nWeave</span>
         </div>
 
@@ -90,6 +96,26 @@ const IndexPage: React.FC<PageProps> = () => {
         <h1 className="text-white text-4xl mb-8">Section 1</h1>
         <div className="flex flex-wrap justify-center">
           <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
+            <FontAwesomeIcon className="text-4xl pb-2" icon={faLanguage} />
+            <h3 className="text-lg font-bold text-highlight pb-2">
+              Auto-Translations
+            </h3>
+            <p className="text-md">
+              <b>(Beta Feature)</b> Automatically translate your keys to any of
+              languages supported by Google Translate or DeepL.
+            </p>
+          </div>
+          <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
+            <FontAwesomeIcon className="text-4xl pb-2" icon={faObjectGroup} />
+            <h3 className="text-lg font-bold text-highlight pb-2">
+              Configuration Wizard
+            </h3>
+            <p className="text-md">
+              Get up and running in no time using the build-in configuration
+              wizard.
+            </p>
+          </div>
+          <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faEye} />
             <h3 className="text-lg font-bold text-highlight pb-2">
               Key Extraction
@@ -104,29 +130,8 @@ const IndexPage: React.FC<PageProps> = () => {
               Wide Support
             </h3>
             <p className="text-md">
-              Supports Angular, React, Next.js and basically anything that uses
-              i18next translations can be configured.
-            </p>
-          </div>
-          <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
-            <FontAwesomeIcon className="text-4xl pb-2" icon={faObjectGroup} />
-            <h3 className="text-lg font-bold text-highlight pb-2">
-              Configuration Wizard
-            </h3>
-            <p className="text-md">
-              Get up and running in no time using the build-in configuration
-              wizard.
-            </p>
-          </div>
-          <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
-            <FontAwesomeIcon className="text-4xl pb-2" icon={faLanguage} />
-            <h3 className="text-lg font-bold text-highlight pb-2">
-              Auto-Translations
-            </h3>
-            <p className="text-md">
-              <b>(Beta Feature)</b> Automatically translate your existing
-              translations to any of your supported languages using Google
-              Translate or DeepL.
+              Supports Angular, Next.js and basically anything that uses i18next
+              translations can be configured.
             </p>
           </div>
         </div>

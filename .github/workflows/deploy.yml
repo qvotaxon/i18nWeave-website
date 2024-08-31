@@ -20,11 +20,14 @@ jobs:
         with:
           node-version: '20' # Specify your Node.js version
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build Gatsby site
-        run: npm run build
+        run: pnpm run build
 
       - name: Setup SSH key for SFTP
         env:

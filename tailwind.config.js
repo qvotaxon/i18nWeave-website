@@ -14,6 +14,10 @@ module.exports = {
         'primary': '#1f2937',
         'secondary': '#3b82f6',
         'highlight': '#f8dc7c',
+        'variant-1': '#3b82f6',
+        'variant-2': '#a9d864',
+        'variant-3': '#e0564c',
+        'variant-4': '#f2b34c',
       }
     },
   },

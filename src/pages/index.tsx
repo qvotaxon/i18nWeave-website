@@ -85,13 +85,13 @@ const IndexPage: React.FC<PageProps> = () => {
 
       <section
         id="section-1"
-        className="h-screen flex flex-col items-center bg-secondary snap-start scroll-mt-16 pt-8"
+        className="h-screen flex flex-col items-center bg-variant-1 snap-start scroll-mt-16 pt-8"
       >
         <h1 className="text-white text-4xl mb-8">Section 1</h1>
         <div className="flex flex-wrap justify-center">
           <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faEye} />
-            <h3 className="text-lg font-bold text-{#f8dc7c} pb-2">
+            <h3 className="text-lg font-bold text-highlight pb-2">
               Key Extraction
             </h3>
             <p className="text-md">
@@ -100,7 +100,9 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
           <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faCode} />
-            <h3 className="text-lg font-bold pb-2">Wide Support</h3>
+            <h3 className="text-lg font-bold text-highlight pb-2">
+              Wide Support
+            </h3>
             <p className="text-md">
               Supports Angular, React, Next.js and basically anything that uses
               i18next translations can be configured.
@@ -108,7 +110,9 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
           <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faObjectGroup} />
-            <h3 className="text-lg font-bold pb-2">Configuration Wizard</h3>
+            <h3 className="text-lg font-bold text-highlight pb-2">
+              Configuration Wizard
+            </h3>
             <p className="text-md">
               Get up and running in no time using the build-in configuration
               wizard.
@@ -116,7 +120,9 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
           <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faLanguage} />
-            <h3 className="text-lg font-bold pb-2">Auto-Translations</h3>
+            <h3 className="text-lg font-bold text-highlight pb-2">
+              Auto-Translations
+            </h3>
             <p className="text-md">
               <b>(Beta Feature)</b> Automatically translate your existing
               translations to any of your supported languages using Google
@@ -127,19 +133,19 @@ const IndexPage: React.FC<PageProps> = () => {
       </section>
       <section
         id="section-2"
-        className="h-screen flex items-center justify-center bg-green-500 snap-start scroll-mt-16"
+        className="h-screen flex items-center justify-center  bg-variant-2 snap-start scroll-mt-16"
       >
         <h1 className="text-white text-4xl">Section 2</h1>
       </section>
       <section
         id="section-3"
-        className="h-screen flex items-center justify-center bg-red-500 snap-start scroll-mt-16"
+        className="h-screen flex items-center justify-center bg-variant-3 snap-start scroll-mt-16"
       >
         <h1 className="text-white text-4xl">Section 3</h1>
       </section>
       <section
         id="section-4"
-        className="h-screen flex items-center justify-center bg-yellow-500 snap-start scroll-mt-16"
+        className="h-screen flex items-center justify-center bg-variant-4 snap-start scroll-mt-16"
       >
         <h1 className="text-white text-4xl">Section 4</h1>
       </section>

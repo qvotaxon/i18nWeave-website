@@ -51,23 +51,23 @@ const IndexPage: React.FC<PageProps> = () => {
           <ul className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 p-4 lg:p-0">
             <li>
               <a
-                href="#section-1"
+                href="#features"
                 className="text-white hover:text-highlight"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Section 1
+                Features
               </a>
             </li>
             <li>
               <a
-                href="#section-2"
+                href="#getting-started"
                 className="text-white hover:text-highlight"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Section 2
+                Getting Started
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#section-3"
                 className="text-white hover:text-highlight"
@@ -84,31 +84,41 @@ const IndexPage: React.FC<PageProps> = () => {
               >
                 Section 4
               </a>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </header>
 
       <section
-        id="section-1"
+        id="features"
         className="h-screen flex flex-col items-center bg-variant-1 snap-start scroll-mt-16 pt-8"
       >
-        <h1 className="text-white text-4xl mb-8">Section 1</h1>
+        <div className="pb-16">
+          <h1 className="text-white text-4xl mb-8 text-center">
+            Seamlessly Manage Your Translations
+          </h1>
+          <p className="text-center">
+            i18nWeave helps you efficiently handle translations in your
+            projects. Increase productivity and ensure consistency across
+            multiple projects.
+          </p>
+        </div>
+
         <div className="flex flex-wrap justify-center">
           <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faLanguage} />
             <h3 className="text-lg font-bold text-highlight pb-2">
-              Auto-Translations
+              Auto-Translate
             </h3>
             <p className="text-md">
-              <b>(Beta Feature)</b> Automatically translate your keys to any of
-              languages supported by Google Translate or DeepL.
+              Automatically translate your keys to any of languages supported by
+              Google Translate or DeepL.
             </p>
           </div>
           <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faObjectGroup} />
             <h3 className="text-lg font-bold text-highlight pb-2">
-              Configuration Wizard
+              Easy Config
             </h3>
             <p className="text-md">
               Get up and running in no time using the build-in configuration
@@ -118,7 +128,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faEye} />
             <h3 className="text-lg font-bold text-highlight pb-2">
-              Key Extraction
+              Auto-Key Extraction
             </h3>
             <p className="text-md">
               Extract translation keys from your code files with ease.
@@ -137,12 +147,14 @@ const IndexPage: React.FC<PageProps> = () => {
         </div>
       </section>
       <section
-        id="section-2"
-        className="h-screen flex items-center justify-center  bg-variant-2 snap-start scroll-mt-16"
+        id="getting-started"
+        className="h-screen flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8"
       >
-        <h1 className="text-white text-4xl">Section 2</h1>
+        <h1 className="text-white text-4xl mb-8 text-center">
+          Getting Started
+        </h1>
       </section>
-      <section
+      {/* <section
         id="section-3"
         className="h-screen flex items-center justify-center bg-variant-3 snap-start scroll-mt-16"
       >
@@ -153,7 +165,7 @@ const IndexPage: React.FC<PageProps> = () => {
         className="h-screen flex items-center justify-center bg-variant-4 snap-start scroll-mt-16"
       >
         <h1 className="text-white text-4xl">Section 4</h1>
-      </section>
+      </section> */}
     </main>
   );
 };

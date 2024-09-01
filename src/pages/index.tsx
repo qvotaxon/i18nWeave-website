@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql, type HeadFC, type PageProps } from 'gatsby';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import {
   faCheckDouble,
   faCode,
@@ -21,7 +21,10 @@ const IndexPage: React.FC<PageProps> = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const { language } = useI18next();
 
-  document.documentElement.lang = language;
+  useEffect(() => {
+    setIsMenuOpen(false);
+    document.documentElement.lang = language;
+  }, [language]);
 
   //todo: uitzoeken layout
 

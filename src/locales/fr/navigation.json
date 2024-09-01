@@ -1,1 +1,6 @@
-{}
+{
+  "main": {
+    "features": "Fonctionnalités",
+    "gettingStarted": "Pour commencer"
+  }
+}

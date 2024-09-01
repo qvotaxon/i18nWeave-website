@@ -2,20 +2,28 @@ import * as React from 'react';
 import { graphql, type HeadFC, type PageProps } from 'gatsby';
 import { useState, useRef } from 'react';
 import {
+  faCheckDouble,
   faCode,
   faEye,
   faObjectGroup,
+  faSmile,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { StaticImage } from 'gatsby-plugin-image';
 import { faAngular, faReact } from '@fortawesome/free-brands-svg-icons';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../components/languageSelector';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 const IndexPage: React.FC<PageProps> = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const { language } = useI18next();
+
+  document.documentElement.lang = language;
+
+  //todo: uitzoeken layout
 
   return (
     <main className="font-sans h-screen overflow-y-scroll snap-y snap-mandatory text-white">
@@ -47,7 +55,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <nav
           ref={menuRef}
           className={`mt-16 lg:flex lg:items-center lg:static lg:p-0 absolute left-0 w-full bg-primary lg:bg-transparent lg:flex-row lg:space-x-4 transition-transform transform lg:mt-0 ${
-            isMenuOpen ? 'translate-y-0 top-0' : '-top-48'
+            isMenuOpen ? 'translate-y-0 top-0 visible' : '-top-48 hidden'
           }`}
         >
           <ul className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 p-4 lg:ml-8 lg:p-0">
@@ -57,7 +65,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 className="text-white hover:text-highlight"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Features
+                {t('navigation:main.features')}
               </a>
             </li>
             <li>
@@ -66,7 +74,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 className="text-white hover:text-highlight"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Getting Started
+                {t('navigation:main.gettingStarted')}
               </a>
             </li>
             {/* <li>
@@ -97,7 +105,7 @@ const IndexPage: React.FC<PageProps> = () => {
         id="features"
         className="h-screen flex flex-col items-center bg-variant-1 snap-start scroll-mt-16 pt-8 text-center"
       >
-        <div className="pb-16 w-5/6">
+        <div className="pb-4 px-4 lg:px-12 lg:pb-16 max-w-screen-xl">
           <h1 className="text-white text-4xl mb-8">
             {t('section.features.title')}
           </h1>
@@ -106,10 +114,10 @@ const IndexPage: React.FC<PageProps> = () => {
             {t('section.features.introduction.description')}
           </p>
 
-          <p className="my-4">{t('section.features.introduction.support')}</p>
+          {/* <p className="my-4">{t('section.features.introduction.support')}</p> */}
         </div>
 
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center max-w-screen-xl">
           {/* <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faLanguage} />
             <h3 className="text-lg font-bold text-highlight pb-2">
@@ -122,41 +130,37 @@ const IndexPage: React.FC<PageProps> = () => {
           </div> */}
 
           {/* md:w-1/4 */}
-          <div className="w-1/2 lg:w-1/5 text-center mb-8 px-4">
+          <div className="w-2/6 text-center px-4 mb-4 lg:mb-8">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faEye} />
             <h2 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.keyExtraction.title')}
             </h2>
             <p className="text-md">
-              {t('section.features.keyExtraction.description')}
+              {/* {t('section.features.keyExtraction.description')} */}
             </p>
           </div>
 
           {/* md:w-1/4 */}
-          <div className="w-1/2 lg:w-1/5 text-center mb-8 px-4">
+          <div className="w-2/6 text-center px-4 mb-4 lg:mb-8">
             {' '}
             <FontAwesomeIcon className="text-4xl pb-2" icon={faObjectGroup} />
             <h2 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.easyConfig.title')}
             </h2>
             <p className="text-md">
-              {t('section.features.easyConfig.description')}
+              {/* {t('section.features.easyConfig.description')} */}
             </p>
           </div>
 
           {/* md:w-1/4 */}
-          {/* <div className="w-1/3 text-center mb-8 px-4">
-            <FontAwesomeIcon className="text-4xl pb-2" icon={faCode} />
+          <div className="w-1/3 text-center mb-8 px-4">
+            <FontAwesomeIcon className="text-4xl pb-2" icon={faCheckDouble} />
             <h2 className="text-lg font-bold text-variant-2 pb-2">
-              Wide Support
+              {t('section.features.foss.title')}
             </h2>
-            <p className="text-md">
-              Supports Angular, Next.js and basically anything that uses i18next
-              translations can be configured.
-            </p>
-          </div> */}
+          </div>
 
-          <div className="w-1/3 lg:w-1/5 text-center mb-8 px-4">
+          <div className="w-2/6 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faAngular} />
             <h2 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.support.angular.title')}
@@ -166,7 +170,7 @@ const IndexPage: React.FC<PageProps> = () => {
             </p>
           </div>
 
-          <div className="w-1/3 lg:w-1/5 text-center mb-8 px-4">
+          <div className="w-2/6 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faReact} />
             <h2 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.support.react.title')}
@@ -176,7 +180,7 @@ const IndexPage: React.FC<PageProps> = () => {
             </p>
           </div>
 
-          <div className="w-1/3 lg:w-1/5 text-center mb-8 px-4">
+          <div className="w-2/6 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faCode} />
             <h2 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.support.custom.title')}
@@ -191,18 +195,17 @@ const IndexPage: React.FC<PageProps> = () => {
         id="getting-started"
         className="h-screen flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8"
       >
-        <h1 className="text-primary text-4xl mb-8 text-center">
+        <h1 className="text-primary text-4xl mb-8 text-center max-w-screen-xl">
           {t('section.gettingStarted.title')}
-          Getting Started
         </h1>
 
-        <div className="w-5/6 text-primary">
+        <div className="w-5/6 text-primary max-w-screen-xl">
           <h2 className="text-lg font-bold text-variant-1 pb-2">
             {t('section.gettingStarted.installExtension.title')}
           </h2>
 
           <div>
-            {t('section.gettingStarted.installExtension.description')}
+            {t('section.gettingStarted.installExtension.description')}{' '}
             <a
               className="text-primary underline"
               href="https://marketplace.visualstudio.com/items?itemName=qvotaxon.i18nweave"
@@ -216,13 +219,16 @@ const IndexPage: React.FC<PageProps> = () => {
           </h2>
 
           <div>
-            Open the command palette and run the{' '}
+            {t('section.gettingStarted.configureProject.description.partOne')}{' '}
             <code className="text-secondary">`Configure i18nWeave`</code>{' '}
-            command. Follow the instructions to set up your project. To open the
-            command palette, press{' '}
+            {t('section.gettingStarted.configureProject.description.partTwo')}{' '}
             <code className="text-secondary">Ctrl+Shift+P</code>
-            on Windows/Linux or{' '}
-            <code className="text-secondary">Cmd+Shift+P</code> on macOS.
+            {t(
+              'section.gettingStarted.configureProject.description.partThree'
+            )}{' '}
+            <code className="text-secondary">Cmd+Shift+P</code>{' '}
+            {t('section.gettingStarted.configureProject.description.partFour')}{' '}
+            .
           </div>
 
           {/* <h3 className="text-lg font-bold text-variant-1 pt-4 pb-2">
@@ -256,12 +262,21 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => (
-  <>
-    <html lang="en" />
-    <title>Home Page</title>
-  </>
-);
+export const Head: HeadFC = ({ data, location }) => {
+  return (
+    <head>
+      <title>i18nWeave - Developer's i18n Companion</title>
+      <meta
+        name="description"
+        content="i18nWeave helps developers efficiently handle translations in their projects. Increase productivity and ensure consistency across multiple languages."
+      />
+      <meta
+        name="keywords"
+        content="i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
+      />
+    </head>
+  );
+};
 
 export const query = graphql`
   query ($language: String!) {

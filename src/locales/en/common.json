@@ -1,42 +1,55 @@
 {
-  "notfound": {
-    "title": "Page not found"
-  },
-  "section": {
-    "features": {
-      "easyConfig": {
-        "description": "Get up and running in no time using the build-in configuration wizard.",
-        "title": "Easy Config"
-      },
-      "introduction": {
-        "description": "Manage your translations with ease using the i18nWeave VSCode extension. i18nWeave provides a wide range of features to help you manage your translations and keep your translations in sync with your codebase.",
-        "support": "Support for Angular, Next.js and basically anything that uses i18next translations can be configured."
-      },
-      "keyExtraction": {
-        "description": "Extract translation keys from your code files with ease.",
-        "title": "Auto-Key Extraction"
-      },
-      "support": {
-        "angular": {
-          "description": "Supports Angular i18next",
-          "title": "Angular"
-        },
-        "custom": {
-          "title": "Custom"
-        },
-        "react": {
-          "description": "Supports React i18next",
-          "title": "React"
-        }
-      },
-      "title": "Seamlessly Manage Your Translations"
+    "notfound": {
+        "title": "Page not found"
     },
-    "gettingStarted": {
-      "configureProject": {
-        "title": "Configure Your Project"
-      },
-      "installExtension": "Install the Extension",
-      "title": "Getting Started"
+    "section": {
+        "features": {
+            "easyConfig": {
+                "description": "Get up and running in no time using the build-in configuration wizard.",
+                "title": "Easy Config"
+            },
+            "foss": {
+                "title": "Free and Open Source"
+            },
+            "introduction": {
+                "description": "Manage your translations with ease using the i18nWeave VSCode extension. i18nWeave provides a wide range of features to help you manage your translations and keep your translations in sync with your codebase.",
+                "support": "Support for Angular, Next.js and basically anything that uses i18next translations can be configured."
+            },
+            "keyExtraction": {
+                "description": "Extract translation keys from your code files with ease.",
+                "title": "Auto-Key Extraction"
+            },
+            "support": {
+                "angular": {
+                    "description": "Supports Angular i18next",
+                    "title": "Angular"
+                },
+                "custom": {
+                    "description": "Supports everything with i18next",
+                    "title": "Custom"
+                },
+                "react": {
+                    "description": "Supports React i18next",
+                    "title": "React"
+                }
+            },
+            "title": "Seamlessly Manage Your Translations"
+        },
+        "gettingStarted": {
+            "configureProject": {
+                "description": {
+                    "partFour": "on macOS",
+                    "partOne": "Open the command palette and run the",
+                    "partThree": "on Windows/Linux or",
+                    "partTwo": "command. Follow the instructions to set up your project. To open the command palette, press"
+                },
+                "title": "Configure Your Project"
+            },
+            "installExtension": {
+                "description": "Search for the i18nWeave extension in the Visual Studio Code extensions window or visit the",
+                "title": "Install the Extension"
+            },
+            "title": "Getting Started"
+        }
     }
-  }
 }

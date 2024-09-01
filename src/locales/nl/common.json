@@ -8,6 +8,9 @@
                 "description": "Met de ingebouwde configuratiewizard kun je in een mum van tijd aan de slag.",
                 "title": "Eenvoudige configuratie"
             },
+            "foss": {
+                "title": "Gratis en Open Source"
+            },
             "introduction": {
                 "description": "Beheer je vertalingen eenvoudig met de i18nWeave VSCode-extensie. i18nWeave biedt een groot aantal functies om je te helpen je vertalingen te beheren en je vertalingen synchroon te houden met je codebase.",
                 "support": "Ondersteuning voor Angular, Next.js en eigenlijk alles dat i18next vertalingen gebruikt kan worden geconfigureerd."
@@ -19,24 +22,33 @@
             "support": {
                 "angular": {
                     "description": "Ondersteunt Angular i18next",
-                    "title": "Hoekig"
+                    "title": "Angular"
                 },
                 "custom": {
-                    "title": "Aangepast"
+                    "description": "Ondersteunt alles met i18next",
+                    "title": "Custom"
                 },
                 "react": {
                     "description": "Ondersteunt React i18next",
-                    "title": "Reageer op"
+                    "title": "React"
                 }
             },
             "title": "Naadloos je vertalingen beheren"
         },
         "gettingStarted": {
             "configureProject": {
+                "description": {
+                    "partFour": "op macOS",
+                    "partOne": "Open het commandopalet en voer het",
+                    "partThree": "op Windows/Linux of",
+                    "partTwo": "opdracht. Volg de instructies om je project op te zetten. Om het opdrachtenpalet te openen, druk je op"
+                },
                 "title": "Je project configureren"
             },
-            "description": "",
-            "installExtension": "De extensie installeren",
+            "installExtension": {
+                "description": "Zoek naar de i18nWeave-extensie in het uitbreidingsvenster van Visual Studio Code of ga naar de",
+                "title": "De extensie installeren"
+            },
             "title": "Aan de slag"
         }
     }

@@ -25,7 +25,6 @@ const LanguageSelector: React.FC = () => {
     };
   }, []);
 
-  //absolute hidden lg:inline-block
   return (
     <div
       className="relative px-4 pb-4 z-20 text-left flex flex-col lg:absolute lg:inline-block lg:right-0 lg:px-0"

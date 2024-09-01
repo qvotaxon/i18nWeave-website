@@ -8,6 +8,9 @@
                 "description": "Mit dem eingebauten Konfigurationsassistenten bist du im Handumdrehen startklar.",
                 "title": "Einfach konfigurieren"
             },
+            "foss": {
+                "title": "Frei und Open Source"
+            },
             "introduction": {
                 "description": "Verwalte deine Übersetzungen ganz einfach mit der i18nWeave VSCode-Erweiterung. i18nWeave bietet eine Vielzahl von Funktionen, die dir helfen, deine Übersetzungen zu verwalten und sie mit deiner Codebasis synchron zu halten.",
                 "support": "Unterstützung für Angular, Next.js und grundsätzlich alles, was i18next-Übersetzungen verwendet, kann konfiguriert werden."
@@ -22,21 +25,30 @@
                     "title": "Angular"
                 },
                 "custom": {
-                    "title": "Benutzerdefiniert"
+                    "description": "Unterstützt alles mit i18next",
+                    "title": "Custom"
                 },
                 "react": {
                     "description": "Unterstützt React i18next",
-                    "title": "Reagiere"
+                    "title": "React"
                 }
             },
             "title": "Verwalte deine Übersetzungen nahtlos"
         },
         "gettingStarted": {
             "configureProject": {
+                "description": {
+                    "partFour": "auf macOS",
+                    "partOne": "Öffne die Befehlspalette und führe den Befehl",
+                    "partThree": "auf Windows/Linux oder",
+                    "partTwo": "befehl. Folge den Anweisungen, um dein Projekt einzurichten. Um die Befehlspalette zu öffnen, drücke"
+                },
                 "title": "Konfiguriere dein Projekt"
             },
-            "description": "",
-            "installExtension": "Installiere die Erweiterung",
+            "installExtension": {
+                "description": "Suchen Sie im Fenster der Visual Studio Code-Erweiterungen nach der i18nWeave-Erweiterung oder besuchen Sie die",
+                "title": "Installiere die Erweiterung"
+            },
             "title": "Erste Schritte"
         }
     }

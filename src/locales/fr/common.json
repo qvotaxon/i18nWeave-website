@@ -1,0 +1,43 @@
+{
+    "notfound": {
+        "title": "Page non trouvée"
+    },
+    "section": {
+        "features": {
+            "easyConfig": {
+                "description": "Sois opérationnel en un rien de temps grâce à l'assistant de configuration intégré.",
+                "title": "Configuration facile"
+            },
+            "introduction": {
+                "description": "Gère tes traductions en toute simplicité grâce à l'extension VSCode d'i18nWeave. i18nWeave propose un large éventail de fonctionnalités pour t'aider à gérer tes traductions et à les garder synchronisées avec ta base de code.",
+                "support": "La prise en charge d'Angular, de Next.js et fondamentalement de tout ce qui utilise les traductions i18next peut être configurée."
+            },
+            "keyExtraction": {
+                "description": "Extrait facilement les clés de traduction de tes fichiers de code.",
+                "title": "Extraction de clé automatique"
+            },
+            "support": {
+                "angular": {
+                    "description": "Prend en charge Angular i18next",
+                    "title": "Angulaire"
+                },
+                "custom": {
+                    "title": "Sur mesure"
+                },
+                "react": {
+                    "description": "Prend en charge React i18next",
+                    "title": "Réagir"
+                }
+            },
+            "title": "Gère tes traductions en toute transparence"
+        },
+        "gettingStarted": {
+            "configureProject": {
+                "title": "Configure ton projet"
+            },
+            "description": "",
+            "installExtension": "Installer l'extension",
+            "title": "Pour commencer"
+        }
+    }
+}

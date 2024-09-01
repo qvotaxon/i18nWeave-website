@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { HeadFC, PageProps } from 'gatsby';
+import { graphql, type HeadFC, type PageProps } from 'gatsby';
 import { useState, useRef } from 'react';
 import {
   faCode,
@@ -9,8 +9,11 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { StaticImage } from 'gatsby-plugin-image';
 import { faAngular, faReact } from '@fortawesome/free-brands-svg-icons';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../components/languageSelector';
 
 const IndexPage: React.FC<PageProps> = () => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -44,7 +47,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <nav
           ref={menuRef}
           className={`mt-16 lg:flex lg:items-center lg:static lg:p-0 absolute left-0 w-full bg-primary lg:bg-transparent lg:flex-row lg:space-x-4 transition-transform transform lg:mt-0 ${
-            isMenuOpen ? 'translate-y-0 top-0' : '-translate-y-1 -top-48'
+            isMenuOpen ? 'translate-y-0 top-0' : '-top-48'
           }`}
         >
           <ul className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 p-4 lg:ml-8 lg:p-0">
@@ -85,6 +88,8 @@ const IndexPage: React.FC<PageProps> = () => {
               </a>
             </li> */}
           </ul>
+
+          <LanguageSelector />
         </nav>
       </header>
 
@@ -94,20 +99,14 @@ const IndexPage: React.FC<PageProps> = () => {
       >
         <div className="pb-16 w-5/6">
           <h1 className="text-white text-4xl mb-8">
-            Seamlessly Manage Your Translations
+            {t('section.features.title')}
           </h1>
 
           <p className="my-4">
-            Manage your translations with ease using the i18nWeave VSCode
-            extension. i18nWeave provides a wide range of features to help you
-            manage your translations and keep your translations in sync with
-            your codebase.
+            {t('section.features.introduction.description')}
           </p>
 
-          <p className="my-4">
-            Support for Angular, Next.js and basically anything that uses
-            i18next translations can be configured.
-          </p>
+          <p className="my-4">{t('section.features.introduction.support')}</p>
         </div>
 
         <div className="flex flex-wrap justify-center">
@@ -126,10 +125,10 @@ const IndexPage: React.FC<PageProps> = () => {
           <div className="w-1/2 lg:w-1/5 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faEye} />
             <h2 className="text-lg font-bold text-variant-2 pb-2">
-              Auto-Key Extraction
+              {t('section.features.keyExtraction.title')}
             </h2>
             <p className="text-md">
-              Extract translation keys from your code files with ease.
+              {t('section.features.keyExtraction.description')}
             </p>
           </div>
 
@@ -138,11 +137,10 @@ const IndexPage: React.FC<PageProps> = () => {
             {' '}
             <FontAwesomeIcon className="text-4xl pb-2" icon={faObjectGroup} />
             <h2 className="text-lg font-bold text-variant-2 pb-2">
-              Easy Config
+              {t('section.features.easyConfig.title')}
             </h2>
             <p className="text-md">
-              Get up and running in no time using the build-in configuration
-              wizard.
+              {t('section.features.easyConfig.description')}
             </p>
           </div>
 
@@ -160,20 +158,32 @@ const IndexPage: React.FC<PageProps> = () => {
 
           <div className="w-1/3 lg:w-1/5 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faAngular} />
-            <h2 className="text-lg font-bold text-variant-2 pb-2">Angular</h2>
-            <p className="text-md">Supports Angular i18next</p>
+            <h2 className="text-lg font-bold text-variant-2 pb-2">
+              {t('section.features.support.angular.title')}
+            </h2>
+            <p className="text-md">
+              {t('section.features.support.angular.description')}
+            </p>
           </div>
 
           <div className="w-1/3 lg:w-1/5 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faReact} />
-            <h2 className="text-lg font-bold text-variant-2 pb-2">React</h2>
-            <p className="text-md">Supports React i18next</p>
+            <h2 className="text-lg font-bold text-variant-2 pb-2">
+              {t('section.features.support.react.title')}
+            </h2>
+            <p className="text-md">
+              {t('section.features.support.react.description')}
+            </p>
           </div>
 
           <div className="w-1/3 lg:w-1/5 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faCode} />
-            <h2 className="text-lg font-bold text-variant-2 pb-2">Custom</h2>
-            <p className="text-md">Supports any project using i18next</p>
+            <h2 className="text-lg font-bold text-variant-2 pb-2">
+              {t('section.features.support.custom.title')}
+            </h2>
+            <p className="text-md">
+              {t('section.features.support.custom.description')}
+            </p>
           </div>
         </div>
       </section>
@@ -182,17 +192,17 @@ const IndexPage: React.FC<PageProps> = () => {
         className="h-screen flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8"
       >
         <h1 className="text-primary text-4xl mb-8 text-center">
+          {t('section.gettingStarted.title')}
           Getting Started
         </h1>
 
         <div className="w-5/6 text-primary">
           <h2 className="text-lg font-bold text-variant-1 pb-2">
-            Install the Extension
+            {t('section.gettingStarted.installExtension.title')}
           </h2>
 
           <div>
-            Search for the i18nWeave extension in the Visual Studio Code
-            extensions window or visit the{' '}
+            {t('section.gettingStarted.installExtension.description')}
             <a
               className="text-primary underline"
               href="https://marketplace.visualstudio.com/items?itemName=qvotaxon.i18nweave"
@@ -202,7 +212,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
 
           <h2 className="text-lg font-bold text-variant-1 pt-4 pb-2">
-            Configure Your Project
+            {t('section.gettingStarted.configureProject.title')}
           </h2>
 
           <div>
@@ -210,9 +220,9 @@ const IndexPage: React.FC<PageProps> = () => {
             <code className="text-secondary">`Configure i18nWeave`</code>{' '}
             command. Follow the instructions to set up your project. To open the
             command palette, press{' '}
-            <code className="text-secondary">Ctrl+Shift+P</code> on
-            Windows/Linux or <code className="text-secondary">Cmd+Shift+P</code>{' '}
-            on macOS.
+            <code className="text-secondary">Ctrl+Shift+P</code>
+            on Windows/Linux or{' '}
+            <code className="text-secondary">Cmd+Shift+P</code> on macOS.
           </div>
 
           {/* <h3 className="text-lg font-bold text-variant-1 pt-4 pb-2">
@@ -252,3 +262,17 @@ export const Head: HeadFC = () => (
     <title>Home Page</title>
   </>
 );
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

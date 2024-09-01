@@ -1,8 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* In your CSS file or style section */
 
+/* In your CSS file or style section */
 .hamburger {
   display: flex;
   flex-direction: column;

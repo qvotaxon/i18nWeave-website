@@ -1,8 +1,21 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "i18nWeave.i18nextScannerModule.enabled": true,
+    "i18nWeave.i18nextScannerModule.translationFilesLocation": "/src/locales",
+    "i18nWeave.i18nextScannerModule.codeFileLocations": ["src/pages"],
+    "i18nWeave.i18nextScannerModule.defaultNamespace": "common",
+    "i18nWeave.i18nextScannerModule.namespaces": ["common", "navigation"],
+    "i18nWeave.i18nextScannerModule.languages": ["en", "nl", "de", "fr"],
+    "i18nWeave.i18nextScannerModule.defaultLanguage": "en",
+    "i18nWeave.i18nextScannerModule.translationFunctionNames": ["t", "i18nKey"],
+    "i18nWeave.i18nextScannerModule.translationComponentTranslationKey": "i18nKey",
+    "i18nWeave.i18nextScannerModule.translationComponentName": "Trans",
+    "i18nWeave.i18nextScannerModule.fileExtensions": ["tsx"],
+    "i18nWeave.betaFeaturesConfiguration.enableTranslationModule": true
+  }
 }

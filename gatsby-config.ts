@@ -11,6 +11,46 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/locales`,
+        name: `locale`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to gatsby-source-filesystem plugin
+        languages: [`en`, `nl`, `de`, `fr`],
+        defaultLanguage: `en`,
+        siteUrl: `https://i18nweave.com`,
+        trailingSlash: 'always', // include if you are using trailingSlash in gatsby config
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+          keySeparator: '.',
+          nsSeparator: ':',
+          defaultNS: `common`, // set common as the default namespace
+          ns: [`common`, `navigation`], // specify the namespaces to load
+        },
+        pages: [
+          {
+            matchPath: '/:lang?',
+            getLanguageFromPath: false,
+          },
+        ],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
         siteUrl: `https://i18nweave.com`,
@@ -40,14 +80,6 @@ const config: GatsbyConfig = {
         name: 'i18nWeave',
         icon: 'src/images/logo.png',
       },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: './src/images/',
-      },
-      __key: 'images',
     },
   ],
 };

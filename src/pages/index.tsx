@@ -13,7 +13,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { faAngular, faReact } from '@fortawesome/free-brands-svg-icons';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../components/languageSelector';
-import { useI18next } from 'gatsby-plugin-react-i18next';
+import { I18nextContext, useI18next } from 'gatsby-plugin-react-i18next';
 
 const IndexPage: React.FC<PageProps> = () => {
   const { t } = useTranslation();
@@ -24,6 +24,15 @@ const IndexPage: React.FC<PageProps> = () => {
   useEffect(() => {
     setIsMenuOpen(false);
     document.documentElement.lang = language;
+    const metaElement = document.querySelector('meta[name="content-language"]');
+    if (!metaElement) {
+      const newMetaElement = document.createElement('meta');
+      newMetaElement.setAttribute('name', 'content-language');
+      newMetaElement.setAttribute('content', language);
+      document.head.appendChild(newMetaElement);
+    } else {
+      metaElement.setAttribute('content', language);
+    }
   }, [language]);
 
   //todo: uitzoeken layout
@@ -36,7 +45,7 @@ const IndexPage: React.FC<PageProps> = () => {
             width={32}
             height={32}
             src="../images/logo.png"
-            alt="Logo"
+            alt="i18nWeave Logo"
             className="h-8 w-8"
           />
           <span className="text-lg">i18nWeave</span>
@@ -135,9 +144,9 @@ const IndexPage: React.FC<PageProps> = () => {
           {/* md:w-1/4 */}
           <div className="w-2/6 text-center px-4 mb-4 lg:mb-8">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faEye} />
-            <h2 className="text-lg font-bold text-variant-2 pb-2">
+            <h3 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.keyExtraction.title')}
-            </h2>
+            </h3>
             <p className="text-md">
               {/* {t('section.features.keyExtraction.description')} */}
             </p>
@@ -147,9 +156,9 @@ const IndexPage: React.FC<PageProps> = () => {
           <div className="w-2/6 text-center px-4 mb-4 lg:mb-8">
             {' '}
             <FontAwesomeIcon className="text-4xl pb-2" icon={faObjectGroup} />
-            <h2 className="text-lg font-bold text-variant-2 pb-2">
+            <h3 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.easyConfig.title')}
-            </h2>
+            </h3>
             <p className="text-md">
               {/* {t('section.features.easyConfig.description')} */}
             </p>
@@ -158,16 +167,16 @@ const IndexPage: React.FC<PageProps> = () => {
           {/* md:w-1/4 */}
           <div className="w-1/3 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faCheckDouble} />
-            <h2 className="text-lg font-bold text-variant-2 pb-2">
+            <h3 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.foss.title')}
-            </h2>
+            </h3>
           </div>
 
           <div className="w-2/6 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faAngular} />
-            <h2 className="text-lg font-bold text-variant-2 pb-2">
+            <h3 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.support.angular.title')}
-            </h2>
+            </h3>
             <p className="text-md">
               {t('section.features.support.angular.description')}
             </p>
@@ -175,9 +184,9 @@ const IndexPage: React.FC<PageProps> = () => {
 
           <div className="w-2/6 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faReact} />
-            <h2 className="text-lg font-bold text-variant-2 pb-2">
+            <h3 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.support.react.title')}
-            </h2>
+            </h3>
             <p className="text-md">
               {t('section.features.support.react.description')}
             </p>
@@ -185,9 +194,9 @@ const IndexPage: React.FC<PageProps> = () => {
 
           <div className="w-2/6 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faCode} />
-            <h2 className="text-lg font-bold text-variant-2 pb-2">
+            <h3 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.support.custom.title')}
-            </h2>
+            </h3>
             <p className="text-md">
               {t('section.features.support.custom.description')}
             </p>
@@ -198,9 +207,9 @@ const IndexPage: React.FC<PageProps> = () => {
         id="getting-started"
         className="h-screen flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8"
       >
-        <h1 className="text-primary text-4xl mb-8 text-center max-w-screen-xl">
+        <h2 className="text-primary text-4xl mb-8 text-center max-w-screen-xl">
           {t('section.gettingStarted.title')}
-        </h1>
+        </h2>
 
         <div className="w-5/6 text-primary max-w-screen-xl">
           <h2 className="text-lg font-bold text-variant-1 pb-2">
@@ -265,21 +274,41 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = ({ data, location }) => {
-  return (
-    <head>
-      <title>i18nWeave - Developer's i18n Companion</title>
-      <meta
-        name="description"
-        content="i18nWeave helps developers efficiently handle translations in their projects. Increase productivity and ensure consistency across multiple languages."
-      />
-      <meta
-        name="keywords"
-        content="i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
-      />
-    </head>
-  );
-};
+// export const Head: HeadFC = ({ data, location }) => {
+//   const context = React.useContext(I18nextContext);
+
+//   useEffect(() => {
+//     console.log(context.language);
+//   }, [context.language]);
+
+//   return (
+//     <head>
+//       <title>i18nWeave - Developer's i18n Companion</title>
+//       <meta
+//         name="description"
+//         content="i18nWeave helps developers efficiently handle translations in their projects. Increase productivity and ensure consistency across multiple languages."
+//       />
+//       <meta
+//         name="keywords"
+//         content="i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
+//       />
+//     </head>
+//   );
+// };
+
+export const Head = () => (
+  <>
+    <title>i18nWeave - Developer's i18n Companion</title>
+    <meta
+      name="description"
+      content="i18nWeave helps developers efficiently handle translations in their projects. Increase productivity and ensure consistency across multiple languages."
+    />
+    <meta
+      name="keywords"
+      content="i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
+    />
+  </>
+);
 
 export const query = graphql`
   query ($language: String!) {

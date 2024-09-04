@@ -36,6 +36,9 @@ importers:
       gatsby-plugin-canonical-urls:
         specifier: ^5.13.1
         version: 5.13.1(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.5.4))
+      gatsby-plugin-clarity:
+        specifier: ^1.0.1
+        version: 1.0.1
       gatsby-plugin-fontawesome-css:
         specifier: ^1.2.0
         version: 1.2.0(@fortawesome/fontawesome-svg-core@6.6.0)(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.5.4))
@@ -3129,6 +3132,10 @@ packages:
     engines: {node: '>=18.0.0'}
     peerDependencies:
       gatsby: ^5.0.0-next
+
+  gatsby-plugin-clarity@1.0.1:
+    resolution: {integrity: sha512-1GKF7GkuScINEDl9Jzhw/8CVABKvVl7NW5PUjOCfwfVQnxX1RP9C4Dj67XD7NSVyBA9ozD8g5Zv04Dzx6/FZwQ==}
+    engines: {node: '>=12.13.0'}
 
   gatsby-plugin-fontawesome-css@1.2.0:
     resolution: {integrity: sha512-Me7zFKPDmFQAWZmC2MQN7vWSHGFneu6FeIylkVinSMh89C0wPeoF165rpfuEdpgG0HScNg0fSh3xCIxYr5gPOQ==}
@@ -9886,6 +9893,10 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.25.6
       gatsby: 5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.5.4)
+
+  gatsby-plugin-clarity@1.0.1:
+    dependencies:
+      '@babel/runtime': 7.25.6
 
   gatsby-plugin-fontawesome-css@1.2.0(@fortawesome/fontawesome-svg-core@6.6.0)(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.5.4)):
     dependencies:

@@ -42,8 +42,6 @@ const IndexPage: React.FC<PageProps> = () => {
     clarity.hasStarted() || clarity.init('nxvf26q0wz');
 
     const userCookiePreferences = getPreferences();
-    console.log(userCookiePreferences);
-
     if (
       (
         userCookiePreferences.cookieOptions.filter(
@@ -53,21 +51,19 @@ const IndexPage: React.FC<PageProps> = () => {
     ) {
       clarity.consent();
     }
+
+    onPreferencesChanged((userCookiePreferences) => {
+      if (
+        (
+          userCookiePreferences.cookieOptions.filter(
+            (x) => x.id === 'statistics'
+          )[0] as CookiePreference
+        ).isEnabled
+      ) {
+        clarity.consent();
+      }
+    });
   }, []);
-
-  onPreferencesChanged((userCookiePreferences) => {
-    console.log(userCookiePreferences);
-
-    if (
-      (
-        userCookiePreferences.cookieOptions.filter(
-          (x) => x.id === 'statistics'
-        )[0] as CookiePreference
-      ).isEnabled
-    ) {
-      clarity.consent();
-    }
-  });
 
   // useEffect(() => {
   //   const userCookiePreferences = getPreferences();

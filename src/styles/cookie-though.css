@@ -23,10 +23,10 @@
     --ct-policy-essential: var(--ct-primary-100);
   
     /* The colors used to style the sliders */
-    --ct-slider-primary: var(--gray-400);
-    --ct-slider-secondary: var(--gray-300);
-    --ct-slider-enabled-primary: #4c4cff;
-    --ct-slider-enabled-secondary: #b3b3ff;
+    --ct-slider-primary: var(#FFF);
+    --ct-slider-secondary: var(#EEE);
+    --ct-slider-enabled-primary: #a9d864;
+    --ct-slider-enabled-secondary: #3b82f6;
   
     /* The font color of the text inside a policy when it's enabled  */
     --ct-enabled-option-color: var(--ct-white);

@@ -1,4 +1,5 @@
-import { init } from 'cookie-though';
+import { clarity } from 'react-microsoft-clarity';
+import { getPreferences, init, onPreferencesChanged } from 'cookie-though';
 import * as React from 'react';
 import { graphql, type HeadFC, type PageProps } from 'gatsby';
 import { useState, useRef, useEffect } from 'react';
@@ -15,7 +16,7 @@ import { faAngular, faReact } from '@fortawesome/free-brands-svg-icons';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../components/languageSelector';
 import { I18nextContext, useI18next } from 'gatsby-plugin-react-i18next';
-import { Config } from 'cookie-though/dist/types/types';
+import { Config, CookiePreference } from 'cookie-though/dist/types/types';
 
 const IndexPage: React.FC<PageProps> = () => {
   const { t } = useTranslation();
@@ -36,6 +37,43 @@ const IndexPage: React.FC<PageProps> = () => {
       metaElement.setAttribute('content', language);
     }
   }, [language]);
+
+  useEffect(() => {
+    clarity.hasStarted() || clarity.init('nxvf26q0wz');
+
+    const userCookiePreferences = getPreferences();
+    console.log(userCookiePreferences);
+
+    if (
+      (
+        userCookiePreferences.cookieOptions.filter(
+          (x) => x.id === 'statistics'
+        )[0] as CookiePreference
+      ).isEnabled
+    ) {
+      clarity.consent();
+    }
+  }, []);
+
+  onPreferencesChanged((userCookiePreferences) => {
+    console.log(userCookiePreferences);
+
+    if (
+      (
+        userCookiePreferences.cookieOptions.filter(
+          (x) => x.id === 'statistics'
+        )[0] as CookiePreference
+      ).isEnabled
+    ) {
+      clarity.consent();
+    }
+  });
+
+  // useEffect(() => {
+  //   const userCookiePreferences = getPreferences();
+
+  //   console.log(userCookiePreferences);
+  // }, [onPreferencesChanged]);
 
   useEffect(() => {
     init({
@@ -60,13 +98,13 @@ const IndexPage: React.FC<PageProps> = () => {
           description:
             'We need to save some technical cookies, for the website to function properly.',
         },
-        {
-          id: 'social',
-          label: 'Social Media Cookies',
-          category: 'social',
-          description:
-            'We need to save some social cookies, for the website to function properly.',
-        },
+        // {
+        //   id: 'social',
+        //   label: 'Social Media Cookies',
+        //   category: 'social',
+        //   description:
+        //     'We need to save some social cookies, for the website to function properly.',
+        // },
       ],
       essentialLabel: 'Always on',
       permissionLabels: {
@@ -82,7 +120,7 @@ const IndexPage: React.FC<PageProps> = () => {
           "We know, cookies aren't everyone's favorite snack, but they help me (the website's developer) give you the smoothest, bug-free experience possible. Just a few crumbs can make all the difference!",
       },
       cookiePolicy: {
-        url: 'https://inthepocket.com/cookie-policy',
+        url: 'https://i18nweave.com/cookie-policy',
         label: 'Read the full cookie declaration',
       },
       customizeLabel: 'Customize',

@@ -33,6 +33,9 @@ importers:
       cookie-though:
         specifier: ^1.5.0
         version: 1.5.0
+      ga-gtag:
+        specifier: ^1.2.0
+        version: 1.2.0
       gatsby:
         specifier: ^5.13.7
         version: 5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.5.4)
@@ -3101,6 +3104,9 @@ packages:
 
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
+
+  ga-gtag@1.2.0:
+    resolution: {integrity: sha512-j9gxutMdpGMdwaX1SzOG31Ddm+IGFjeNf+N3Z5g+BBpS8FSXOALlrM+ORIGc/QKszGJEDlw+6PfIsJZICsqsGQ==}
 
   gatsby-cli@5.13.3:
     resolution: {integrity: sha512-JQTeivvZWuhxE1HRey2sRhwUmkCrs5478fiLR0XRFGin4X1ggCmrQx/DBkJP1TgktdPfNU8t987+slSnO2XzMA==}
@@ -9803,6 +9809,8 @@ snapshots:
   functional-red-black-tree@1.0.1: {}
 
   functions-have-names@1.2.3: {}
+
+  ga-gtag@1.2.0: {}
 
   gatsby-cli@5.13.3:
     dependencies:

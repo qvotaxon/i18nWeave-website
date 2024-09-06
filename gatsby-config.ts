@@ -59,17 +59,17 @@ const config: GatsbyConfig = {
     'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-pnpm-gatsby-5',
     'gatsby-plugin-postcss',
-    {
-      resolve: 'gatsby-plugin-google-gtag',
-      options: {
-        trackingIds: [
-          'G-GY3TDG8CD7', // Google Analytics / GA
-        ],
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-google-gtag',
+    //   options: {
+    //     trackingIds: [
+    //       'G-GY3TDG8CD7', // Google Analytics / GA
+    //     ],
+    //     pluginConfig: {
+    //       head: true,
+    //     },
+    //   },
+    // },
     // {
     //   resolve: `gatsby-plugin-clarity`,
     //   options: {

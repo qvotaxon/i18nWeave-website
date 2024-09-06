@@ -2,15 +2,18 @@
     "section": {
         "features": {
             "easyConfig": {
+                "description": "",
                 "title": "Easy Config"
             },
             "foss": {
                 "title": "Free and Open Source"
             },
             "introduction": {
-                "description": "Manage your translations with ease using the i18nWeave VSCode extension. i18nWeave provides a wide range of features to help you manage your translations and keep your translations in sync with your codebase."
+                "description": "Manage your translations with ease using the i18nWeave VSCode extension. i18nWeave provides a wide range of features to help you manage your translations and keep your translations in sync with your codebase.",
+                "support": ""
             },
             "keyExtraction": {
+                "description": "",
                 "title": "Auto-Key Extraction"
             },
             "support": {

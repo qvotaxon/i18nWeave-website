@@ -2,15 +2,18 @@
     "section": {
         "features": {
             "easyConfig": {
+                "description": "",
                 "title": "Configuration facile"
             },
             "foss": {
                 "title": "Source libre et gratuite"
             },
             "introduction": {
-                "description": "Gère tes traductions en toute simplicité grâce à l'extension VSCode d'i18nWeave. i18nWeave propose un large éventail de fonctionnalités pour t'aider à gérer tes traductions et à les garder synchronisées avec ta base de code."
+                "description": "Gère tes traductions en toute simplicité grâce à l'extension VSCode d'i18nWeave. i18nWeave propose un large éventail de fonctionnalités pour t'aider à gérer tes traductions et à les garder synchronisées avec ta base de code.",
+                "support": ""
             },
             "keyExtraction": {
+                "description": "",
                 "title": "Extraction de clé automatique"
             },
             "support": {

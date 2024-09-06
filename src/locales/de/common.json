@@ -2,15 +2,18 @@
     "section": {
         "features": {
             "easyConfig": {
+                "description": "",
                 "title": "Einfach konfigurieren"
             },
             "foss": {
                 "title": "Frei und Open Source"
             },
             "introduction": {
-                "description": "Verwalte deine Übersetzungen ganz einfach mit der i18nWeave VSCode-Erweiterung. i18nWeave bietet eine Vielzahl von Funktionen, die dir helfen, deine Übersetzungen zu verwalten und sie mit deiner Codebasis synchron zu halten."
+                "description": "Verwalte deine Übersetzungen ganz einfach mit der i18nWeave VSCode-Erweiterung. i18nWeave bietet eine Vielzahl von Funktionen, die dir helfen, deine Übersetzungen zu verwalten und sie mit deiner Codebasis synchron zu halten.",
+                "support": ""
             },
             "keyExtraction": {
+                "description": "",
                 "title": "Auto-Schlüssel-Extraktion"
             },
             "support": {

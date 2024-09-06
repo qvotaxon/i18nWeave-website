@@ -1,49 +1,83 @@
 {
-    "section": {
-        "features": {
-            "easyConfig": {
-                "title": "Easy Config"
-            },
-            "foss": {
-                "title": "Free and Open Source"
-            },
-            "introduction": {
-                "description": "Manage your translations with ease using the i18nWeave VSCode extension. i18nWeave provides a wide range of features to help you manage your translations and keep your translations in sync with your codebase."
-            },
-            "keyExtraction": {
-                "title": "Auto-Key Extraction"
-            },
-            "support": {
-                "angular": {
-                    "description": "Supports Angular i18next",
-                    "title": "Angular"
-                },
-                "custom": {
-                    "description": "Supports everything with i18next",
-                    "title": "Custom"
-                },
-                "react": {
-                    "description": "Supports React i18next",
-                    "title": "React"
-                }
-            },
-            "title": "Seamlessly Manage Your Translations"
-        },
-        "gettingStarted": {
-            "configureProject": {
-                "description": {
-                    "partFour": "on macOS",
-                    "partOne": "Open the command palette and run the",
-                    "partThree": "on Windows/Linux or",
-                    "partTwo": "command. Follow the instructions to set up your project. To open the command palette, press"
-                },
-                "title": "Configure Your Project"
-            },
-            "installExtension": {
-                "description": "Search for the i18nWeave extension in the Visual Studio Code extensions window or visit the",
-                "title": "Install the Extension"
-            },
-            "title": "Getting Started"
-        }
+  "cookies": {
+    "essential": {
+      "description": "We need to save some technical cookies, for the website to function properly.",
+      "label": "Essential Cookies"
+    },
+    "functional": {
+      "description": "We need to save some basic preferences eg. language.",
+      "label": "Functional Cookies"
+    },
+    "general": {
+      "cookiePolicy": {
+        "label": "Read the full cookie declaration"
+      },
+      "customizeLabel": "Customize",
+      "essentialLabel": "Always on",
+      "header": {
+        "description": "We know, cookies aren't everyone's favorite snack, but they help me (the website's developer) give you the smoothest, bug-free experience possible. Just a few crumbs can make all the difference!",
+        "subTitle": "Yep, it's another one of *those* banners...",
+        "title": "Cookies, Anyone?"
+      },
+      "permissionLabels": {
+        "accept": "Accept",
+        "acceptAll": "Accept all",
+        "decline": "Decline"
+      }
+    },
+    "statistics": {
+      "description": "We need to save some technical cookies, for the website to function properly.",
+      "label": "Statistics"
     }
+  },
+  "section": {
+    "features": {
+      "easyConfig": {
+        "description": "",
+        "title": "Easy Config"
+      },
+      "foss": {
+        "title": "Free and Open Source"
+      },
+      "introduction": {
+        "description": "Manage your translations with ease using the i18nWeave VSCode extension. i18nWeave provides a wide range of features to help you manage your translations and keep your translations in sync with your codebase.",
+        "support": ""
+      },
+      "keyExtraction": {
+        "description": "",
+        "title": "Auto-Key Extraction"
+      },
+      "support": {
+        "angular": {
+          "description": "Supports Angular i18next",
+          "title": "Angular"
+        },
+        "custom": {
+          "description": "Supports everything with i18next",
+          "title": "Custom"
+        },
+        "react": {
+          "description": "Supports React i18next",
+          "title": "React"
+        }
+      },
+      "title": "Seamlessly Manage Your Translations"
+    },
+    "gettingStarted": {
+      "configureProject": {
+        "description": {
+          "partFour": "on macOS",
+          "partOne": "Open the command palette and run the",
+          "partThree": "on Windows/Linux or",
+          "partTwo": "command. Follow the instructions to set up your project. To open the command palette, press"
+        },
+        "title": "Configure Your Project"
+      },
+      "installExtension": {
+        "description": "Search for the i18nWeave extension in the Visual Studio Code extensions window or visit the",
+        "title": "Install the Extension"
+      },
+      "title": "Getting Started"
+    }
+  }
 }

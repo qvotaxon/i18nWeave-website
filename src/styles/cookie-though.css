@@ -73,4 +73,6 @@
   
     /* The z-index you want the root container to have */
     --ct-z-index: 9999;
+
+    bottom: -400px !important;
   }

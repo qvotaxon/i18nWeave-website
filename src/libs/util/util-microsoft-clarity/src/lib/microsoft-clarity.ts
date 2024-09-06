@@ -2,7 +2,9 @@ import { clarity } from 'react-microsoft-clarity';
 
 export function useMicrosoftClarity() {
   const initialize = (projectId: string) => {
-    clarity.hasStarted() || clarity.init('nxvf26q0wz');
+    if (!clarity.hasStarted()) {
+      clarity.init(projectId);
+    }
   };
 
   const consent = () => {
@@ -14,3 +16,4 @@ export function useMicrosoftClarity() {
     consent,
   };
 }
+

@@ -2,7 +2,7 @@ import { FlagIcon, FlagIconCode } from 'react-flag-kit';
 import React, { useState, useEffect, useRef } from 'react';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 
-const LanguageSelector: React.FC = () => {
+export const LanguageSelector: React.FC = () => {
   const { languages, changeLanguage, language } = useI18next();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);

@@ -119,23 +119,21 @@ const IndexPage: React.FC<PageProps> = () => {
       policies: [
         {
           id: 'essential',
-          label: 'Essential Cookies',
-          description:
-            'We need to save some technical cookies, for the website to function properly.',
+          label: t('cookies.essential.label'),
+          description: t('cookies.essential.description'),
           category: 'essential',
         },
-        // {
-        //   id: 'functional',
-        //   label: 'Functional Cookies',
-        //   category: 'functional',
-        //   description: 'We need to save some basic preferences eg. language.',
-        // },
+        {
+          id: 'functional',
+          label: t('cookies.functional.label'),
+          category: 'essential',
+          description: t('cookies.functional.description'),
+        },
         {
           id: 'statistics',
-          label: 'Statistics',
+          label: t('cookies.statistics.label'),
           category: 'statistics',
-          description:
-            'We need to save some technical cookies, for the website to function properly.',
+          description: t('cookies.statistics.description'),
         },
         // {
         //   id: 'social',
@@ -145,24 +143,23 @@ const IndexPage: React.FC<PageProps> = () => {
         //     'We need to save some social cookies, for the website to function properly.',
         // },
       ],
-      essentialLabel: 'Always on',
+      essentialLabel: t('cookies.general.essentialLabel'),
       permissionLabels: {
-        accept: 'Accept',
-        acceptAll: 'Accept all',
-        decline: 'Decline',
+        accept: t('cookies.general.permissionLabels.accept'),
+        acceptAll: t('cookies.general.permissionLabels.acceptAll'),
+        decline: t('cookies.general.permissionLabels.decline'),
       },
       cookiePreferenceKey: 'cookie-preferences',
       header: {
-        title: 'Cookies, Anyone?',
-        subTitle: "Yep, it's another one of *those* banners...",
-        description:
-          "We know, cookies aren't everyone's favorite snack, but they help me (the website's developer) give you the smoothest, bug-free experience possible. Just a few crumbs can make all the difference!",
+        title: t('cookies.general.header.title'),
+        subTitle: t('cookies.general.header.subTitle'),
+        description: t('cookies.general.header.description'),
       },
       cookiePolicy: {
         url: 'https://i18nweave.com/cookie-policy',
-        label: 'Read the full cookie declaration',
+        label: t('cookies.general.cookiePolicy.label'),
       },
-      customizeLabel: 'Customize',
+      customizeLabel: t('cookies.general.customizeLabel'),
     });
 
     if (hasSetCookiePreferences) {

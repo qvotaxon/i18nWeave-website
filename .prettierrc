@@ -1,0 +1,36 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "**/*.{css,scss,less}",
+        "**/*.{json,json5}",
+        "**/*.{graphql}",
+        "**/*.{md,mdx}",
+        "**/*.{html}",
+        "**/*.{yaml,yml}",
+        "**/*.{ts,tsx}"
+      ],
+      "options": {
+        "singleQuote": true,
+        "bracketSpacing": true,
+        "bracketSameLine": true,
+        "trailingComma": "es5",
+        "arrowParens": "avoid",
+        "endOfLine": "crlf",
+        "plugins": ["@trivago/prettier-plugin-sort-imports"],
+        "importOrderParserPlugins": ["decorators", "typescript"],
+        "importOrder": [
+          "^@/(.*)$",
+          "<THIRD_PARTY_MODULES>",
+          "^@i18n-weave/ui/(.*)$",
+          "^@i18n-weave/feat/(.*)$",
+          "^@i18n-weave/util/(.*)$",
+          "^[./]"
+        ],
+        "importOrderSeparation": true,
+        "importOrderSortSpecifiers": true,
+        "importOrderGroupNamespaceSpecifiers": true
+      }
+    }
+  ]
+}

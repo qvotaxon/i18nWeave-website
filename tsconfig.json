@@ -99,7 +99,20 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "baseUrl": "./src",
+    "paths": {
+      "@i18n-weave/util/util-google-analytics": [
+        "libs/util/util-google-analytics/src"
+      ],
+      "@i18n-weave/util/util-microsoft-clarity": [
+        "libs/util/util-microsoft-clarity/src"
+      ],
+      "@i18n-weave/ui/ui-layout": ["libs/ui/ui-layout/src"],
+      "@i18n-weave/ui/ui-language-selector": [
+        "libs/ui/ui-language-selector/src"
+      ]
+    }
   },
   "include": [
     "./src/**/*",

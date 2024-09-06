@@ -1,11 +1,39 @@
 {
-  "notfound": {
-    "title": "Pagina niet gevonden"
+  "cookies": {
+    "essential": {
+      "description": "We moeten een aantal technische cookies opslaan om de website goed te laten functioneren.",
+      "label": "Essentiële koekjes"
+    },
+    "functional": {
+      "description": "We moeten een aantal basisvoorkeuren opslaan, zoals taal.",
+      "label": "Functionele cookies"
+    },
+    "general": {
+      "cookiePolicy": {
+        "label": "Lees de volledige cookieverklaring"
+      },
+      "customizeLabel": "Pas  aan",
+      "essentialLabel": "Altijd aan",
+      "header": {
+        "description": "We weten dat koekjes niet ieders favoriete snack zijn, maar ze helpen mij (de ontwikkelaar van de website) wel om je een zo soepel mogelijke ervaring zonder bugs te geven. Een paar kruimels kunnen al het verschil maken!",
+        "subTitle": "Ja, het is weer zo'n pop-up...",
+        "title": "Koekjes, iemand?"
+      },
+      "permissionLabels": {
+        "accept": "Accepteer",
+        "acceptAll": "Alles accepteren",
+        "decline": "Afwijzen"
+      }
+    },
+    "statistics": {
+      "description": "We moeten een aantal technische cookies opslaan om de website goed te laten functioneren.",
+      "label": "Statistieken"
+    }
   },
   "section": {
     "features": {
       "easyConfig": {
-        "description": "Met de ingebouwde configuratiewizard kun je in een mum van tijd aan de slag.",
+        "description": "",
         "title": "Eenvoudige configuratie"
       },
       "foss": {
@@ -13,10 +41,10 @@
       },
       "introduction": {
         "description": "Beheer je vertalingen eenvoudig met de i18nWeave VSCode-extensie. i18nWeave biedt een groot aantal functies om je te helpen je vertalingen te beheren en je vertalingen synchroon te houden met je codebase.",
-        "support": "Ondersteuning voor Angular, Next.js en eigenlijk alles dat i18next vertalingen gebruikt kan worden geconfigureerd."
+        "support": ""
       },
       "keyExtraction": {
-        "description": "Gemakkelijk vertaalsleutels uit je codebestanden halen.",
+        "description": "",
         "title": "Automatische sleutelextractie"
       },
       "support": {

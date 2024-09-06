@@ -23,6 +23,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "autoprefixer": "^10.4.20",
     "cookie-though": "^1.5.0",
+    "ga-gtag": "^1.2.0",
     "gatsby": "^5.13.7",
     "gatsby-plugin-canonical-urls": "^5.13.1",
     "gatsby-plugin-clarity": "^1.0.1",
@@ -43,6 +44,7 @@
     "react-dom": "^18.2.0",
     "react-flag-kit": "^1.1.1",
     "react-i18next": "^15.0.1",
+    "react-microsoft-clarity": "^1.2.0",
     "tailwindcss": "^3.4.10"
   },
   "devDependencies": {

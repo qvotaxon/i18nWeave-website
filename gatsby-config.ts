@@ -59,28 +59,28 @@ const config: GatsbyConfig = {
     'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-pnpm-gatsby-5',
     'gatsby-plugin-postcss',
-    {
-      resolve: 'gatsby-plugin-google-gtag',
-      options: {
-        trackingIds: [
-          'G-GY3TDG8CD7', // Google Analytics / GA
-        ],
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-clarity`,
-      options: {
-        // String value for your clarity project ID
-        clarity_project_id: 'nxvf26q0wz',
-        // Boolean value for enabling clarity while developing
-        // true will enable clarity tracking code on both development and production environments
-        // false will enable clarity tracking code on production environment only
-        enable_on_dev_env: false,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-google-gtag',
+    //   options: {
+    //     trackingIds: [
+    //       'G-GY3TDG8CD7', // Google Analytics / GA
+    //     ],
+    //     pluginConfig: {
+    //       head: true,
+    //     },
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-plugin-clarity`,
+    //   options: {
+    //     // String value for your clarity project ID
+    //     clarity_project_id: 'nxvf26q0wz',
+    //     // Boolean value for enabling clarity while developing
+    //     // true will enable clarity tracking code on both development and production environments
+    //     // false will enable clarity tracking code on production environment only
+    //     enable_on_dev_env: false,
+    //   },
+    // },
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

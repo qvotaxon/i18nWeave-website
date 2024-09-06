@@ -2,18 +2,15 @@
     "section": {
         "features": {
             "easyConfig": {
-                "description": "Mit dem eingebauten Konfigurationsassistenten bist du im Handumdrehen startklar.",
                 "title": "Einfach konfigurieren"
             },
             "foss": {
                 "title": "Frei und Open Source"
             },
             "introduction": {
-                "description": "Verwalte deine Übersetzungen ganz einfach mit der i18nWeave VSCode-Erweiterung. i18nWeave bietet eine Vielzahl von Funktionen, die dir helfen, deine Übersetzungen zu verwalten und sie mit deiner Codebasis synchron zu halten.",
-                "support": "Unterstützung für Angular, Next.js und grundsätzlich alles, was i18next-Übersetzungen verwendet, kann konfiguriert werden."
+                "description": "Verwalte deine Übersetzungen ganz einfach mit der i18nWeave VSCode-Erweiterung. i18nWeave bietet eine Vielzahl von Funktionen, die dir helfen, deine Übersetzungen zu verwalten und sie mit deiner Codebasis synchron zu halten."
             },
             "keyExtraction": {
-                "description": "Extrahiere ganz einfach Übersetzungsschlüssel aus deinen Codedateien.",
                 "title": "Auto-Schlüssel-Extraktion"
             },
             "support": {

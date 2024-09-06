@@ -2,18 +2,15 @@
     "section": {
         "features": {
             "easyConfig": {
-                "description": "Get up and running in no time using the build-in configuration wizard.",
                 "title": "Easy Config"
             },
             "foss": {
                 "title": "Free and Open Source"
             },
             "introduction": {
-                "description": "Manage your translations with ease using the i18nWeave VSCode extension. i18nWeave provides a wide range of features to help you manage your translations and keep your translations in sync with your codebase.",
-                "support": "Support for Angular, Next.js and basically anything that uses i18next translations can be configured."
+                "description": "Manage your translations with ease using the i18nWeave VSCode extension. i18nWeave provides a wide range of features to help you manage your translations and keep your translations in sync with your codebase."
             },
             "keyExtraction": {
-                "description": "Extract translation keys from your code files with ease.",
                 "title": "Auto-Key Extraction"
             },
             "support": {

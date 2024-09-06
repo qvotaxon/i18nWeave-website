@@ -2,18 +2,15 @@
     "section": {
         "features": {
             "easyConfig": {
-                "description": "Met de ingebouwde configuratiewizard kun je in een mum van tijd aan de slag.",
                 "title": "Eenvoudige configuratie"
             },
             "foss": {
                 "title": "Gratis en Open Source"
             },
             "introduction": {
-                "description": "Beheer je vertalingen eenvoudig met de i18nWeave VSCode-extensie. i18nWeave biedt een groot aantal functies om je te helpen je vertalingen te beheren en je vertalingen synchroon te houden met je codebase.",
-                "support": "Ondersteuning voor Angular, Next.js en eigenlijk alles dat i18next vertalingen gebruikt kan worden geconfigureerd."
+                "description": "Beheer je vertalingen eenvoudig met de i18nWeave VSCode-extensie. i18nWeave biedt een groot aantal functies om je te helpen je vertalingen te beheren en je vertalingen synchroon te houden met je codebase."
             },
             "keyExtraction": {
-                "description": "Gemakkelijk vertaalsleutels uit je codebestanden halen.",
                 "title": "Automatische sleutelextractie"
             },
             "support": {

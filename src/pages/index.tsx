@@ -1,97 +1,94 @@
-import { clarity } from 'react-microsoft-clarity';
+import React, { useState, useEffect, useRef } from 'react';
+import { useGoogleAnalytics } from './../libs/feat/feat-google-analytics/src/lib/google-analytics';
+import { useMicrosoftClarity } from './../libs/feat/feat-microsoft-clarity/src/lib/microsoft-clarity';
 import { getPreferences, init, onPreferencesChanged } from 'cookie-though';
-import * as React from 'react';
-import { graphql, type HeadFC, type PageProps } from 'gatsby';
-import { useState, useRef, useEffect } from 'react';
+import { graphql, type PageProps } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { StaticImage } from 'gatsby-plugin-image';
 import {
   faCheckDouble,
   faCode,
   faEye,
   faObjectGroup,
-  faSmile,
 } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { StaticImage } from 'gatsby-plugin-image';
 import { faAngular, faReact } from '@fortawesome/free-brands-svg-icons';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../components/languageSelector';
-import { I18nextContext, useI18next } from 'gatsby-plugin-react-i18next';
-import { Config, CookiePreference } from 'cookie-though/dist/types/types';
-import { gtag, initDataLayer, install } from 'ga-gtag';
+import { useI18next } from 'gatsby-plugin-react-i18next';
+import { CookiePreference } from 'cookie-though/dist/types/types';
 
-const IndexPage: React.FC<PageProps> = () => {
-  const { t } = useTranslation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-  const { language } = useI18next();
+/**
+ * Updates the document's language metadata dynamically.
+ * @param language - The current language to be set.
+ */
+const updateLanguageMeta = (language: string) => {
+  document.documentElement.lang = language;
+  const metaElement = document.querySelector('meta[name="content-language"]');
+  if (!metaElement) {
+    const newMetaElement = document.createElement('meta');
+    newMetaElement.setAttribute('name', 'content-language');
+    newMetaElement.setAttribute('content', language);
+    document.head.appendChild(newMetaElement);
+  } else {
+    metaElement.setAttribute('content', language);
+  }
+};
 
-  initDataLayer();
-  gtag('consent', 'default', {
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    analytics_storage: 'denied',
-  });
-  install('G-GY3TDG8CD7');
-
-  useEffect(() => {
-    setIsMenuOpen(false);
-
-    document.documentElement.lang = language;
-
-    const metaElement = document.querySelector('meta[name="content-language"]');
-
-    if (!metaElement) {
-      const newMetaElement = document.createElement('meta');
-      newMetaElement.setAttribute('name', 'content-language');
-      newMetaElement.setAttribute('content', language);
-      document.head.appendChild(newMetaElement);
-    } else {
-      metaElement.setAttribute('content', language);
-    }
-  }, [language]);
+/**
+ * Custom hook for handling cookie preferences and analytics consent.
+ * Initializes Google Analytics and Microsoft Clarity based on user cookie preferences.
+ */
+const useCookieConsent = (
+  googleAnalyticsTrackingId: string,
+  microsoftClarityTrackingId: string
+) => {
+  const googleAnalytics = useGoogleAnalytics();
+  const microsoftClarity = useMicrosoftClarity();
 
   useEffect(() => {
-    // if (window.location.hostname !== 'localhost') {
-    clarity.hasStarted() || clarity.init('nxvf26q0wz');
-    // }
+    googleAnalytics.initialize(googleAnalyticsTrackingId);
+    microsoftClarity.initialize(microsoftClarityTrackingId);
+
+    const updateConsentBasedOnPreferences = (userCookiePreferences: any) => {
+      const statisticsCookie = userCookiePreferences.cookieOptions.find(
+        (x: any) => x.id === 'statistics'
+      ) as CookiePreference;
+      if (statisticsCookie?.isEnabled) {
+        microsoftClarity.consent();
+        googleAnalytics.updateConsent({
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          ad_storage: 'granted',
+          analytics_storage: 'granted',
+        });
+      }
+    };
 
     const userCookiePreferences = getPreferences();
+    updateConsentBasedOnPreferences(userCookiePreferences);
 
-    if (
-      (
-        userCookiePreferences.cookieOptions.filter(
-          (x) => x.id === 'statistics'
-        )[0] as CookiePreference
-      ).isEnabled
-    ) {
-      clarity.consent();
-      gtag('consent', 'update', {
-        ad_user_data: 'granted',
-        ad_personalization: 'granted',
-        ad_storage: 'granted',
-        analytics_storage: 'granted',
-      });
-    }
+    onPreferencesChanged(updateConsentBasedOnPreferences);
+  }, [
+    googleAnalytics,
+    microsoftClarity,
+    googleAnalyticsTrackingId,
+    microsoftClarityTrackingId,
+  ]);
+};
 
-    onPreferencesChanged((userCookiePreferences) => {
-      if (
-        (
-          userCookiePreferences.cookieOptions.filter(
-            (x) => x.id === 'statistics'
-          )[0] as CookiePreference
-        ).isEnabled
-      ) {
-        clarity.consent();
-      }
-    });
-  }, []);
+const IndexPage: React.FC<PageProps> = () => {
+  const googleAnalyticsTrackingId = '';
+  const microsoftClarityTrackingId = '';
+  const { t } = useTranslation();
+  const { language } = useI18next();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
-  // useEffect(() => {
-  //   const userCookiePreferences = getPreferences();
+  useEffect(() => {
+    updateLanguageMeta(language);
+  }, [language]);
 
-  //   console.log(userCookiePreferences);
-  // }, [onPreferencesChanged]);
+  useCookieConsent(googleAnalyticsTrackingId, microsoftClarityTrackingId);
 
   useEffect(() => {
     init({
@@ -103,12 +100,13 @@ const IndexPage: React.FC<PageProps> = () => {
             'We need to save some technical cookies, for the website to function properly.',
           category: 'essential',
         },
-        {
-          id: 'functional',
-          label: 'Functional Cookies',
-          category: 'functional',
-          description: 'We need to save some basic preferences eg. language.',
-        },
+        // {
+        //   id: 'functional',
+        //   label: 'Functional Cookies',
+        //   category: 'functional',
+        //   description:
+        //     'We need to save some basic preferences, e.g., language.',
+        // },
         {
           id: 'statistics',
           label: 'Statistics',
@@ -116,13 +114,6 @@ const IndexPage: React.FC<PageProps> = () => {
           description:
             'We need to save some technical cookies, for the website to function properly.',
         },
-        // {
-        //   id: 'social',
-        //   label: 'Social Media Cookies',
-        //   category: 'social',
-        //   description:
-        //     'We need to save some social cookies, for the website to function properly.',
-        // },
       ],
       essentialLabel: 'Always on',
       permissionLabels: {
@@ -135,7 +126,7 @@ const IndexPage: React.FC<PageProps> = () => {
         title: 'Cookies, Anyone?',
         subTitle: "Yep, it's another one of *those* banners...",
         description:
-          "We know, cookies aren't everyone's favorite snack, but they help me (the website's developer) give you the smoothest, bug-free experience possible. Just a few crumbs can make all the difference!",
+          'Cookies help us provide you with the smoothest experience possible.',
       },
       cookiePolicy: {
         url: 'https://i18nweave.com/cookie-policy',
@@ -144,8 +135,6 @@ const IndexPage: React.FC<PageProps> = () => {
       customizeLabel: 'Customize',
     });
   }, []);
-
-  //todo: uitzoeken layout
 
   return (
     <>
@@ -161,7 +150,6 @@ const IndexPage: React.FC<PageProps> = () => {
             />
             <span className="text-lg">i18nWeave</span>
           </div>
-
           <button
             type="button"
             aria-label="Toggle Menu"
@@ -174,7 +162,6 @@ const IndexPage: React.FC<PageProps> = () => {
               <span className="bar"></span>
             </div>
           </button>
-
           <nav
             ref={menuRef}
             className={`mt-16 lg:flex lg:items-center lg:static lg:p-0 absolute left-0 w-full bg-primary lg:bg-transparent lg:flex-row lg:space-x-4 transition-transform transform lg:mt-0 ${
@@ -200,26 +187,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   {t('navigation:main.gettingStarted')}
                 </a>
               </li>
-              {/* <li>
-              <a
-                href="#section-3"
-                className="text-white hover:text-highlight"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Section 3
-              </a>
-            </li>
-            <li>
-              <a
-                href="#section-4"
-                className="text-white hover:text-highlight"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Section 4
-              </a>
-            </li> */}
             </ul>
-
             <LanguageSelector />
           </nav>
         </header>
@@ -232,57 +200,30 @@ const IndexPage: React.FC<PageProps> = () => {
             <h1 className="text-white text-4xl mb-8">
               {t('section.features.title')}
             </h1>
-
             <p className="my-4">
               {t('section.features.introduction.description')}
             </p>
-
-            {/* <p className="my-4">{t('section.features.introduction.support')}</p> */}
           </div>
 
           <div className="flex flex-wrap justify-center max-w-screen-xl">
-            {/* <div className="w-1/2 md:w-1/4 text-center mb-8 px-4">
-            <FontAwesomeIcon className="text-4xl pb-2" icon={faLanguage} />
-            <h3 className="text-lg font-bold text-highlight pb-2">
-              Auto-Translate
-            </h3>
-            <p className="text-md">
-              Automatically translate your keys to any of languages supported by
-              Google Translate or DeepL.
-            </p>
-          </div> */}
-
-            {/* md:w-1/4 */}
             <div className="w-2/6 text-center px-4 mb-4 lg:mb-8">
               <FontAwesomeIcon className="text-4xl pb-2" icon={faEye} />
               <h3 className="text-lg font-bold text-variant-2 pb-2">
                 {t('section.features.keyExtraction.title')}
               </h3>
-              <p className="text-md">
-                {/* {t('section.features.keyExtraction.description')} */}
-              </p>
             </div>
-
-            {/* md:w-1/4 */}
             <div className="w-2/6 text-center px-4 mb-4 lg:mb-8">
-              {' '}
               <FontAwesomeIcon className="text-4xl pb-2" icon={faObjectGroup} />
               <h3 className="text-lg font-bold text-variant-2 pb-2">
                 {t('section.features.easyConfig.title')}
               </h3>
-              <p className="text-md">
-                {/* {t('section.features.easyConfig.description')} */}
-              </p>
             </div>
-
-            {/* md:w-1/4 */}
             <div className="w-1/3 text-center mb-8 px-4">
               <FontAwesomeIcon className="text-4xl pb-2" icon={faCheckDouble} />
               <h3 className="text-lg font-bold text-variant-2 pb-2">
                 {t('section.features.foss.title')}
               </h3>
             </div>
-
             <div className="w-2/6 text-center mb-8 px-4">
               <FontAwesomeIcon className="text-4xl pb-2" icon={faAngular} />
               <h3 className="text-lg font-bold text-variant-2 pb-2">
@@ -292,7 +233,6 @@ const IndexPage: React.FC<PageProps> = () => {
                 {t('section.features.support.angular.description')}
               </p>
             </div>
-
             <div className="w-2/6 text-center mb-8 px-4">
               <FontAwesomeIcon className="text-4xl pb-2" icon={faReact} />
               <h3 className="text-lg font-bold text-variant-2 pb-2">
@@ -302,7 +242,6 @@ const IndexPage: React.FC<PageProps> = () => {
                 {t('section.features.support.react.description')}
               </p>
             </div>
-
             <div className="w-2/6 text-center mb-8 px-4">
               <FontAwesomeIcon className="text-4xl pb-2" icon={faCode} />
               <h3 className="text-lg font-bold text-variant-2 pb-2">
@@ -314,6 +253,7 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
           </div>
         </section>
+
         <section
           id="getting-started"
           className="h-screen flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8"
@@ -355,79 +295,14 @@ const IndexPage: React.FC<PageProps> = () => {
               )}{' '}
               .
             </div>
-
-            {/* <h3 className="text-lg font-bold text-variant-1 pt-4 pb-2">
-            Configuration Options
-          </h3>
-
-          <div>
-            i18nWeave provides a wide range of configuration options to suit
-            your needs. You can configure the extension to work with your
-            existing project setup. Please have a look on the Examples page for
-            more information on how to configure the extension. And to see the
-            extension in action.
-          </div> */}
           </div>
         </section>
-        {/* <section
-        id="section-3"
-        className="h-screen flex items-center justify-center bg-variant-3 snap-start scroll-mt-16"
-      >
-        <h1 className="text-white text-4xl">Section 3</h1>
-      </section>
-      <section
-        id="section-4"
-        className="h-screen flex items-center justify-center bg-variant-4 snap-start scroll-mt-16"
-      >
-        <h1 className="text-white text-4xl">Section 4</h1>
-      </section> */}
       </main>
-      <footer>
-        <div>
-          <p>Footer</p>
-        </div>
-      </footer>
     </>
   );
 };
 
 export default IndexPage;
-
-// export const Head: HeadFC = ({ data, location }) => {
-//   const context = React.useContext(I18nextContext);
-
-//   useEffect(() => {
-//     console.log(context.language);
-//   }, [context.language]);
-
-//   return (
-//     <head>
-//       <title>i18nWeave - Developer's i18n Companion</title>
-//       <meta
-//         name="description"
-//         content="i18nWeave helps developers efficiently handle translations in their projects. Increase productivity and ensure consistency across multiple languages."
-//       />
-//       <meta
-//         name="keywords"
-//         content="i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
-//       />
-//     </head>
-//   );
-// };
-
-export const Head = () => (
-  <>
-    <title>i18nWeave - Developer's i18n Companion</title>
-    <meta
-      name="description"
-      content="i18nWeave helps developers efficiently handle translations in their projects. Increase productivity and ensure consistency across multiple languages."
-    />
-    <meta
-      name="keywords"
-      content="i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
-    />
-  </>
-);
 
 export const query = graphql`
   query ($language: String!) {

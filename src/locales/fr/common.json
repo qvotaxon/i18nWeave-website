@@ -2,7 +2,7 @@
     "cookies": {
         "essential": {
             "description": "Nous devons enregistrer certains cookies techniques, pour que le site Internet fonctionne correctement.",
-            "label": "Biscuits essentiels"
+            "label": "Cookies essentiels"
         },
         "functional": {
             "description": "Nous devons sauvegarder certaines préférences de base, par exemple la langue.",

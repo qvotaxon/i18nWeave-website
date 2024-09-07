@@ -13,26 +13,16 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint --config ./eslint.config.js src/**/*.{js,ts,tsx}",
-    "pretty": "prettier --write \"./src/**/*.{ts,tsx}\""
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@eslint/js": "^9.10.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.4.0",
-    "@typescript-eslint/parser": "^8.4.0",
     "autoprefixer": "^10.4.20",
     "cookie-though": "^1.5.0",
-    "eslint": "^9.10.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.30.0",
-    "eslint-plugin-react": "^7.35.2",
     "ga-gtag": "^1.2.0",
     "gatsby": "^5.13.7",
     "gatsby-plugin-canonical-urls": "^5.13.1",
@@ -41,13 +31,11 @@
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-pnpm-gatsby-5": "^1.2.11",
     "gatsby-plugin-postcss": "^6.13.1",
-    "gatsby-plugin-prettier-eslint": "^1.0.6",
     "gatsby-plugin-react-i18next": "^3.0.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
-    "globals": "^15.9.0",
     "i18next": "^23.14.0",
     "postcss": "^8.4.45",
     "react": "^18.3.1",
@@ -59,12 +47,12 @@
     "tsconfig-paths-webpack-plugin": "^4.1.0"
   },
   "devDependencies": {
-    "@types/node": "^20.11.19",
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
-    "eslint-plugin-no-relative-import-paths": "^1.5.5",
-    "tsconfig-paths-webpack-plugin": "^4.1.0",
-    "typescript": "^5.3.3"
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^20.16.5",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "globals": "^15.9.0",
+    "typescript": "^5.5.4"
   },
   "pnpm": {
     "overrides": {
@@ -73,4 +61,3 @@
     }
   }
 }
-

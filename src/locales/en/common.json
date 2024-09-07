@@ -1,4 +1,10 @@
 {
+    "404": {
+        "pageNotFound": {
+            "errorMessage": "It looks like it got lost in translation. We could not find the page you were looking for.",
+            "title": "Page Not Found"
+        }
+    },
     "cookies": {
         "essential": {
             "description": "We need to save some technical cookies, for the website to function properly.",

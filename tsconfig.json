@@ -120,5 +120,5 @@
     "./gatsby-config.ts",
     "./plugins/**/*",
     "static"
-  ]
+, "src/libs/util/.eslintrc.js"  ]
 }

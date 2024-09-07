@@ -44,6 +44,12 @@ const GettingStartedPage: React.FC<PageProps> = () => {
                     <code className="text-secondary">Cmd+Shift+P</code>{' '}
                     {t('section.gettingStarted.configureProject.description.partFour')}{' '}
                     .
+
+                    <a
+                        href="/features"
+                        className="button text-center w-full block md:inline md:w-auto text-primary p-2 md-0 border-4 border-primary text-2xl hover:text-white hover:border-white mt-8 md:mt-0">
+                        {t('section.gettingStarted.buttons.features')}
+                    </a>
                 </div>
             </section>
         </Layout>

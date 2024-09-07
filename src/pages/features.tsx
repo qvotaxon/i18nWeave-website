@@ -29,6 +29,11 @@ const FeaturesPage: React.FC<PageProps> = () => {
                     <p className='my-4'>
                     {t('section.features.tableView.introduction')}
                     </p>
+
+                    <a href="/getting-started"
+                        className="button text-center w-full block md:inline md:w-auto text-white p-2 md-0 border-4 border-white text-2xl hover:text-primary hover:border-primary mt-8">
+                        {t('section.gettingStarted.buttons.getStarted')}
+                    </a>
                 </div>
             </section>
         </Layout>

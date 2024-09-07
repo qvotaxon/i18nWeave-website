@@ -24,6 +24,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "autoprefixer": "^10.4.20",
     "cookie-though": "^1.5.0",
+    "eslint-config-prettier": "^9.1.0",
     "ga-gtag": "^1.2.0",
     "gatsby": "^5.13.7",
     "gatsby-plugin-canonical-urls": "^5.13.1",
@@ -55,13 +56,14 @@
     "@types/node": "^20.16.5",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.4.0",
+    "@typescript-eslint/parser": "^8.4.0",
     "eslint": "^9.9.1",
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-no-relative-import-paths": "^1.5.5",
     "eslint-plugin-react": "^7.35.2",
     "globals": "^15.9.0",
-    "typescript": "^5.5.4",
-    "typescript-eslint": "^8.4.0"
+    "typescript": "^5.5.4"
   },
   "pnpm": {
     "overrides": {

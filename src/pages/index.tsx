@@ -20,10 +20,10 @@ const IndexPage: React.FC<PageProps> = () => {
     <Layout>
       <section
         id="features"
-        className="h-screen flex flex-col items-center bg-variant-1 snap-start scroll-mt-16 pt-8 text-center">
+        className="h-screen flex flex-col items-center bg-variant-1 snap-start scroll-mt-16 pt-8 text-center [@media_(max-height:666px)]:h-fit">
         <div className="pb-4 px-4 lg:px-12 lg:pb-16 max-w-screen-xl">
           <h1 className="text-white text-4xl mb-8">
-            {t('section.features.title')}
+            {t('section.i18nWeave.introduction.title')}
           </h1>
 
           <p className="my-4">
@@ -87,41 +87,33 @@ const IndexPage: React.FC<PageProps> = () => {
       </section>
       <section
         id="getting-started"
-        className="h-screen flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8">
+        className="h-screen flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8 [@media_(max-height:666px)]:h-fit [@media_(max-height:666px)]:py-8">
         <h2 className="text-primary text-4xl mb-8 text-center max-w-screen-xl">
           {t('section.gettingStarted.title')}
         </h2>
 
-        <div className="w-5/6 text-primary max-w-screen-xl">
-          <h2 className="text-lg font-bold text-variant-1 pb-2">
-            {t('section.gettingStarted.installExtension.title')}
-          </h2>
-
+        <div className="w-5/6 text-primary max-w-screen-xl text-lg">
           <div>
-            {t('section.gettingStarted.installExtension.description')}{' '}
-            <a
-              className="text-primary underline"
-              href="https://marketplace.visualstudio.com/items?itemName=qvotaxon.i18nweave">
-              Visual Studio Code Marketplace.
-            </a>
+            <p className="my-4">
+              {t('section.gettingStarted.configurationWizard.introduction')}
+            </p>
+            <p className="my-4">
+              {t('section.gettingStarted.librarySupport.introduction')}
+            </p>
           </div>
+        </div>
 
-          <h2 className="text-lg font-bold text-variant-1 pt-4 pb-2">
-            {t('section.gettingStarted.configureProject.title')}
-          </h2>
-
-          <div>
-            {t('section.gettingStarted.configureProject.description.partOne')}{' '}
-            <code className="text-secondary">`Configure i18nWeave`</code>{' '}
-            {t('section.gettingStarted.configureProject.description.partTwo')}{' '}
-            <code className="text-secondary">Ctrl+Shift+P</code>
-            {t(
-              'section.gettingStarted.configureProject.description.partThree'
-            )}{' '}
-            <code className="text-secondary">Cmd+Shift+P</code>{' '}
-            {t('section.gettingStarted.configureProject.description.partFour')}{' '}
-            .
-          </div>
+        <div className="mt-8 w-5/6">
+          <a
+            href="/getting-started"
+            className="button text-center w-full block md:inline md:w-auto text-primary p-2 md-0 md:mx-2 border-4 border-primary text-2xl hover:text-white hover:border-white">
+            {t('section.gettingStarted.buttons.getStarted')}
+          </a>
+          <a
+            href="/features"
+            className="button text-center w-full block md:inline md:w-auto text-primary p-2 md-0 md:mx-2 border-4 border-primary text-2xl hover:text-white hover:border-white mt-4 md:mt-0">
+            {t('section.gettingStarted.buttons.features')}
+          </a>
         </div>
       </section>
     </Layout>

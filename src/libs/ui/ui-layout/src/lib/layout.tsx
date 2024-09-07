@@ -16,6 +16,9 @@ import { LanguageSelector } from '@i18n-weave/ui/ui-language-selector';
 
 import { useGoogleAnalytics } from '@i18n-weave/util/util-google-analytics';
 import { useMicrosoftClarity } from '@i18n-weave/util/util-microsoft-clarity';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
+import {faCloudDownloadAlt, faDownload} from '@fortawesome/free-solid-svg-icons';
 
 interface LayoutProps {
   children: ReactNode;
@@ -151,18 +154,45 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
   }, []);
 
   return (
-    <main className="font-sans h-screen overflow-y-scroll snap-y snap-mandatory text-white">
+    <main className="font-sans h-screen overflow-y-scroll snap-y snap-mandatory text-white [@media_(max-height:666px)]:snap-none [@media_(max-height:666px)]:overflow-auto [@media_(max-height:666px)]:h-fit">
       <header className="sticky top-0 w-full bg-primary py-4 z-10 flex items-center justify-between px-4">
         <div className="flex items-center space-x-4">
-          <StaticImage
-            width={32}
-            height={32}
-            src="../../../../../images/logo.png"
-            alt="i18nWeave Logo"
-            className="h-8 w-8"
-          />
+          <a href='/'>
+            <StaticImage
+              width={32}
+              height={32}
+              src="../../../../../images/logo.png"
+              alt="i18nWeave Logo"
+              className="h-8 w-8"
+            />
+          </a><a href='/'>
           <span className="text-lg">i18nWeave</span>
+          </a>
         </div>
+
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=qvotaxon.i18nweave"
+          target='_blank'
+          type="button"
+          aria-label="Microsoft Marketplace"
+          title='Download i18nWeave for Visual Studio Code'
+          className="block absolute lg:right-44 text-white focus:outline-none z-10 hover:cursor-pointer right-28 text-3xl hover:text-secondary">
+          <div>
+            <FontAwesomeIcon icon={faCloudDownloadAlt} />
+          </div>
+        </a>
+
+        <a
+          href="https://github.com/qvotaxon/i18nweave-vscode"
+          target='_blank'
+          type="button"
+          aria-label="Github Repository"
+          title='View i18nWeave on GitHub'
+          className="block absolute lg:right-32 text-white focus:outline-none z-10 hover:cursor-pointer right-16 text-3xl hover:text-secondary">
+          <div>
+            <FontAwesomeIcon icon={faGithub} />
+          </div>
+        </a>
 
         <button
           type="button"
@@ -184,7 +214,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
           <ul className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 p-4 lg:ml-8 lg:p-0">
             <li>
               <a
-                href="#features"
+                href="/features"
                 className="text-white hover:text-highlight"
                 onClick={() => setIsMenuOpen(false)}>
                 {t('navigation:main.features')}
@@ -192,7 +222,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
             </li>
             <li>
               <a
-                href="#getting-started"
+                href="/getting-started"
                 className="text-white hover:text-highlight"
                 onClick={() => setIsMenuOpen(false)}>
                 {t('navigation:main.gettingStarted')}

@@ -38,6 +38,12 @@
   },
   "section": {
     "features": {
+      "automaticKeyExtraction": {
+        "introduction": "Extrait instantanément les clés de traduction de tes fichiers de code à chaque fois que tu les enregistres. i18nWeave utilise une détection intelligente des changements de code, ce qui garantit que les analyses n'ont lieu que lorsque c'est nécessaire."
+      },
+      "automaticTranslation": {
+        "introduction": "Traduit automatiquement les clés manquantes dans toutes les langues définies chaque fois que tu ajoutes une traduction à un fichier de ressources. i18nWeave prend actuellement en charge la traduction avec DeepL (en version bêta), et prévoit d'ajouter Google Translate prochainement."
+      },
       "easyConfig": {
         "title": "Configuration facile"
       },
@@ -64,9 +70,19 @@
           "title": "React"
         }
       },
-      "title": "Gère tes traductions en toute transparence"
+      "tableView": {
+        "introduction": "Gère tes traductions facilement grâce à l'affichage interactif du tableau. Fini le défilement interminable des fichiers JSON - trouve les clés non traduites en haut du tableau pour un accès rapide."
+      },
+      "title": "Caractéristiques"
     },
     "gettingStarted": {
+      "buttons": {
+        "features": "Montre-moi les caractéristiques",
+        "getStarted": "Je veux commencer"
+      },
+      "configurationWizard": {
+        "introduction": "Après avoir installé l'extension VSCode, tu seras opérationnel en un rien de temps grâce à l'assistant de configuration."
+      },
       "configureProject": {
         "description": {
           "partFour": "on macOS",
@@ -80,7 +96,15 @@
         "description": "Recherche l'extension i18nWeave dans la fenêtre d'extensions de Visual Studio Code ou visite le site de l'entreprise",
         "title": "Installer l'extension"
       },
+      "librarySupport": {
+        "introduction": "i18nWeave prend en charge une grande variété de projets, de cadres et de bibliothèques. Tant que tu utilises i18next pour tes traductions, i18nWeave peut être ton outil de référence. Si tu n'utilises pas encore i18next, ne t'inquiète pas ! J'ai créé des exemples d'applications présentant différentes approches pour t'aider à démarrer."
+      },
       "title": "Pour commencer"
+    },
+    "i18nWeave": {
+      "introduction": {
+        "title": "Gère tes traductions en toute transparence"
+      }
     }
   }
 }

@@ -38,6 +38,12 @@
   },
   "section": {
     "features": {
+      "automaticKeyExtraction": {
+        "introduction": "Haal onmiddellijk vertaalsleutels uit je codebestanden wanneer je ze opslaat. i18nWeave gebruikt slimme detectie van codewijzigingen, zodat scans alleen plaatsvinden wanneer dat nodig is."
+      },
+      "automaticTranslation": {
+        "introduction": "Automatisch vertalen van ontbrekende toetsen in alle gedefinieerde talen wanneer je een vertaling toevoegt aan een resourcebestand. i18nWeave ondersteunt momenteel vertaling met DeepL (in bèta), met plannen om Google Translate binnenkort toe te voegen."
+      },
       "easyConfig": {
         "title": "Eenvoudige configuratie"
       },
@@ -64,9 +70,19 @@
           "title": "React"
         }
       },
-      "title": "Naadloos je vertalingen beheren"
+      "tableView": {
+        "introduction": "Beheer je vertalingen eenvoudig met de interactieve tabelweergave. Nooit meer eindeloos scrollen door JSON-bestanden - zoek onvertaalde sleutels bovenaan de tabel voor snelle toegang."
+      },
+      "title": "Kenmerken"
     },
     "gettingStarted": {
+      "buttons": {
+        "features": "Toon me de functies",
+        "getStarted": "Ik wil aan de slag"
+      },
+      "configurationWizard": {
+        "introduction": "Nadat je de VSCode-extensie hebt geïnstalleerd, kun je in een mum van tijd aan de slag met de Configuratiewizard."
+      },
       "configureProject": {
         "description": {
           "partFour": "op macOS",
@@ -80,7 +96,15 @@
         "description": "Zoek naar de i18nWeave-extensie in het uitbreidingsvenster van Visual Studio Code of ga naar de",
         "title": "De extensie installeren"
       },
+      "librarySupport": {
+        "introduction": "i18nWeave ondersteunt een grote verscheidenheid aan projecten, frameworks en bibliotheken. Zolang je i18next gebruikt voor je vertalingen, kan i18nWeave je go-to tool zijn. Als je i18next nog niet gebruikt, geen zorgen! Ik heb voorbeeldapplicaties gemaakt met verschillende benaderingen om je op weg te helpen."
+      },
       "title": "Aan de slag"
+    },
+    "i18nWeave": {
+      "introduction": {
+        "title": "Naadloos je vertalingen beheren"
+      }
     }
   }
 }

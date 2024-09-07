@@ -38,6 +38,12 @@
   },
   "section": {
     "features": {
+      "automaticKeyExtraction": {
+        "introduction": "Extrahiere sofort Übersetzungsschlüssel aus deinen Codedateien, wenn du sie speicherst. i18nWeave nutzt eine intelligente Erkennung von Codeänderungen, um sicherzustellen, dass nur bei Bedarf gescannt wird."
+      },
+      "automaticTranslation": {
+        "introduction": "Übersetze automatisch fehlende Schlüssel in allen definierten Sprachen, wenn du einer Ressourcendatei eine Übersetzung hinzufügst. i18nWeave unterstützt derzeit die Übersetzung mit DeepL (in der Beta-Phase) und plant, Google Translate bald hinzuzufügen."
+      },
       "easyConfig": {
         "title": "Einfach konfigurieren"
       },
@@ -64,9 +70,19 @@
           "title": "React"
         }
       },
-      "title": "Verwalte deine Übersetzungen nahtlos"
+      "tableView": {
+        "introduction": "Verwalte deine Übersetzungen ganz einfach mit der interaktiven Tabellenansicht. Kein endloses Scrollen durch JSON-Dateien mehr - finde die nicht übersetzten Schlüssel oben in der Tabelle für schnellen Zugriff."
+      },
+      "title": "Eigenschaften"
     },
     "gettingStarted": {
+      "buttons": {
+        "features": "Zeig mir die Funktionen",
+        "getStarted": "Ich möchte loslegen"
+      },
+      "configurationWizard": {
+        "introduction": "Nachdem du die VSCode-Erweiterung installiert hast, kannst du mit dem Konfigurationsassistenten im Handumdrehen loslegen."
+      },
       "configureProject": {
         "description": {
           "partFour": "auf macOS",
@@ -80,7 +96,15 @@
         "description": "Suchen Sie im Fenster der Visual Studio Code-Erweiterungen nach der i18nWeave-Erweiterung oder besuchen Sie die",
         "title": "Installiere die Erweiterung"
       },
+      "librarySupport": {
+        "introduction": "i18nWeave unterstützt eine Vielzahl von Projekten, Frameworks und Bibliotheken. Solange du i18next für deine Übersetzungen verwendest, kann i18nWeave dein Tool der Wahl sein. Wenn du i18next noch nicht verwendest, mach dir keine Sorgen! Ich habe Beispielanwendungen mit verschiedenen Ansätzen erstellt, um dir den Einstieg zu erleichtern."
+      },
       "title": "Erste Schritte"
+    },
+    "i18nWeave": {
+      "introduction": {
+        "title": "Verwalte deine Übersetzungen nahtlos"
+      }
     }
   }
 }

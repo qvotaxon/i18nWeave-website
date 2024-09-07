@@ -1,6 +1,7 @@
-import { useTranslation } from 'react-i18next';
+import { Layout } from '@i18n-weave/ui/ui-layout';
+
 import * as React from 'react';
-import { graphql, type PageProps } from 'gatsby';
+import { faAngular, faReact } from '@fortawesome/free-brands-svg-icons';
 import {
   faCheckDouble,
   faCode,
@@ -8,8 +9,8 @@ import {
   faObjectGroup,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngular, faReact } from '@fortawesome/free-brands-svg-icons';
-import { Layout } from '@i18n-weave/ui/ui-layout';
+import { type PageProps, graphql } from 'gatsby';
+import { useTranslation } from 'react-i18next';
 
 const IndexPage: React.FC<PageProps> = () => {
   const { t } = useTranslation();
@@ -18,8 +19,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <Layout>
       <section
         id="features"
-        className="h-screen flex flex-col items-center bg-variant-1 snap-start scroll-mt-16 pt-8 text-center"
-      >
+        className="h-screen flex flex-col items-center bg-variant-1 snap-start scroll-mt-16 pt-8 text-center">
         <div className="pb-4 px-4 lg:px-12 lg:pb-16 max-w-screen-xl">
           <h1 className="text-white text-4xl mb-8">
             {t('section.features.title')}
@@ -86,8 +86,7 @@ const IndexPage: React.FC<PageProps> = () => {
       </section>
       <section
         id="getting-started"
-        className="h-screen flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8"
-      >
+        className="h-screen flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8">
         <h2 className="text-primary text-4xl mb-8 text-center max-w-screen-xl">
           {t('section.gettingStarted.title')}
         </h2>
@@ -101,8 +100,7 @@ const IndexPage: React.FC<PageProps> = () => {
             {t('section.gettingStarted.installExtension.description')}{' '}
             <a
               className="text-primary underline"
-              href="https://marketplace.visualstudio.com/items?itemName=qvotaxon.i18nweave"
-            >
+              href="https://marketplace.visualstudio.com/items?itemName=qvotaxon.i18nweave">
               Visual Studio Code Marketplace.
             </a>
           </div>

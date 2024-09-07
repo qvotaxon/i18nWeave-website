@@ -1,83 +1,80 @@
 {
-  "cookies": {
-    "essential": {
-      "description": "We moeten een aantal technische cookies opslaan om de website goed te laten functioneren.",
-      "label": "Essentiële koekjes"
-    },
-    "functional": {
-      "description": "We moeten een aantal basisvoorkeuren opslaan, zoals taal.",
-      "label": "Functionele cookies"
-    },
-    "general": {
-      "cookiePolicy": {
-        "label": "Lees de volledige cookieverklaring"
-      },
-      "customizeLabel": "Pas  aan",
-      "essentialLabel": "Altijd aan",
-      "header": {
-        "description": "We weten dat koekjes niet ieders favoriete snack zijn, maar ze helpen mij (de ontwikkelaar van de website) wel om je een zo soepel mogelijke ervaring zonder bugs te geven. Een paar kruimels kunnen al het verschil maken!",
-        "subTitle": "Ja, het is weer zo'n pop-up...",
-        "title": "Koekjes, iemand?"
-      },
-      "permissionLabels": {
-        "accept": "Accepteer",
-        "acceptAll": "Alles accepteren",
-        "decline": "Afwijzen"
-      }
-    },
-    "statistics": {
-      "description": "We moeten een aantal technische cookies opslaan om de website goed te laten functioneren.",
-      "label": "Statistieken"
-    }
-  },
-  "section": {
-    "features": {
-      "easyConfig": {
-        "description": "",
-        "title": "Eenvoudige configuratie"
-      },
-      "foss": {
-        "title": "Gratis en Open Source"
-      },
-      "introduction": {
-        "description": "Beheer je vertalingen eenvoudig met de i18nWeave VSCode-extensie. i18nWeave biedt een groot aantal functies om je te helpen je vertalingen te beheren en je vertalingen synchroon te houden met je codebase.",
-        "support": ""
-      },
-      "keyExtraction": {
-        "description": "",
-        "title": "Automatische sleutelextractie"
-      },
-      "support": {
-        "angular": {
-          "description": "Ondersteunt Angular i18next",
-          "title": "Angular"
+    "cookies": {
+        "essential": {
+            "description": "We moeten een aantal technische cookies opslaan om de website goed te laten functioneren.",
+            "label": "Essentiële koekjes"
         },
-        "custom": {
-          "description": "Ondersteunt alles met i18next",
-          "title": "Custom"
+        "functional": {
+            "description": "We moeten een aantal basisvoorkeuren opslaan, zoals taal.",
+            "label": "Functionele cookies"
         },
-        "react": {
-          "description": "Ondersteunt React i18next",
-          "title": "React"
+        "general": {
+            "cookiePolicy": {
+                "label": "Lees de volledige cookieverklaring"
+            },
+            "customizeLabel": "Pas  aan",
+            "essentialLabel": "Altijd aan",
+            "header": {
+                "description": "We weten dat koekjes niet ieders favoriete snack zijn, maar ze helpen mij (de ontwikkelaar van de website) wel om je een zo soepel mogelijke ervaring zonder bugs te geven. Een paar kruimels kunnen al het verschil maken!",
+                "subTitle": "Ja, het is weer zo'n pop-up...",
+                "title": "Koekjes, iemand?"
+            },
+            "permissionLabels": {
+                "accept": "Accepteer",
+                "acceptAll": "Alles accepteren",
+                "decline": "Afwijzen"
+            }
+        },
+        "statistics": {
+            "description": "We moeten een aantal technische cookies opslaan om de website goed te laten functioneren.",
+            "label": "Statistieken"
         }
-      },
-      "title": "Naadloos je vertalingen beheren"
     },
-    "gettingStarted": {
-      "configureProject": {
-        "description": {
-          "partFour": "op macOS",
-          "partOne": "Open het commandopalet en voer het",
-          "partThree": "op Windows/Linux of",
-          "partTwo": "opdracht. Volg de instructies om je project op te zetten. Om het opdrachtenpalet te openen, druk je op"
+    "section": {
+        "features": {
+            "easyConfig": {
+                "title": "Eenvoudige configuratie"
+            },
+            "foss": {
+                "title": "Gratis en Open Source"
+            },
+            "introduction": {
+                "description": "Beheer je vertalingen eenvoudig met de i18nWeave VSCode-extensie. i18nWeave biedt een groot aantal functies om je te helpen je vertalingen te beheren en je vertalingen synchroon te houden met je codebase."
+            },
+            "keyExtraction": {
+                "title": "Automatische sleutelextractie"
+            },
+            "support": {
+                "angular": {
+                    "description": "Ondersteunt Angular i18next",
+                    "title": "Angular"
+                },
+                "custom": {
+                    "description": "Ondersteunt alles met i18next",
+                    "title": "Custom"
+                },
+                "react": {
+                    "description": "Ondersteunt React i18next",
+                    "title": "React"
+                }
+            },
+            "title": "Naadloos je vertalingen beheren"
         },
-        "title": "Je project configureren"
-      },
-      "installExtension": {
-        "description": "Zoek naar de i18nWeave-extensie in het uitbreidingsvenster van Visual Studio Code of ga naar de",
-        "title": "De extensie installeren"
-      },
-      "title": "Aan de slag"
+        "gettingStarted": {
+            "configureProject": {
+                "description": {
+                    "partFour": "op macOS",
+                    "partOne": "Open het commandopalet en voer het",
+                    "partThree": "op Windows/Linux of",
+                    "partTwo": "opdracht. Volg de instructies om je project op te zetten. Om het opdrachtenpalet te openen, druk je op"
+                },
+                "title": "Je project configureren"
+            },
+            "installExtension": {
+                "description": "Zoek naar de i18nWeave-extensie in het uitbreidingsvenster van Visual Studio Code of ga naar de",
+                "title": "De extensie installeren"
+            },
+            "title": "Aan de slag"
+        }
     }
-  }
 }

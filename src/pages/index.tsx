@@ -1,6 +1,7 @@
+import * as React from 'react';
+
 import { Layout } from '@i18n-weave/ui/ui-layout';
 
-import * as React from 'react';
 import { faAngular, faReact } from '@fortawesome/free-brands-svg-icons';
 import {
   faCheckDouble,

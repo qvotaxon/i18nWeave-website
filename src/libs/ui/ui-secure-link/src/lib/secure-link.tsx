@@ -45,7 +45,8 @@ export const SecureLink: React.FC<SecureLinkProps> = ({
   // Use Gatsby Link for internal links, and <a> for others
   if (internal) {
     return (
-      <Link
+      // @ts-ignore
+      <Link // todo: find out fix for this typing issue.
         to={to}
         language={language}
         title={title}

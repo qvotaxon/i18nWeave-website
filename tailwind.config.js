@@ -16,7 +16,7 @@ module.exports = {
         'secondary': '#375b95',
         'highlight': '#f8dc7c',
         'variant-1': '#375b95',
-        'variant-2': '#a9d864',
+        'variant-2': '#7c9f48',
         'variant-3': '#e0564c',
         'variant-4': '#f2b34c',
       }

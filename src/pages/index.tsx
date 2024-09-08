@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Layout } from '@i18n-weave/ui/ui-layout';
+import { SecureLink } from '@i18n-weave/ui/ui-secure-link';
 
 import { faAngular, faReact } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -103,17 +104,17 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
 
-        <div className="mt-8 w-5/6">
-          <a
-            href="/getting-started"
-            className="button text-center w-full block md:inline md:w-auto text-primary p-2 md-0 md:mx-2 border-4 border-primary text-2xl hover:text-white hover:border-white">
+        <div className="mt-8 w-5/6 max-w-screen-xl">
+          <SecureLink
+            to="/getting-started"
+            className="button text-center w-full block md:inline md:w-auto text-primary p-2 mx-0 border-4 border-primary text-2xl hover:text-white hover:border-white">
             {t('section.gettingStarted.buttons.getStarted')}
-          </a>
-          <a
-            href="/features"
-            className="button text-center w-full block md:inline md:w-auto text-primary p-2 md-0 md:mx-2 border-4 border-primary text-2xl hover:text-white hover:border-white mt-4 md:mt-0">
+          </SecureLink>
+          <SecureLink
+            to="/features"
+            className="button text-center w-full block md:inline md:w-auto text-primary p-2 mx-0 md:mx-4 border-4 border-primary text-2xl hover:text-white hover:border-white mt-4 md:mt-0">
             {t('section.gettingStarted.buttons.features')}
-          </a>
+          </SecureLink>
         </div>
       </section>
     </Layout>

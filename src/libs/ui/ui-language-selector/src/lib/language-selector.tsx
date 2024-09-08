@@ -1,9 +1,12 @@
-import { useI18next } from 'gatsby-plugin-react-i18next';
 import React, { useEffect, useRef, useState } from 'react';
+
+import { SecureLink } from '@i18n-weave/ui/ui-secure-link';
+
+import { useI18next } from 'gatsby-plugin-react-i18next';
 import { FlagIcon, FlagIconCode } from 'react-flag-kit';
 
 export const LanguageSelector: React.FC = () => {
-  const { languages, changeLanguage, language } = useI18next();
+  const { languages, originalPath, language } = useI18next();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -57,24 +60,39 @@ export const LanguageSelector: React.FC = () => {
         <div className="outline-white outline-1 outline w-full z-10 bg-primary border border-primary rounded-md shadow-lg lg:right-0 lg:w-48 lg:absolute">
           <div className="py-1">
             {languages.map(lng => (
-              <button
-                type="button"
-                key={lng}
-                onClick={e => {
-                  e.preventDefault();
-                  changeLanguage(lng);
-                  setIsOpen(false); // Close dropdown after language change
-                }}
-                className="flex items-center px-4 py-2 w-full text-sm text-white hover:bg-secondary hover:text-primary hover:font-bold">
-                <FlagIcon
-                  code={
-                    lng === 'en' ? 'US' : (lng.toUpperCase() as FlagIconCode)
-                  }
-                  style={{ width: '1.5rem', height: '1rem' }}
-                  className="mr-2 h-4"
-                />
-                {lng.toUpperCase()}
-              </button>
+              <SecureLink to={originalPath} language={lng}>
+                <span
+                  className="button flex items-center px-4 py-2 w-full text-sm text-white hover:bg-secondary hover:text-highlight hover:font-bold"
+                  key={lng}>
+                  <FlagIcon
+                    code={
+                      lng === 'en' ? 'US' : (lng.toUpperCase() as FlagIconCode)
+                    }
+                    style={{ width: '1.5rem', height: '1rem' }}
+                    className="mr-2 h-4"
+                  />
+                  {lng.toUpperCase()}
+                </span>
+              </SecureLink>
+
+              // <button
+              //   type="button"
+              //   key={lng}
+              //   onClick={e => {
+              //     e.preventDefault();
+              //     changeLanguage(lng);
+              //     setIsOpen(false); // Close dropdown after language change
+              //   }}
+              //   className="flex items-center px-4 py-2 w-full text-sm text-white hover:bg-secondary hover:text-primary hover:font-bold">
+              //   <FlagIcon
+              //     code={
+              //       lng === 'en' ? 'US' : (lng.toUpperCase() as FlagIconCode)
+              //     }
+              //     style={{ width: '1.5rem', height: '1rem' }}
+              //     className="mr-2 h-4"
+              //   />
+              //   {lng.toUpperCase()}
+              // </button>
             ))}
           </div>
         </div>

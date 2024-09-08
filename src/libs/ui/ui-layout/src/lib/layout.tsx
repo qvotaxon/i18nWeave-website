@@ -178,7 +178,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 
         <SecureLink
           to="https://marketplace.visualstudio.com/items?itemName=qvotaxon.i18nweave"
-          iconClassName="hidden"
+          iconClassName="!hidden"
           aria-label="Microsoft Marketplace"
           title="Download i18nWeave for Visual Studio Code"
           className="block absolute lg:right-44 text-white focus:outline-none z-10 hover:cursor-pointer right-28 text-3xl hover:text-secondary">
@@ -189,7 +189,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 
         <SecureLink
           to="https://github.com/qvotaxon/i18nweave-vscode"
-          iconClassName="hidden"
+          iconClassName="!hidden"
           aria-label="Github Repository"
           title="View i18nWeave on GitHub"
           className="block absolute lg:right-32 text-white focus:outline-none z-10 hover:cursor-pointer right-16 text-3xl hover:text-secondary">
@@ -220,7 +220,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
               <SecureLink
                 to="/features"
                 className="text-white hover:text-highlight"
-                activeClassName="text-highlight">
+                activeClassName="!text-highlight">
                 {t('navigation:main.features')}
               </SecureLink>
             </li>
@@ -228,7 +228,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
               <SecureLink
                 to="/getting-started"
                 className="text-white hover:text-highlight"
-                activeClassName="text-highlight">
+                activeClassName="!text-highlight">
                 {t('navigation:main.gettingStarted')}
               </SecureLink>
             </li>

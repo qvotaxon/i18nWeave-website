@@ -108,10 +108,12 @@
       "@i18n-weave/util/util-microsoft-clarity": [
         "libs/util/util-microsoft-clarity/src"
       ],
-      "@i18n-weave/ui/ui-layout": ["libs/ui/ui-layout/src"],
+
       "@i18n-weave/ui/ui-language-selector": [
         "libs/ui/ui-language-selector/src"
-      ]
+      ],
+      "@i18n-weave/ui/ui-layout": ["libs/ui/ui-layout/src"],
+      "@i18n-weave/ui/ui-secure-link": ["libs/ui/ui-secure-link/src"]
     }
   },
   "include": [
@@ -119,6 +121,7 @@
     "./gatsby-node.ts",
     "./gatsby-config.ts",
     "./plugins/**/*",
-    "static"
-, "src/libs/util/.eslintrc.js"  ]
+    "static",
+    "src/libs/util/.eslintrc.js"
+  ]
 }

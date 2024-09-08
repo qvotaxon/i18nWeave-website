@@ -1,3 +1,18 @@
+import { ReactNode } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+
+import { LanguageSelector } from '@i18n-weave/ui/ui-language-selector';
+import { SecureLink } from '@i18n-weave/ui/ui-secure-link';
+
+import { useGoogleAnalytics } from '@i18n-weave/util/util-google-analytics';
+import { useMicrosoftClarity } from '@i18n-weave/util/util-microsoft-clarity';
+
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import {
+  faCloudDownloadAlt,
+  faDownload,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   getPreferences,
   hide,
@@ -8,17 +23,7 @@ import {
 import { CookiePreference } from 'cookie-though/dist/types/types';
 import { StaticImage } from 'gatsby-plugin-image';
 import { useI18next } from 'gatsby-plugin-react-i18next';
-import { ReactNode } from 'react';
-import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-
-import { LanguageSelector } from '@i18n-weave/ui/ui-language-selector';
-
-import { useGoogleAnalytics } from '@i18n-weave/util/util-google-analytics';
-import { useMicrosoftClarity } from '@i18n-weave/util/util-microsoft-clarity';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
-import {faCloudDownloadAlt, faDownload} from '@fortawesome/free-solid-svg-icons';
 
 interface LayoutProps {
   children: ReactNode;
@@ -157,7 +162,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
     <main className="font-sans h-screen overflow-y-scroll snap-y snap-mandatory text-white [@media_(max-height:666px)]:snap-none [@media_(max-height:666px)]:overflow-auto [@media_(max-height:666px)]:h-fit">
       <header className="sticky top-0 w-full bg-primary py-4 z-10 flex items-center justify-between px-4">
         <div className="flex items-center space-x-4">
-          <a href='/'>
+          <SecureLink to="/">
             <StaticImage
               width={32}
               height={32}
@@ -165,34 +170,33 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
               alt="i18nWeave Logo"
               className="h-8 w-8"
             />
-          </a><a href='/'>
-          <span className="text-lg">i18nWeave</span>
-          </a>
+          </SecureLink>
+          <SecureLink to="/">
+            <span className="text-lg">i18nWeave</span>
+          </SecureLink>
         </div>
 
-        <a
-          href="https://marketplace.visualstudio.com/items?itemName=qvotaxon.i18nweave"
-          target='_blank'
-          type="button"
+        <SecureLink
+          to="https://marketplace.visualstudio.com/items?itemName=qvotaxon.i18nweave"
+          iconClassName="hidden"
           aria-label="Microsoft Marketplace"
-          title='Download i18nWeave for Visual Studio Code'
+          title="Download i18nWeave for Visual Studio Code"
           className="block absolute lg:right-44 text-white focus:outline-none z-10 hover:cursor-pointer right-28 text-3xl hover:text-secondary">
           <div>
             <FontAwesomeIcon icon={faCloudDownloadAlt} />
           </div>
-        </a>
+        </SecureLink>
 
-        <a
-          href="https://github.com/qvotaxon/i18nweave-vscode"
-          target='_blank'
-          type="button"
+        <SecureLink
+          to="https://github.com/qvotaxon/i18nweave-vscode"
+          iconClassName="hidden"
           aria-label="Github Repository"
-          title='View i18nWeave on GitHub'
+          title="View i18nWeave on GitHub"
           className="block absolute lg:right-32 text-white focus:outline-none z-10 hover:cursor-pointer right-16 text-3xl hover:text-secondary">
           <div>
             <FontAwesomeIcon icon={faGithub} />
           </div>
-        </a>
+        </SecureLink>
 
         <button
           type="button"
@@ -212,21 +216,21 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
             isMenuOpen ? 'translate-y-0 top-0 visible' : '-top-48 hidden'
           }`}>
           <ul className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 p-4 lg:ml-8 lg:p-0">
-            <li>
-              <a
-                href="/features"
+            <li onClick={() => setIsMenuOpen(false)}>
+              <SecureLink
+                to="/features"
                 className="text-white hover:text-highlight"
-                onClick={() => setIsMenuOpen(false)}>
+                activeClassName="text-highlight">
                 {t('navigation:main.features')}
-              </a>
+              </SecureLink>
             </li>
-            <li>
-              <a
-                href="/getting-started"
+            <li onClick={() => setIsMenuOpen(false)}>
+              <SecureLink
+                to="/getting-started"
                 className="text-white hover:text-highlight"
-                onClick={() => setIsMenuOpen(false)}>
+                activeClassName="text-highlight">
                 {t('navigation:main.gettingStarted')}
-              </a>
+              </SecureLink>
             </li>
           </ul>
 

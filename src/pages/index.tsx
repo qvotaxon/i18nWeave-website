@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Layout } from '@i18n-weave/ui/ui-layout';
+import { SEO } from '@i18n-weave/ui/ui-seo';
 import { SecureLink } from '@i18n-weave/ui/ui-secure-link';
 
 import { faAngular, faReact } from '@fortawesome/free-brands-svg-icons';
@@ -101,6 +102,9 @@ const IndexPage: React.FC<PageProps> = () => {
             <p className="my-4">
               {t('section.gettingStarted.librarySupport.introduction')}
             </p>
+            <p className="my-4">
+              {t('section.gettingStarted.examples.introduction')}
+            </p>
           </div>
         </div>
 
@@ -123,18 +127,12 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head = () => (
-  <>
-    <title>i18nWeave - Developer&apos;s i18n Companion</title>
-    <meta
-      name="description"
-      content="i18nWeave helps developers efficiently handle translations in their projects. Increase productivity and ensure consistency across multiple languages."
-    />
-    <meta
-      name="keywords"
-      content="i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
-    />
-  </>
+export const Head = (props: PageProps) => (
+  <SEO
+    title="Developer&apos;s i18n Companion"
+    description="i18nWeave helps developers efficiently handle i18next translations in their projects. Increase productivity and ensure consistency across multiple languages."
+    keywords="i18next, i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
+  />
 );
 
 export const query = graphql`

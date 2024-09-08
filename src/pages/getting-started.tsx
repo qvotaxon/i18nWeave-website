@@ -22,7 +22,7 @@ const GettingStartedPage: React.FC<PageProps> = () => {
           <div>
             {t('section.gettingStarted.installExtension.description')}{' '}
             <SecureLink
-              className="text-primary underline"
+              className="text-primary underline hover:text-white hover:border-white"
               to="https://marketplace.visualstudio.com/items?itemName=qvotaxon.i18nweave">
               Visual Studio Code Marketplace.
             </SecureLink>
@@ -41,7 +41,7 @@ const GettingStartedPage: React.FC<PageProps> = () => {
           {t('section.gettingStarted.configureProject.description.partFour')} .
           <SecureLink
             to="/features"
-            className="button text-center w-full block text-primary p-2 border-4 border-primary text-2xl hover:text-white hover:border-white mt-8 md:mt-4 md:inline-block md:w-auto">
+            className="button text-center w-full block text-primary p-2 border-4 border-primary text-2xl hover:text-white hover:border-white mt-8 md:mt-4 md:w-fit">
             {t('section.gettingStarted.buttons.features')}
           </SecureLink>
         </div>

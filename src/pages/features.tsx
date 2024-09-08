@@ -32,7 +32,7 @@ const FeaturesPage: React.FC<PageProps> = () => {
             <span className="font-bold">Limitations:</span> The DeepL
             integration in i18nWeave supports the languages listed here:{' '}
             <SecureLink
-              className="text-primary hover:underline hover:text-highlight hover:border-highlight"
+              className="text-white underline hover:text-highlight hover:border-highlight"
               to="https://developers.deepl.com/docs/resources/supported-languages">
               DeepL Docs
             </SecureLink>

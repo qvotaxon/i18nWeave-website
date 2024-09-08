@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { PageProps, graphql } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {Layout} from '@i18n-weave/ui/ui-layout';

@@ -3,7 +3,6 @@ import { ReactNode } from 'react';
 
 import { faExternalLinkSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Placeholder } from 'gatsby-plugin-image';
 import { Link } from 'gatsby-plugin-react-i18next';
 
 interface SecureLinkProps {

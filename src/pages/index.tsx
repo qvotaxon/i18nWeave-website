@@ -102,9 +102,9 @@ const IndexPage: React.FC<PageProps> = () => {
             <p className="my-4">
               {t('section.gettingStarted.librarySupport.introduction')}
             </p>
-            <p className="my-4">
+            {/* <p className="my-4">
               {t('section.gettingStarted.examples.introduction')}
-            </p>
+            </p> */}
           </div>
         </div>
 

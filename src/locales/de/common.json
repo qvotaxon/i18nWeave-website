@@ -92,12 +92,15 @@
                 },
                 "title": "Konfiguriere dein Projekt"
             },
+            "examples": {
+                "introduction": "Wenn du i18next noch nicht verwendest, mach dir keine Sorgen! Ich habe Beispielanwendungen erstellt, die verschiedene Ansätze zeigen, um dir den Einstieg zu erleichtern."
+            },
             "installExtension": {
                 "description": "Suchen Sie im Fenster der Visual Studio Code-Erweiterungen nach der i18nWeave-Erweiterung oder besuchen Sie die",
                 "title": "Installiere die Erweiterung"
             },
             "librarySupport": {
-                "introduction": "i18nWeave unterstützt eine Vielzahl von Projekten, Frameworks und Bibliotheken. Solange du i18next für deine Übersetzungen verwendest, kann i18nWeave dein Tool der Wahl sein. Wenn du i18next noch nicht verwendest, mach dir keine Sorgen! Ich habe Beispielanwendungen mit verschiedenen Ansätzen erstellt, um dir den Einstieg zu erleichtern."
+                "introduction": "i18nWeave unterstützt eine Vielzahl von Projekten, Frameworks und Bibliotheken. Solange du i18next für deine Übersetzungen verwendest, kann i18nWeave dein bevorzugtes Tool sein."
             },
             "title": "Erste Schritte"
         },

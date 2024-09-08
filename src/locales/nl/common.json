@@ -92,12 +92,15 @@
                 },
                 "title": "Je project configureren"
             },
+            "examples": {
+                "introduction": "Als je i18next nog niet gebruikt, geen zorgen! Ik heb voorbeeldapplicaties gemaakt met verschillende benaderingen om je op weg te helpen."
+            },
             "installExtension": {
                 "description": "Zoek naar de i18nWeave-extensie in het uitbreidingsvenster van Visual Studio Code of ga naar de",
                 "title": "De extensie installeren"
             },
             "librarySupport": {
-                "introduction": "i18nWeave ondersteunt een grote verscheidenheid aan projecten, frameworks en bibliotheken. Zolang je i18next gebruikt voor je vertalingen, kan i18nWeave je go-to tool zijn. Als je i18next nog niet gebruikt, geen zorgen! Ik heb voorbeeldapplicaties gemaakt met verschillende benaderingen om je op weg te helpen."
+                "introduction": "i18nWeave ondersteunt een grote verscheidenheid aan projecten, frameworks en bibliotheken. Zolang je i18next gebruikt voor je vertalingen, kan i18nWeave je go-to tool zijn."
             },
             "title": "Aan de slag"
         },

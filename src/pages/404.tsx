@@ -3,6 +3,7 @@ import { PageProps, graphql } from 'gatsby';
 import { useTranslation } from 'react-i18next';
 
 import {Layout} from '@i18n-weave/ui/ui-layout';
+import { SEO } from '@i18n-weave/ui/ui-seo';
 
 const NotFoundPage: React.FC<PageProps> = () => {
   const { t } = useTranslation();
@@ -34,16 +35,10 @@ export const query = graphql`
 
 export default NotFoundPage;
 
-export const Head = () => (
-  <>
-    <title>i18nWeave - Page Not Found</title>
-    <meta
-      name="description"
-      content="i18nWeave helps developers efficiently handle translations in their projects. Increase productivity and ensure consistency across multiple languages."
-    />
-    <meta
-      name="keywords"
-      content="i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
-    />
-  </>
+export const Head = (props: PageProps) => (
+  <SEO
+    title="Developer&apos;s i18n Companion"
+    description="i18nWeave helps developers efficiently handle i18next translations in their projects. Increase productivity and ensure consistency across multiple languages."
+    keywords="i18next, i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
+  />
 );

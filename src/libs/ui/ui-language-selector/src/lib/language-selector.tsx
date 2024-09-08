@@ -60,7 +60,7 @@ export const LanguageSelector: React.FC = () => {
         <div className="outline-white outline-1 outline w-full z-10 bg-primary border border-primary rounded-md shadow-lg lg:right-0 lg:w-48 lg:absolute">
           <div className="py-1">
             {languages.map(lng => (
-              <SecureLink to={originalPath} language={lng}>
+              <SecureLink to={originalPath} language={lng} key={lng}>
                 <span
                   className="button flex items-center px-4 py-2 w-full text-sm text-white hover:bg-secondary hover:text-highlight hover:font-bold"
                   key={lng}>

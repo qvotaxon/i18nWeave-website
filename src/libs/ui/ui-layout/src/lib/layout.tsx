@@ -256,6 +256,59 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
       </div>
 
       {children}
+      <footer className="sticky bottom-0 bg-primary py-4 w-full text-white flex items-center justify-between px-4">
+        <div className="flex items-center space-x-4">
+          <SecureLink to="/">
+            <StaticImage
+              width={32}
+              height={32}
+              src="../../../../../images/logo.png"
+              alt="i18nWeave Logo"
+              className="h-8 w-8"
+            />
+          </SecureLink>
+          <SecureLink to="/">
+            <span className="text-lg">i18nWeave</span>
+          </SecureLink>
+        </div>
+
+        <div className="flex space-x-4">
+          <SecureLink
+            to="https://marketplace.visualstudio.com/items?itemName=qvotaxon.i18nweave"
+            iconClassName="!hidden"
+            aria-label="Microsoft Marketplace"
+            title="Download i18nWeave for Visual Studio Code"
+            className="text-white focus:outline-none hover:cursor-pointer text-3xl hover:text-secondary">
+            <div>
+              <FontAwesomeIcon icon={faCloudDownloadAlt} />
+            </div>
+          </SecureLink>
+
+          <SecureLink
+            to="https://github.com/qvotaxon/i18nweave-vscode"
+            iconClassName="!hidden"
+            aria-label="Github Repository"
+            title="View i18nWeave on GitHub"
+            className="text-white focus:outline-none hover:cursor-pointer text-3xl hover:text-secondary">
+            <div>
+              <FontAwesomeIcon icon={faGithub} />
+            </div>
+          </SecureLink>
+        </div>
+
+        <div className="flex items-center space-x-4">
+          <SecureLink
+            to="/privacy-policy"
+            className="text-white hover:text-highlight">
+            Privacy Policy
+          </SecureLink>
+          {/* <SecureLink
+            to="/terms-of-service"
+            className="text-white hover:text-highlight">
+            Terms of Service
+          </SecureLink> */}
+        </div>
+      </footer>
     </main>
   );
 };

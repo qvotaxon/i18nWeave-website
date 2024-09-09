@@ -15,7 +15,10 @@ const getCurrentLanguage = (pathname: string): string => {
 };
 
 export const SEO: React.FC<SEOProps> = ({ title, description, keywords }) => {
-  const { pathname, origin } = typeof window !== 'undefined' ? window.location : { pathname: '/', origin: 'https://i18nweave.com' };
+  const { pathname, origin } =
+    typeof window !== 'undefined'
+      ? window.location
+      : { pathname: '/', origin: 'https://i18nweave.com' };
   const language = getCurrentLanguage(pathname);
   const originalPath = pathname.replace(`/${language}`, '') || '/';
   const baseUrl = origin;
@@ -29,14 +32,16 @@ export const SEO: React.FC<SEOProps> = ({ title, description, keywords }) => {
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonicalUrl} />
 
-      {availableLanguages.map((lang) => (
-        <link
-          key={lang}
-          rel="alternate"
-          href={`${baseUrl}${lang === 'en' ? '' : `/${lang}`}${originalPath === '/' ? '' : originalPath}`}
-          hrefLang={lang}
-        />
-      ))}
+      {availableLanguages
+        .filter(x => x !== language)
+        .map(lang => (
+          <link
+            key={lang}
+            rel="alternate"
+            href={`${baseUrl}${lang === 'en' ? '' : `/${lang}`}${originalPath === '/' ? '' : originalPath}`}
+            hrefLang={lang}
+          />
+        ))}
     </>
   );
 };

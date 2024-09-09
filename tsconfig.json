@@ -112,9 +112,7 @@
       "@i18n-weave/ui/ui-language-selector": [
         "libs/ui/ui-language-selector/src"
       ],
-      "@i18n-weave/ui/ui-seo": [
-        "libs/ui/ui-seo/src"
-      ],
+      "@i18n-weave/ui/ui-seo": ["libs/ui/ui-seo/src"],
       "@i18n-weave/ui/ui-layout": ["libs/ui/ui-layout/src"],
       "@i18n-weave/ui/ui-secure-link": ["libs/ui/ui-secure-link/src"]
     }

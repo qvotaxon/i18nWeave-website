@@ -25,7 +25,6 @@
     "cookie-though": "^1.5.0",
     "ga-gtag": "^1.2.0",
     "gatsby": "^5.13.7",
-    "gatsby-plugin-canonical-urls": "^5.13.1",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",

@@ -1,10 +1,12 @@
 import type { GatsbyConfig } from 'gatsby';
 
+const siteUrl = process.env.URL || `https://i18nweave.com`;
+
 /** @type {*} */
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `i18nWeave - Developer's i18n Companion`,
-    siteUrl: 'https://i18nweave.com',
+    siteUrl: siteUrl,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -32,7 +34,7 @@ const config: GatsbyConfig = {
         localeJsonSourceName: `locale`, // name given to gatsby-source-filesystem plugin
         languages: [`en`, `nl`, `de`, `fr`, `es`],
         defaultLanguage: `en`,
-        siteUrl: `https://i18nweave.com`,
+        siteUrl: siteUrl,
         trailingSlash: 'always', // include if you are using trailingSlash in gatsby config
         i18nextOptions: {
           interpolation: {
@@ -51,12 +53,6 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-canonical-urls',
-      options: {
-        siteUrl: `https://i18nweave.com`,
-      },
-    },
     'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-pnpm-gatsby-5',
     'gatsby-plugin-postcss',
@@ -65,10 +61,79 @@ const config: GatsbyConfig = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sitemap',
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: 'gatsby-plugin-sitemap',
       options: {
-        name: 'i18nWeave',
-        icon: 'src/images/logo.png',
+        output: `/sitemap/`, // Define your sitemap directory output
+        createLinkInHead: true, // Adding a link to the sitemap in the <head>
+        entryLimit: 45000, // Default entry limit
+        excludes: ['/404', '/404.html', '/*/404', '/*/404.html'], // Exclude 404 pages
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              nodes {
+                path
+                pageContext
+              }
+            }
+          }
+        `,
+        resolveSiteUrl: () => siteUrl, // Resolving site URL from environment variable or fallback
+
+        // Custom resolvePages function to filter and map pages
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+        }: {
+          allSitePage: { nodes: any[] };
+        }) => {
+          // Filtering pages with required conditions
+          return allPages
+            .filter(
+              page =>
+                page.pageContext &&
+                page.pageContext.i18n &&
+                page.pageContext.i18n.routed === false &&
+                !page.path.includes('404')
+            )
+            .map(page => {
+              const { path, pageContext } = page;
+              const { i18n } = pageContext;
+              return {
+                path,
+                i18n,
+              };
+            });
+        },
+
+        // Custom serialize function to format the sitemap entries
+        serialize: ({ path, i18n }: { path: string; i18n: any }) => {
+          const { defaultLanguage, languages, originalPath } = i18n;
+          const fullUrl = siteUrl + (originalPath || path);
+
+          // Generate links for different languages
+          const links = [
+            { lang: defaultLanguage || 'en', url: fullUrl },
+            { lang: 'x-default', url: fullUrl },
+          ];
+
+          languages.forEach((lang: string) => {
+            if (lang !== defaultLanguage) {
+              links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` });
+            }
+          });
+
+          // Return the sitemap entry with required fields
+          return {
+            url: fullUrl,
+            changefreq: 'daily',
+            priority: originalPath === '/' ? 1.0 : 0.7,
+            links,
+          };
+        },
       },
     },
   ],

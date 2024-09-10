@@ -105,6 +105,7 @@
       "@i18n-weave/util/util-google-analytics": [
         "libs/util/util-google-analytics/src"
       ],
+      "@i18n-weave/util/util-i18n-key": ["libs/util/util-i18n-key/src"],
       "@i18n-weave/util/util-microsoft-clarity": [
         "libs/util/util-microsoft-clarity/src"
       ],

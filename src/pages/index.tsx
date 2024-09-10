@@ -36,31 +36,31 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="flex flex-wrap justify-center max-w-screen-xl">
           <div className="w-2/6 text-center px-4 mb-4 lg:mb-8">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faEye} />
-            <h3 className="text-lg font-bold text-variant-2 pb-2">
+            <h2 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.keyExtraction.title')}
-            </h3>
+            </h2>
           </div>
 
           <div className="w-2/6 text-center px-4 mb-4 lg:mb-8">
             {' '}
             <FontAwesomeIcon className="text-4xl pb-2" icon={faObjectGroup} />
-            <h3 className="text-lg font-bold text-variant-2 pb-2">
+            <h2 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.easyConfig.title')}
-            </h3>
+            </h2>
           </div>
 
           <div className="w-1/3 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faCheckDouble} />
-            <h3 className="text-lg font-bold text-variant-2 pb-2">
+            <h2 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.foss.title')}
-            </h3>
+            </h2>
           </div>
 
           <div className="w-2/6 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faAngular} />
-            <h3 className="text-lg font-bold text-variant-2 pb-2">
+            <h2 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.support.angular.title')}
-            </h3>
+            </h2>
             <p className="text-md">
               {t('section.features.support.angular.description')}
             </p>
@@ -68,9 +68,9 @@ const IndexPage: React.FC<PageProps> = () => {
 
           <div className="w-2/6 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faReact} />
-            <h3 className="text-lg font-bold text-variant-2 pb-2">
+            <h2 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.support.react.title')}
-            </h3>
+            </h2>
             <p className="text-md">
               {t('section.features.support.react.description')}
             </p>
@@ -78,9 +78,9 @@ const IndexPage: React.FC<PageProps> = () => {
 
           <div className="w-2/6 text-center mb-8 px-4">
             <FontAwesomeIcon className="text-4xl pb-2" icon={faCode} />
-            <h3 className="text-lg font-bold text-variant-2 pb-2">
+            <h2 className="text-lg font-bold text-variant-2 pb-2">
               {t('section.features.support.custom.title')}
-            </h3>
+            </h2>
             <p className="text-md">
               {t('section.features.support.custom.description')}
             </p>
@@ -90,9 +90,9 @@ const IndexPage: React.FC<PageProps> = () => {
       <section
         id="getting-started"
         className="h-screen flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8 [@media_(max-height:666px)]:h-fit [@media_(max-height:666px)]:py-8">
-        <h2 className="text-primary text-4xl mb-8 text-center max-w-screen-xl">
+        <h3 className="text-primary text-4xl mb-8 text-center max-w-screen-xl">
           {t('section.gettingStarted.title')}
-        </h2>
+        </h3>
 
         <div className="w-5/6 text-primary max-w-screen-xl text-lg">
           <div>

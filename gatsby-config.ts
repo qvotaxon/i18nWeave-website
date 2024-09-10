@@ -63,7 +63,6 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        output: `/sitemap/`, // Define your sitemap directory output
         createLinkInHead: true, // Adding a link to the sitemap in the <head>
         entryLimit: 45000, // Default entry limit
         excludes: ['/404', '/404.html', '/*/404', '/*/404.html'], // Exclude 404 pages

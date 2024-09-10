@@ -1,0 +1,77 @@
+{
+  "cookies": {
+    "changesToPolicy": {
+      "text": "We kunnen onze Cookieverklaring bijwerken om wijzigingen in het gebruik van cookies op onze website weer te geven. Alle wijzigingen worden op deze pagina gepubliceerd.",
+      "title": "Wijzigingen in deze Cookieverklaring"
+    },
+    "contact": {
+      "text": "Voor meer informatie over ons gebruik van cookies en om meer te weten te komen over ons privacybeleid, kun je contact met ons opnemen via <0>privacy@i18nweave.com</0>.",
+      "title": "Neem contact met ons op"
+    },
+    "introduction": {
+      "text": "Cookies zijn kleine tekstbestanden die op je apparaat (computer, tablet of mobiel) worden opgeslagen wanneer je een website bezoekt. Ze worden veel gebruikt om websites efficiënter te laten werken en om informatie te verstrekken aan de website-eigenaren.",
+      "title": "Wat zijn cookies?"
+    },
+    "managingCookies": {
+      "textOne": "Je hebt het recht om te beslissen of je cookies accepteert of weigert. Wanneer je onze site voor het eerst bezoekt, verschijnt er een cookiebanner om je toestemming te vragen voor het plaatsen van cookies op je apparaat. Je kunt je cookievoorkeuren via deze banner beheren met de Cookie-though tool.",
+      "textTwo": "Bovendien kun je cookies beheren of verwijderen via de instellingen van je browser. Hier vind je links voor het beheren van cookies in populaire browsers:",
+      "title": "Cookies beheren"
+    },
+    "title": "Cookieverklaring",
+    "typesOfCookies": {
+      "essential": "<0>Essentiële cookies:</0> Deze cookies zijn noodzakelijk voor het functioneren van de website en kunnen niet worden uitgeschakeld in onze systemen. Ze worden meestal alleen ingesteld als reactie op acties van jou, zoals het instellen van je privacyvoorkeuren, inloggen of het invullen van formulieren.",
+      "languageCookie": "<0>Prestatie- en Analytische cookies:</0> We gebruiken deze cookies om te begrijpen en analyseren hoe bezoekers omgaan met de website. Hieronder vallen de Analytische cookies van Google en de Clarity-cookies van Microsoft. Deze cookies helpen ons de functionaliteit en gebruikerservaring van de website te verbeteren.",
+      "performance": "<0>Taalvoorkeur cookie:</0> Deze cookie slaat je geselecteerde taalvoorkeur op voor een consistente browse-ervaring.",
+      "title": "Soorten cookies die we gebruiken"
+    },
+    "useOfCookies": {
+      "googleAnalytics": "<0>Google Analytics:</0> We gebruiken Google Analytics om gedetailleerde statistieken te verzamelen over hoe gebruikers onze website gebruiken. Dit helpt ons het gedrag van bezoekers te begrijpen en onze site dienovereenkomstig te verbeteren. De verzamelde gegevens zijn anoniem en aggregeren gebruikersgedrag, maar identificeren geen individuen.",
+      "languageCookie": "<0>Taalcookie:</0> Er wordt een cookie opgeslagen om je geselecteerde taalvoorkeur te onthouden, zodat je de website bij een volgend bezoek in de door jou gekozen taal kunt bekijken.",
+      "microsoftClarity": "<0>Microsoft Clarity:</0> We gebruiken Microsoft Clarity om inzicht te krijgen in hoe gebruikers omgaan met onze website. Dit omvat het vastleggen van gebruikerssessies en gedrag om de websiteprestaties en de betrokkenheid van gebruikers te verbeteren."
+    }
+  },
+  "privacyPolicy": {
+    "changesToPolicy": {
+      "text": "We kunnen dit Privacybeleid regelmatig bijwerken. We zullen je op de hoogte stellen van eventuele wijzigingen door het nieuwe Privacybeleid op deze pagina te plaatsen.",
+      "title": "Wijzigingen in dit privacybeleid"
+    },
+    "childPrivacy": {
+      "text": "Onze website is toegankelijk voor gebruikers van alle leeftijden, maar we verzamelen niet bewust persoonlijke gegevens van kinderen jonger dan 13. Als we ontdekken dat we persoonlijke gegevens hebben verzameld van een kind jonger dan 13, zullen we stappen ondernemen om dergelijke informatie te verwijderen.",
+      "title": "Privacy van kinderen"
+    },
+    "contact": {
+      "text": "Als je vragen of opmerkingen hebt over dit Privacybeleid, neem dan contact met ons op via <0>privacy@i18nweave.com</0>.",
+      "title": "Neem contact met ons op"
+    },
+    "dataCollection": {
+      "googleAnalytics": "<0>Google Analytics:</0> Wij gebruiken Google Analytics om informatie te verzamelen over uw gebruik van onze website, zoals de pagina's die u bezoekt, de tijd die u op elke pagina doorbrengt en andere gebruiksstatistieken. Google Analytics gebruikt cookies om deze gegevens te verzamelen.",
+      "languageCookie": "<0>Taalcookie:</0> We slaan een cookie op om je taalvoorkeur te onthouden voor een betere gebruikerservaring.",
+      "microsoftClarity": "<0>Microsoft Clarity</0>: We gebruiken Microsoft Clarity om te begrijpen hoe gebruikers omgaan met onze webpagina's. Dit houdt in dat we informatie verzamelen over gebruikerssessies, inclusief klikken, scrollen en andere interacties.",
+      "title": "Gegevens die we verzamelen"
+    },
+    "dataSecurity": {
+      "text": "We implementeren gepaste technische en organisatorische maatregelen om de veiligheid van je persoonlijke gegevens te waarborgen en ongeoorloofde toegang, openbaarmaking, wijziging of vernietiging te voorkomen.",
+      "title": "Gegevensbeveiliging"
+    },
+    "dataSharing": {
+      "text": "We delen je persoonlijke gegevens niet met derden, behalve als dat nodig is om te voldoen aan wettelijke verplichtingen of om onze rechten te beschermen.",
+      "title": "Delen van gegevens"
+    },
+    "internationalDataTransfer": {
+      "text": "Aangezien onze gebruikers van over de hele wereld komen, kunnen verzamelde gegevens worden overgedragen naar en verwerkt in landen buiten de Europese Economische Ruimte (EER). Wij zorgen ervoor dat dergelijke overdrachten voldoen aan de toepasselijke wetgeving inzake gegevensbescherming en implementeren adequate waarborgen.",
+      "title": "Internationale gegevensoverdracht"
+    },
+    "introduction": {
+      "text": "Welcome to i18nweave.com. We value your privacy and strive to protect your personal data. This Privacy Policy outlines the type of data we collect, how we use it, and the measures we take to ensure its security.",
+      "title": "Introduction"
+    },
+    "title": "Privacy Policy",
+    "useOfData": {
+      "analyze": "Analyseer het gedrag en de voorkeuren van gebruikers om de gebruikerservaring te verbeteren.",
+      "improve": "De functionaliteit en inhoud van onze website verbeteren.",
+      "monitor": "De veiligheid en prestaties van onze website bewaken en onderhouden.",
+      "text": "We gebruiken de verzamelde gegevens om:",
+      "title": "Gebruik van gegevens"
+    }
+  }
+}

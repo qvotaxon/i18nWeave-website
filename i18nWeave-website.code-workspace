@@ -12,7 +12,11 @@
       "src/libs",
     ],
     "i18nWeave.i18nextScannerModule.defaultNamespace": "common",
-    "i18nWeave.i18nextScannerModule.namespaces": ["common", "navigation"],
+    "i18nWeave.i18nextScannerModule.namespaces": [
+      "common",
+      "navigation",
+      "policies",
+    ],
     "i18nWeave.i18nextScannerModule.languages": ["en", "nl", "de", "fr", "es"],
     "i18nWeave.i18nextScannerModule.defaultLanguage": "en",
     "i18nWeave.i18nextScannerModule.translationFunctionNames": ["t", "i18nKey"],

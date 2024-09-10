@@ -1,0 +1,77 @@
+{
+  "cookies": {
+    "changesToPolicy": {
+      "text": "Podemos actualizar nuestra Declaración sobre Cookies para reflejar cualquier cambio en el uso de cookies en nuestro sitio web. Cualquier cambio será publicado en esta página.",
+      "title": "Cambios en esta Declaración sobre Cookies"
+    },
+    "contact": {
+      "text": "Para obtener más información sobre nuestro uso de cookies y conocer mejor nuestras prácticas de privacidad, ponte en contacto con nosotros en <0>privacy@i18nweave.com</0>.",
+      "title": "Contacta con nosotros"
+    },
+    "introduction": {
+      "text": "Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo (ordenador, tableta o móvil) cuando visitas un sitio web. Se utilizan ampliamente para hacer que los sitios web funcionen de forma más eficiente, así como para proporcionar información a los propietarios del sitio web.",
+      "title": "¿Qué son las cookies?"
+    },
+    "managingCookies": {
+      "textOne": "Tienes derecho a decidir si aceptas o rechazas las cookies. Cuando visites nuestro sitio por primera vez, aparecerá un banner de cookies para pedirte tu consentimiento para colocar cookies en tu dispositivo. Puedes gestionar tus preferencias de cookies a través de este banner mediante la herramienta Cookie-though.",
+      "textTwo": "Además, puedes gestionar o eliminar las cookies mediante la configuración de tu navegador. Aquí tienes enlaces para gestionar las cookies en los navegadores más populares:",
+      "title": "Gestión de cookies"
+    },
+    "title": "Declaración sobre cookies",
+    "typesOfCookies": {
+      "essential": "<0>Cookies esenciales:</0> Estas cookies son necesarias para que el sitio web funcione y no se pueden desactivar en nuestros sistemas. Normalmente se establecen sólo en respuesta a acciones realizadas por ti, como establecer tus preferencias de privacidad, iniciar sesión o rellenar formularios.",
+      "languageCookie": "<0>Cookies de rendimiento y analíticas:</0> Utilizamos estas cookies para comprender y analizar cómo interactúan los visitantes con el sitio web. Esto incluye las cookies analíticas de Google y las cookies Clarity de Microsoft. Estas cookies nos ayudan a mejorar la funcionalidad y la experiencia de usuario del sitio web.",
+      "performance": "<0>Cookie de preferencia de idioma:</0> Esta cookie almacena tu preferencia de idioma seleccionada para proporcionar una experiencia de navegación consistente.",
+      "title": "Tipos de cookies que utilizamos"
+    },
+    "useOfCookies": {
+      "googleAnalytics": "<0>Google Analytics:</0> Utilizamos Google Analytics para recopilar estadísticas detalladas sobre cómo utilizan los usuarios nuestro sitio web. Esto nos ayuda a comprender el comportamiento de los visitantes y a mejorar nuestro sitio en consecuencia. Los datos recogidos son anónimos y agregan el comportamiento de los usuarios, pero no identifican a las personas.",
+      "languageCookie": "<0>Cookie de idioma:</0> Se guarda una cookie para recordar tu preferencia de idioma seleccionada, asegurando que en tus siguientes visitas experimentes el sitio web en el idioma elegido.",
+      "microsoftClarity": "<0>Microsoft Clarity:</0> Utilizamos Microsoft Clarity para obtener información sobre cómo interactúan los usuarios con nuestro sitio web. Esto incluye el registro de las sesiones y comportamientos de los usuarios para mejorar el rendimiento del sitio web y la participación de los usuarios."
+    }
+  },
+  "privacyPolicy": {
+    "changesToPolicy": {
+      "text": "Podemos actualizar esta Política de Privacidad periódicamente. Te notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página.",
+      "title": "Cambios en esta Política de Privacidad"
+    },
+    "childPrivacy": {
+      "text": "Nuestro sitio web es accesible a usuarios de todas las edades, pero no recopilamos conscientemente datos personales de niños menores de 13 años. Si tenemos conocimiento de que hemos recopilado datos personales de un niño menor de 13 años, tomaremos medidas para eliminar dicha información.",
+      "title": "Privacidad infantil"
+    },
+    "contact": {
+      "text": "Si tienes alguna pregunta o duda sobre esta Política de Privacidad, ponte en contacto con nosotros en <0>privacy@i18nweave.com</0>.",
+      "title": "Contacta con nosotros"
+    },
+    "dataCollection": {
+      "googleAnalytics": "<0>Google Analytics:</0> Utilizamos Google Analytics para recopilar información sobre tu uso de nuestro sitio web, como las páginas que visitas, el tiempo que pasas en cada página y otras estadísticas de uso. Google Analytics utiliza cookies para recopilar estos datos.",
+      "languageCookie": "<0>Cookie de idioma:</0> Almacenamos una cookie para recordar tu preferencia de idioma para una mejor experiencia de usuario.",
+      "microsoftClarity": "<0>Microsoft Clarity</0>: Utilizamos Microsoft Clarity para comprender cómo interactúan los usuarios con nuestras páginas web. Esto implica recopilar información sobre las sesiones de los usuarios, incluyendo clics, desplazamientos y otras interacciones.",
+      "title": "Datos que recogemos"
+    },
+    "dataSecurity": {
+      "text": "Aplicamos las medidas técnicas y organizativas adecuadas para garantizar la seguridad de tus datos personales y evitar el acceso, la divulgación, la alteración o la destrucción no autorizados.",
+      "title": "Seguridad de los datos"
+    },
+    "dataSharing": {
+      "text": "No compartimos tus datos personales con terceros, salvo cuando sea necesario para cumplir obligaciones legales o proteger nuestros derechos.",
+      "title": "Intercambio de datos"
+    },
+    "internationalDataTransfer": {
+      "text": "Dado que nuestros usuarios proceden de todo el mundo, los datos recogidos pueden ser transferidos y procesados en países fuera del Espacio Económico Europeo (EEE). Nos aseguramos de que dichas transferencias cumplan la legislación aplicable en materia de protección de datos y apliquen las garantías adecuadas.",
+      "title": "Transferencias internacionales de datos"
+    },
+    "introduction": {
+      "text": "Bienvenido a i18nweave.com. Valoramos tu privacidad y nos esforzamos por proteger tus datos personales. Esta Política de Privacidad describe el tipo de datos que recogemos, cómo los utilizamos y las medidas que tomamos para garantizar su seguridad.",
+      "title": "Introducción"
+    },
+    "title": "Política de privacidad",
+    "useOfData": {
+      "analyze": "Analiza el comportamiento y las preferencias de los usuarios para mejorar su experiencia.",
+      "improve": "Mejorar la funcionalidad y el contenido de nuestro sitio web.",
+      "monitor": "Supervisar y mantener la seguridad y el rendimiento de nuestro sitio web.",
+      "text": "Utilizamos los datos recogidos para:",
+      "title": "Uso de los datos"
+    }
+  }
+}

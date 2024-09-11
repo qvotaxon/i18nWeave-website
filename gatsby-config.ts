@@ -63,33 +63,31 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        createLinkInHead: true, // Adding a link to the sitemap in the <head>
-        entryLimit: 45000, // Default entry limit
-        excludes: ['/404', '/404.html', '/*/404', '/*/404.html'], // Exclude 404 pages
+        createLinkInHead: true,
+        entryLimit: 45000,
+        excludes: ['/404', '/404.html', '/*/404', '/*/404.html'],
         query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage {
-              nodes {
-                path
-                pageContext
-              }
-            }
+      {
+        site {
+          siteMetadata {
+            siteUrl
           }
-        `,
-        resolveSiteUrl: () => siteUrl, // Resolving site URL from environment variable or fallback
+        }
+        allSitePage {
+          nodes {
+            path
+            pageContext
+          }
+        }
+      }
+    `,
+        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl, // Ensure siteUrl is retrieved correctly
 
-        // Custom resolvePages function to filter and map pages
         resolvePages: ({
           allSitePage: { nodes: allPages },
         }: {
           allSitePage: { nodes: any[] };
         }) => {
-          // Filtering pages with required conditions
           return allPages
             .filter(
               page =>
@@ -108,12 +106,10 @@ const config: GatsbyConfig = {
             });
         },
 
-        // Custom serialize function to format the sitemap entries
         serialize: ({ path, i18n }: { path: string; i18n: any }) => {
           const { defaultLanguage, languages, originalPath } = i18n;
-          const fullUrl = siteUrl + (originalPath || path);
+          const fullUrl = `${siteUrl}${originalPath || path}`; // Correct URL concatenation
 
-          // Generate links for different languages
           const links = [
             { lang: defaultLanguage || 'en', url: fullUrl },
             { lang: 'x-default', url: fullUrl },
@@ -125,7 +121,6 @@ const config: GatsbyConfig = {
             }
           });
 
-          // Return the sitemap entry with required fields
           return {
             url: fullUrl,
             changefreq: 'daily',

@@ -108,7 +108,6 @@ const config: GatsbyConfig = {
 
         serialize: ({ path, i18n }: { path: string; i18n: any }) => {
           const { defaultLanguage, languages, originalPath } = i18n;
-          const siteUrl = process.env.SITE_URL || 'https://your-site-url.com'; // Set fallback if siteUrl is not available
           const fullUrl = `${siteUrl}${originalPath || path}`; // Correct URL concatenation
 
           const links = [

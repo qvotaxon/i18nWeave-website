@@ -108,7 +108,8 @@ const config: GatsbyConfig = {
 
         serialize: ({ path, i18n }: { path: string; i18n: any }) => {
           const { defaultLanguage, languages, originalPath } = i18n;
-          const fullUrl = `${siteUrl}${originalPath || path}`; // Correct URL concatenation
+          // const siteUrl = site.siteMetadata.siteUrl;
+          const fullUrl = `${siteUrl}${originalPath || path}`; // Ensure correct URL concatenation
 
           const links = [
             { lang: defaultLanguage || 'en', url: fullUrl },

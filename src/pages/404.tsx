@@ -37,8 +37,6 @@ export const query = graphql`
 export default NotFoundPage;
 
 export const Head = (props: PageProps<PageProps, PageContext>) => {
-  const { t } = useTranslation();
-
   return (
     <SEO
       title="Developer's i18n Companion"

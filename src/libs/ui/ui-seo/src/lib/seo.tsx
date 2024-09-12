@@ -32,7 +32,7 @@ export const SEO: React.FC<SEOProps> = ({
   const origin =
     typeof window !== 'undefined'
       ? window.location.origin
-      : { origin: 'https://i18nweave.com' };
+      : 'https://i18nweave.com';
   const originalPath = pathname.replace(`/${currentLanguage}`, '') || '/';
   const canonicalUrl = `${origin}${currentLanguage === 'en' ? '' : `/${currentLanguage}`}${originalPath === '/' ? '' : originalPath}`;
 

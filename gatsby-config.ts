@@ -81,7 +81,7 @@ const config: GatsbyConfig = {
         }
       }
     `,
-        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl, // Ensure siteUrl is retrieved correctly
+        resolveSiteUrl: ({ site }: any) => site.siteMetadata.siteUrl, // Ensure siteUrl is retrieved correctly
 
         resolvePages: ({
           allSitePage: { nodes: allPages },

@@ -19,6 +19,7 @@ type SEOProps = {
   keywords: string;
   pathname: string;
   pageContext: PageContext;
+  noIndex?: boolean;
 };
 
 export const SEO: React.FC<SEOProps> = ({
@@ -27,6 +28,7 @@ export const SEO: React.FC<SEOProps> = ({
   keywords,
   pathname,
   pageContext,
+  noIndex,
 }) => {
   const currentLanguage = pageContext.language;
   const origin =
@@ -43,6 +45,7 @@ export const SEO: React.FC<SEOProps> = ({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <link rel="canonical" href={canonicalUrl} />
+        {noIndex && <meta name="robots" content="noindex" />}
 
         {pageContext.i18n.languages
           .filter(x => x !== currentLanguage)

@@ -151,11 +151,12 @@ export default CookiePolicyPage;
 export const Head = (props: PageProps<PageProps, PageContext>) => {
   return (
     <SEO
-      title="Developer's i18n Companion"
-      description="Install and configure the i18nWeave extension for Visual Studio Code. Instructions for Windows, Linux, and macOS."
-      keywords="i18next, i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, Windows, Linux, macOS"
+      title="Cookie Policy"
+      description=""
+      keywords=""
       pageContext={props.pageContext}
       pathname={props.location.pathname}
+      noIndex={true}
     />
   );
 };

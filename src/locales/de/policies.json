@@ -1,77 +1,77 @@
 {
-  "cookies": {
-    "changesToPolicy": {
-      "text": "Wir können unsere Cookie-Erklärung aktualisieren, um Änderungen bei der Verwendung von Cookies auf unserer Website zu berücksichtigen. Alle Änderungen werden auf dieser Seite bekannt gegeben.",
-      "title": "Änderungen an dieser Cookie-Erklärung"
+    "cookies": {
+        "changesToPolicy": {
+            "text": "Wir können unsere Cookie-Erklärung aktualisieren, um Änderungen bei der Verwendung von Cookies auf unserer Website zu berücksichtigen. Alle Änderungen werden auf dieser Seite bekannt gegeben.",
+            "title": "Änderungen an dieser Cookie-Erklärung"
+        },
+        "contact": {
+            "text": "Für weitere Informationen über unsere Verwendung von Cookies und um mehr über unsere Datenschutzpraktiken zu erfahren, kontaktiere uns bitte unter <0>privacy@i18nweave.com</0>.",
+            "title": "Kontakt"
+        },
+        "introduction": {
+            "text": "Cookies sind kleine Textdateien, die auf deinem Gerät (Computer, Tablet oder Handy) gespeichert werden, wenn du eine Website besuchst. Sie werden häufig verwendet, um Websites effizienter zu machen und um den Website-Betreibern Informationen zu liefern.",
+            "title": "Was sind Cookies?"
+        },
+        "managingCookies": {
+            "textOne": "Du hast das Recht zu entscheiden, ob du Cookies akzeptieren oder ablehnen möchtest. Wenn du unsere Website zum ersten Mal besuchst, erscheint ein Cookie-Banner, der dich um deine Erlaubnis bittet, Cookies auf deinem Gerät zu platzieren. Du kannst deine Cookie-Präferenzen über dieses Banner mit dem Cookie-though-Tool verwalten.",
+            "textTwo": "Außerdem kannst du Cookies in den Einstellungen deines Browsers verwalten oder löschen. Hier sind Links zur Verwaltung von Cookies in gängigen Browsern:",
+            "title": "Cookies beherbergen"
+        },
+        "title": "Cookie-Erklärung",
+        "typesOfCookies": {
+            "essential": "<0>Wesentliche Cookies:</0> Diese Cookies sind notwendig, damit die Website funktioniert und können auf unseren Systemen nicht deaktiviert werden. Sie werden in der Regel nur als Reaktion auf deine Aktionen gesetzt, z. B. wenn du deine Datenschutzeinstellungen vornimmst, dich anmeldest oder Formulare ausfüllst.",
+            "languageCookie": "<0>Performance- und Analyse-Cookies:</0> Wir verwenden diese Cookies, um zu verstehen und zu analysieren, wie Besucher mit der Website interagieren. Dazu gehören Google-Analytics-Cookies und Microsoft Clarity-Cookies. Diese Cookies helfen uns, die Funktionalität und das Nutzererlebnis der Website zu verbessern.",
+            "performance": "<0>Sprachpräferenz-Cookie:</0> Dieses Cookie speichert deine gewählte Sprachpräferenz, um ein einheitliches Surferlebnis zu gewährleisten.",
+            "title": "Arten von Cookies, die wir verwenden"
+        },
+        "useOfCookies": {
+            "googleAnalytics": "<0>Google Analytics:</0> Wir verwenden Google Analytics, um detaillierte Statistiken über die Nutzung unserer Website zu sammeln. Das hilft uns, das Besucherverhalten zu verstehen und unsere Seite entsprechend zu verbessern. Die gesammelten Daten sind anonym und fassen das Nutzerverhalten zusammen, identifizieren aber keine Einzelpersonen.",
+            "languageCookie": "<0>Sprach-Cookie:</0> Ein Cookie wird gespeichert, um die von dir gewählte Sprache zu speichern und sicherzustellen, dass du die Website bei deinen nächsten Besuchen in der von dir gewählten Sprache siehst.",
+            "microsoftClarity": "<0>Microsoft Clarity:</0> Wir verwenden Microsoft Clarity, um Einblicke in die Interaktion der Nutzer/innen mit unserer Website zu erhalten. Dazu gehört auch die Aufzeichnung von Nutzersitzungen und Verhaltensweisen, um die Leistung der Website und das Engagement der Nutzer/innen zu verbessern."
+        }
     },
-    "contact": {
-      "text": "Für weitere Informationen über unsere Verwendung von Cookies und um mehr über unsere Datenschutzpraktiken zu erfahren, kontaktiere uns bitte unter <0>privacy@i18nweave.com</0>.",
-      "title": "Kontakt"
-    },
-    "introduction": {
-      "text": "Cookies sind kleine Textdateien, die auf deinem Gerät (Computer, Tablet oder Handy) gespeichert werden, wenn du eine Website besuchst. Sie werden häufig verwendet, um Websites effizienter zu machen und um den Website-Betreibern Informationen zu liefern.",
-      "title": "Was sind Cookies?"
-    },
-    "managingCookies": {
-      "textOne": "Du hast das Recht zu entscheiden, ob du Cookies akzeptieren oder ablehnen möchtest. Wenn du unsere Website zum ersten Mal besuchst, erscheint ein Cookie-Banner, der dich um deine Erlaubnis bittet, Cookies auf deinem Gerät zu platzieren. Du kannst deine Cookie-Präferenzen über dieses Banner mit dem Cookie-though-Tool verwalten.",
-      "textTwo": "Außerdem kannst du Cookies in den Einstellungen deines Browsers verwalten oder löschen. Hier sind Links zur Verwaltung von Cookies in gängigen Browsern:",
-      "title": "Cookies beherbergen"
-    },
-    "title": "Cookie-Erklärung",
-    "typesOfCookies": {
-      "essential": "<0>Wesentliche Cookies:</0> Diese Cookies sind notwendig, damit die Website funktioniert und können auf unseren Systemen nicht deaktiviert werden. Sie werden in der Regel nur als Reaktion auf deine Aktionen gesetzt, z. B. wenn du deine Datenschutzeinstellungen vornimmst, dich anmeldest oder Formulare ausfüllst.",
-      "languageCookie": "<0>Performance- und Analyse-Cookies:</0> Wir verwenden diese Cookies, um zu verstehen und zu analysieren, wie Besucher mit der Website interagieren. Dazu gehören Google-Analytics-Cookies und Microsoft Clarity-Cookies. Diese Cookies helfen uns, die Funktionalität und das Nutzererlebnis der Website zu verbessern.",
-      "performance": "<0>Sprachpräferenz-Cookie:</0> Dieses Cookie speichert deine gewählte Sprachpräferenz, um ein einheitliches Surferlebnis zu gewährleisten.",
-      "title": "Arten von Cookies, die wir verwenden"
-    },
-    "useOfCookies": {
-      "googleAnalytics": "<0>Google Analytics:</0> Wir verwenden Google Analytics, um detaillierte Statistiken über die Nutzung unserer Website zu sammeln. Das hilft uns, das Besucherverhalten zu verstehen und unsere Seite entsprechend zu verbessern. Die gesammelten Daten sind anonym und fassen das Nutzerverhalten zusammen, identifizieren aber keine Einzelpersonen.",
-      "languageCookie": "<0>Sprach-Cookie:</0> Ein Cookie wird gespeichert, um die von dir gewählte Sprache zu speichern und sicherzustellen, dass du die Website bei deinen nächsten Besuchen in der von dir gewählten Sprache siehst.",
-      "microsoftClarity": "<0>Microsoft Clarity:</0> Wir verwenden Microsoft Clarity, um Einblicke in die Interaktion der Nutzer/innen mit unserer Website zu erhalten. Dazu gehört auch die Aufzeichnung von Nutzersitzungen und Verhaltensweisen, um die Leistung der Website und das Engagement der Nutzer/innen zu verbessern."
+    "privacyPolicy": {
+        "changesToPolicy": {
+            "text": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Wir werden dich über alle Änderungen informieren, indem wir die neue Datenschutzrichtlinie auf dieser Seite veröffentlichen.",
+            "title": "Änderungen an dieser Datenschutzrichtlinie"
+        },
+        "childPrivacy": {
+            "text": "Unsere Website ist für Nutzer/innen aller Altersgruppen zugänglich, aber wir sammeln nicht wissentlich personenbezogene Daten von Kindern unter 13 Jahren. Wenn wir erfahren, dass wir personenbezogene Daten von einem Kind unter 13 Jahren gesammelt haben, werden wir Maßnahmen ergreifen, um diese Informationen zu löschen.",
+            "title": "Der Schutz der Privatsphäre von Kindern"
+        },
+        "contact": {
+            "text": "Wenn du Fragen oder Bedenken zu dieser Datenschutzrichtlinie hast, kontaktiere uns bitte unter <0>privacy@i18nweave.com</0>.",
+            "title": "Kontakt"
+        },
+        "dataCollection": {
+            "googleAnalytics": "<0>Google Analytics:</0> Wir verwenden Google Analytics, um Informationen über deine Nutzung unserer Website zu sammeln, z. B. die von dir besuchten Seiten, die Verweildauer auf jeder Seite und andere Nutzungsstatistiken. Google Analytics verwendet Cookies, um diese Daten zu sammeln.",
+            "languageCookie": "<0>Sprach-Cookie:</0> Wir speichern ein Cookie, um deine Sprachpräferenz für ein besseres Nutzererlebnis zu speichern.",
+            "microsoftClarity": "<0>Microsoft Clarity</0>: Wir verwenden Microsoft Clarity, um zu verstehen, wie Nutzer/innen mit unseren Websites interagieren. Dazu sammeln wir Informationen über die Sitzungen der Nutzer/innen, einschließlich Klicks, Scrollen und andere Interaktionen.",
+            "title": "Daten, die wir sammeln"
+        },
+        "dataSecurity": {
+            "text": "Wir setzen angemessene technische und organisatorische Maßnahmen ein, um die Sicherheit deiner personenbezogenen Daten zu gewährleisten und unbefugten Zugriff, Offenlegung, Veränderung oder Zerstörung zu verhindern.",
+            "title": "Datensicherheit"
+        },
+        "dataSharing": {
+            "text": "Wir geben deine personenbezogenen Daten nicht an Dritte weiter, es sei denn, dies ist notwendig, um gesetzlichen Verpflichtungen nachzukommen oder unsere Rechte zu schützen.",
+            "title": "Gemeinsame Nutzung von Daten"
+        },
+        "internationalDataTransfer": {
+            "text": "Da unsere Nutzer/innen aus der ganzen Welt kommen, können die erhobenen Daten in Länder außerhalb des Europäischen Wirtschaftsraums (EWR) übertragen und dort verarbeitet werden. Wir stellen sicher, dass solche Übertragungen mit den geltenden Datenschutzgesetzen übereinstimmen und angemessene Sicherheitsvorkehrungen getroffen werden.",
+            "title": "Internationale Datenübertragungen"
+        },
+        "introduction": {
+            "text": "Willkommen bei i18nweave.com. Wir schätzen deine Privatsphäre und bemühen uns, deine persönlichen Daten zu schützen. Diese Datenschutzrichtlinie beschreibt, welche Art von Daten wir sammeln, wie wir sie verwenden und welche Maßnahmen wir ergreifen, um ihre Sicherheit zu gewährleisten.",
+            "title": "Einführung"
+        },
+        "title": "Datenschutzrichtlinie",
+        "useOfData": {
+            "analyze": "Analysiere das Nutzerverhalten und die Vorlieben, um das Nutzererlebnis zu verbessern.",
+            "improve": "Die Funktionalität und den Inhalt unserer Website zu verbessern.",
+            "monitor": "Die Sicherheit und Leistung unserer Website zu überwachen und zu erhalten.",
+            "text": "Wir verwenden die gesammelten Daten, um:",
+            "title": "Verwendung von Daten"
+        }
     }
-  },
-  "privacyPolicy": {
-    "changesToPolicy": {
-      "text": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Wir werden dich über alle Änderungen informieren, indem wir die neue Datenschutzrichtlinie auf dieser Seite veröffentlichen.",
-      "title": "Änderungen an dieser Datenschutzrichtlinie"
-    },
-    "childPrivacy": {
-      "text": "Unsere Website ist für Nutzer/innen aller Altersgruppen zugänglich, aber wir sammeln nicht wissentlich personenbezogene Daten von Kindern unter 13 Jahren. Wenn wir erfahren, dass wir personenbezogene Daten von einem Kind unter 13 Jahren gesammelt haben, werden wir Maßnahmen ergreifen, um diese Informationen zu löschen.",
-      "title": "Der Schutz der Privatsphäre von Kindern"
-    },
-    "contact": {
-      "text": "Wenn du Fragen oder Bedenken zu dieser Datenschutzrichtlinie hast, kontaktiere uns bitte unter <0>privacy@i18nweave.com</0>.",
-      "title": "Kontakt"
-    },
-    "dataCollection": {
-      "googleAnalytics": "<0>Google Analytics:</0> Wir verwenden Google Analytics, um Informationen über deine Nutzung unserer Website zu sammeln, z. B. die von dir besuchten Seiten, die Verweildauer auf jeder Seite und andere Nutzungsstatistiken. Google Analytics verwendet Cookies, um diese Daten zu sammeln.",
-      "languageCookie": "<0>Sprach-Cookie:</0> Wir speichern ein Cookie, um deine Sprachpräferenz für ein besseres Nutzererlebnis zu speichern.",
-      "microsoftClarity": "<0>Microsoft Clarity</0>: Wir verwenden Microsoft Clarity, um zu verstehen, wie Nutzer/innen mit unseren Websites interagieren. Dazu sammeln wir Informationen über die Sitzungen der Nutzer/innen, einschließlich Klicks, Scrollen und andere Interaktionen.",
-      "title": "Daten, die wir sammeln"
-    },
-    "dataSecurity": {
-      "text": "Wir setzen angemessene technische und organisatorische Maßnahmen ein, um die Sicherheit deiner personenbezogenen Daten zu gewährleisten und unbefugten Zugriff, Offenlegung, Veränderung oder Zerstörung zu verhindern.",
-      "title": "Datensicherheit"
-    },
-    "dataSharing": {
-      "text": "Wir geben deine personenbezogenen Daten nicht an Dritte weiter, es sei denn, dies ist notwendig, um gesetzlichen Verpflichtungen nachzukommen oder unsere Rechte zu schützen.",
-      "title": "Gemeinsame Nutzung von Daten"
-    },
-    "internationalDataTransfer": {
-      "text": "Da unsere Nutzer/innen aus der ganzen Welt kommen, können die erhobenen Daten in Länder außerhalb des Europäischen Wirtschaftsraums (EWR) übertragen und dort verarbeitet werden. Wir stellen sicher, dass solche Übertragungen mit den geltenden Datenschutzgesetzen übereinstimmen und angemessene Sicherheitsvorkehrungen getroffen werden.",
-      "title": "Internationale Datenübertragungen"
-    },
-    "introduction": {
-      "text": "Willkommen bei i18nweave.com. Wir schätzen deine Privatsphäre und bemühen uns, deine persönlichen Daten zu schützen. Diese Datenschutzrichtlinie beschreibt, welche Art von Daten wir sammeln, wie wir sie verwenden und welche Maßnahmen wir ergreifen, um ihre Sicherheit zu gewährleisten.",
-      "title": "Einführung"
-    },
-    "title": "Datenschutzrichtlinie",
-    "useOfData": {
-      "analyze": "Analysiere das Nutzerverhalten und die Vorlieben, um das Nutzererlebnis zu verbessern.",
-      "improve": "Die Funktionalität und den Inhalt unserer Website zu verbessern.",
-      "monitor": "Die Sicherheit und Leistung unserer Website zu überwachen und zu erhalten.",
-      "text": "Wir verwenden die gesammelten Daten, um:",
-      "title": "Verwendung von Daten"
-    }
-  }
 }

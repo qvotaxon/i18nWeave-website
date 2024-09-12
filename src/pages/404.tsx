@@ -37,15 +37,14 @@ export const query = graphql`
 export default NotFoundPage;
 
 export const Head = (props: PageProps<PageProps, PageContext>) => {
-  const { t } = useTranslation();
-
   return (
     <SEO
       title="Developer's i18n Companion"
-      description="i18nWeave helps developers efficiently handle i18next translations in their projects. Increase productivity and ensure consistency across multiple languages."
-      keywords="i18next, i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
+      description=""
+      keywords=""
       pageContext={props.pageContext}
       pathname={props.location.pathname}
+      noIndex={true}
     />
   );
 };

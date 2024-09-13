@@ -238,7 +238,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
         </nav>
       </header>
 
-      <div className="fixed left-5 bottom-5">
+      <div className="fixed left-5 bottom-24 z-50 [@media_(max-height:666px)]:bottom-5 md:bottom-20">
         <svg
           width="33"
           height="33"

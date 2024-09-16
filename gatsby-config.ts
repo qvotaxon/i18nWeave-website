@@ -35,7 +35,7 @@ const config: GatsbyConfig = {
         languages: [`en`, `nl`, `de`, `fr`, `es`],
         defaultLanguage: `en`,
         siteUrl: siteUrl,
-        trailingSlash: 'always', // include if you are using trailingSlash in gatsby config
+        trailingSlash: true, // include if you are using trailingSlash in gatsby config
         i18nextOptions: {
           interpolation: {
             escapeValue: false, // not needed for react as it escapes by default

@@ -36,7 +36,7 @@ export const SEO: React.FC<SEOProps> = ({
       ? window.location.origin
       : 'https://i18nweave.com';
   const originalPath = pathname.replace(`/${currentLanguage}`, '') || '/';
-  const canonicalUrl = `${origin}${currentLanguage === 'en' ? '' : `/${currentLanguage}`}${originalPath === '/' ? '' : originalPath}`;
+  const canonicalUrl = `${origin}${currentLanguage === 'en' ? '' : `/${currentLanguage}/`}${originalPath === '/' ? '' : originalPath}`;
 
   return (
     <html lang={currentLanguage}>
@@ -53,7 +53,7 @@ export const SEO: React.FC<SEOProps> = ({
             <link
               key={lang}
               rel="alternate"
-              href={`${origin}${lang === 'en' ? '' : `/${lang}`}${originalPath === '/' ? '' : originalPath}`}
+              href={`${origin}${lang === 'en' ? '' : `/${lang}/`}${originalPath === '/' ? '' : originalPath}`}
               hrefLang={lang}
             />
           ))}

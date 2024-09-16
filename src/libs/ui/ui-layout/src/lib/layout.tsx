@@ -296,7 +296,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
           </SecureLink>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col md:flex-row items-center md:space-x-4">
           <SecureLink
             to="/privacy-policy"
             className="text-white hover:text-highlight">

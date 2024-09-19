@@ -122,12 +122,8 @@ const config: GatsbyConfig = {
           languages.forEach((lang: string) => {
             if (lang !== defaultLanguage) {
               links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` });
-
-              console.log('pushing link', `${siteUrl}/${lang}${originalPath}`);
             }
           });
-
-          console.log('fullUrl', fullUrl);
 
           return {
             url: fullUrl,

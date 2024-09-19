@@ -44,7 +44,7 @@ const FeaturesPage: React.FC<PageProps> = () => {
 
           <SecureLink
             to="/getting-started"
-            className="button text-center w-full block text-white p-2 border-4 border-white text-2xl hover:text-highlight hover:border-highlight mt-8 md:mt-4 md:inline-block md:w-auto">
+            className="button text-center w-full block text-white p-2 border-4 border-white text-2xl hover:text-highlight hover:border-highlight py-2 px-4 mx-0 md:mt-4 md:inline-block md:w-auto">
             {t('section.gettingStarted.buttons.getStarted')}
           </SecureLink>
         </div>

@@ -1,109 +1,109 @@
 {
-  "404": {
-    "goToHome": "Ir a la página de inicio",
-    "pageNotFound": {
-      "errorMessage": "Parece que se ha perdido en la traducción. No hemos podido encontrar la página que buscabas.",
-      "title": "Página no encontrada"
-    }
-  },
-  "cookies": {
-    "essential": {
-      "description": "Necesitamos guardar ciertas cookies técnicas para que el sitio web funcione correctamente.",
-      "label": "Cookies esenciales"
-    },
-    "functional": {
-      "description": "Necesitamos guardar algunas preferencias básicas, como el idioma.",
-      "label": "Cookies funcionales"
-    },
-    "general": {
-      "cookiePolicy": {
-        "label": "Leer la declaración completa sobre las cookies"
-      },
-      "customizeLabel": "Personaliza",
-      "essentialLabel": "Siempre en movimiento",
-      "header": {
-        "description": "Sabemos que las galletas no son el tentempié favorito de todo el mundo, pero me ayudan a mí (el desarrollador del sitio web) a proporcionarte la experiencia más fluida y libre de errores posible. ¡Unas migas pueden marcar la diferencia!",
-        "subTitle": "Sí, es otro de esos *banners*...",
-        "title": "¿Quieres galletas?"
-      },
-      "permissionLabels": {
-        "accept": "Acepta",
-        "acceptAll": "Aceptar todo",
-        "decline": "Rejeter"
-      }
-    },
-    "statistics": {
-      "description": "Necesitamos guardar ciertas cookies técnicas para que el sitio web funcione correctamente.",
-      "label": "Estadísticas"
-    }
-  },
-  "section": {
-    "features": {
-      "automaticKeyExtraction": {
-        "introduction": "Extrae instantáneamente las claves de traducción de tus archivos de código cada vez que los guardes. i18nWeave utiliza la detección inteligente de cambios en el código, garantizando que los análisis sólo se realicen cuando sea necesario."
-      },
-      "automaticTranslation": {
-        "introduction": "Traduce automáticamente las claves que falten en todos los idiomas definidos cada vez que añadas una traducción a un archivo de recursos. i18nWeave admite actualmente la traducción con DeepL (en versión beta), y tiene previsto añadir Google Translate en breve."
-      },
-      "easyConfig": {
-        "title": "Configuración sencilla"
-      },
-      "foss": {
-        "title": "Libre y de código abierto"
-      },
-      "introduction": {
-        "description": "Gestiona tus traducciones con facilidad utilizando la extensión VSCode de i18nWeave. i18nWeave ofrece una amplia gama de funciones para ayudarte a gestionar tus traducciones y mantenerlas sincronizadas con tu base de código."
-      },
-      "keyExtraction": {
-        "title": "Extracción automática de claves"
-      },
-      "support": {
-        "angular": {
-          "description": "Encargarse de Angular i18next",
-          "title": "Angular"
-        },
-        "custom": {
-          "description": "Soporta todo con i18next",
-          "title": "A medida"
-        },
-        "react": {
-          "description": "Encargarse de React i18next",
-          "title": "React"
+    "404": {
+        "goToHome": "Ir a la página de inicio",
+        "pageNotFound": {
+            "errorMessage": "Parece que se ha perdido en la traducción. No hemos podido encontrar la página que buscabas.",
+            "title": "Página no encontrada"
         }
-      },
-      "tableView": {
-        "introduction": "Gestiona fácilmente tus traducciones con la visualización interactiva de la tabla. Se acabó el desplazamiento interminable por los archivos JSON: encuentra las claves sin traducir en la parte superior de la tabla para acceder rápidamente a ellas."
-      },
-      "title": "Características"
     },
-    "gettingStarted": {
-      "buttons": {
-        "features": "Muéstrame las características",
-        "getStarted": "Quiero empezar"
-      },
-      "configurationWizard": {
-        "introduction": "Una vez que hayas instalado la extensión VSCode, estarás funcionando en un abrir y cerrar de ojos gracias al asistente de configuración."
-      },
-      "configureProject": {
-        "description": "Abre la paleta de comandos y ejecuta el comando <0>`Configurar i18nWeave`</0>. Sigue las instrucciones para configurar tu proyecto. Para abrir la paleta de comandos, pulsa <1>Ctrl+Mayús+P</1> en Windows/Linux o <2>Cmd+Mayús+P</2> en macOS.",
-        "title": "Configura tu proyecto"
-      },
-      "examples": {
-        "introduction": "Si aún no utilizas i18next, ¡no te preocupes! He creado algunas aplicaciones de ejemplo con diferentes enfoques para ayudarte a empezar."
-      },
-      "installExtension": {
-        "description": "Busca la extensión i18nWeave en la ventana de extensiones de Visual Studio Code o visita el sitio web de la empresa",
-        "title": "Instalar la extensión"
-      },
-      "librarySupport": {
-        "introduction": "i18nWeave es compatible con una gran variedad de proyectos, marcos de trabajo y bibliotecas. Mientras utilices i18next para tus traducciones, i18nWeave puede ser tu herramienta de referencia."
-      },
-      "title": "Cómo empezar"
+    "cookies": {
+        "essential": {
+            "description": "Necesitamos guardar ciertas cookies técnicas para que el sitio web funcione correctamente.",
+            "label": "Cookies esenciales"
+        },
+        "functional": {
+            "description": "Necesitamos guardar algunas preferencias básicas, como el idioma.",
+            "label": "Cookies funcionales"
+        },
+        "general": {
+            "cookiePolicy": {
+                "label": "Leer la declaración completa sobre las cookies"
+            },
+            "customizeLabel": "Personaliza",
+            "essentialLabel": "Siempre en movimiento",
+            "header": {
+                "description": "Sabemos que las galletas no son el tentempié favorito de todo el mundo, pero me ayudan a mí (el desarrollador del sitio web) a proporcionarte la experiencia más fluida y libre de errores posible. ¡Unas migas pueden marcar la diferencia!",
+                "subTitle": "Sí, es otro de esos *banners*...",
+                "title": "¿Quieres galletas?"
+            },
+            "permissionLabels": {
+                "accept": "Acepta",
+                "acceptAll": "Aceptar todo",
+                "decline": "Rejeter"
+            }
+        },
+        "statistics": {
+            "description": "Necesitamos guardar ciertas cookies técnicas para que el sitio web funcione correctamente.",
+            "label": "Estadísticas"
+        }
     },
-    "i18nWeave": {
-      "introduction": {
-        "title": "Gestiona tus traducciones de forma transparente"
-      }
+    "section": {
+        "features": {
+            "automaticKeyExtraction": {
+                "introduction": "Extrae instantáneamente las claves de traducción de tus archivos de código cada vez que los guardes. i18nWeave utiliza la detección inteligente de cambios en el código, garantizando que los análisis sólo se realicen cuando sea necesario."
+            },
+            "automaticTranslation": {
+                "introduction": "Traduce automáticamente las claves que falten en todos los idiomas definidos cada vez que añadas una traducción a un archivo de recursos. i18nWeave admite actualmente la traducción con DeepL (en versión beta), y tiene previsto añadir Google Translate en breve."
+            },
+            "easyConfig": {
+                "title": "Configuración sencilla"
+            },
+            "foss": {
+                "title": "Libre y de código abierto"
+            },
+            "introduction": {
+                "description": "Gestiona tus traducciones con facilidad utilizando la extensión VSCode de i18nWeave. i18nWeave ofrece una amplia gama de funciones para ayudarte a gestionar tus traducciones y mantenerlas sincronizadas con tu base de código."
+            },
+            "keyExtraction": {
+                "title": "Extracción automática de claves"
+            },
+            "support": {
+                "angular": {
+                    "description": "Encargarse de Angular i18next",
+                    "title": "Angular"
+                },
+                "custom": {
+                    "description": "Soporta todo con i18next",
+                    "title": "A medida"
+                },
+                "react": {
+                    "description": "Encargarse de React i18next",
+                    "title": "React"
+                }
+            },
+            "tableView": {
+                "introduction": "Gestiona fácilmente tus traducciones con la visualización interactiva de la tabla. Se acabó el desplazamiento interminable por los archivos JSON: encuentra las claves sin traducir en la parte superior de la tabla para acceder rápidamente a ellas."
+            },
+            "title": "Características"
+        },
+        "gettingStarted": {
+            "buttons": {
+                "features": "Muéstrame las características",
+                "getStarted": "Quiero empezar"
+            },
+            "configurationWizard": {
+                "introduction": "Una vez que hayas instalado la extensión VSCode, estarás funcionando en un abrir y cerrar de ojos gracias al asistente de configuración."
+            },
+            "configureProject": {
+                "description": "Abre la paleta de comandos y ejecuta el comando <0>`Configurar i18nWeave`</0>. Sigue las instrucciones para configurar tu proyecto. Para abrir la paleta de comandos, pulsa <1>Ctrl+Mayús+P</1> en Windows/Linux o <2>Cmd+Mayús+P</2> en macOS.",
+                "title": "Configura tu proyecto"
+            },
+            "examples": {
+                "introduction": "Si aún no utilizas i18next, ¡no te preocupes! He creado algunas aplicaciones de ejemplo con diferentes enfoques para ayudarte a empezar."
+            },
+            "installExtension": {
+                "description": "Busca la extensión i18nWeave en la ventana de extensiones de Visual Studio Code o visita el sitio web de la empresa",
+                "title": "Instalar la extensión"
+            },
+            "librarySupport": {
+                "introduction": "i18nWeave es compatible con una gran variedad de proyectos, marcos de trabajo y bibliotecas. Mientras utilices i18next para tus traducciones, i18nWeave puede ser tu herramienta de referencia."
+            },
+            "title": "Cómo empezar"
+        },
+        "i18nWeave": {
+            "introduction": {
+                "title": "Gestiona tus traducciones de forma transparente"
+            }
+        }
     }
-  }
 }

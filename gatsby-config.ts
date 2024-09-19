@@ -13,6 +13,20 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    `gatsby-plugin-mdx`,
+    // {
+    //   resolve: `gatsby-plugin-page-creator`,
+    //   options: {
+    //     path: `./src/blog/posts`,
+    //   },
+    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `./src/pages/blog/posts`,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -43,7 +57,7 @@ const config: GatsbyConfig = {
           keySeparator: '.',
           nsSeparator: ':',
           defaultNS: `common`, // set common as the default namespace
-          ns: [`common`, `navigation`], // specify the namespaces to load
+          ns: [`common`, `navigation`, `mdx`, `policies`], // specify the namespaces to load
         },
         pages: [
           {
@@ -59,7 +73,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sitemap',
+    // 'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {

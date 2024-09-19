@@ -1,109 +1,109 @@
 {
-  "404": {
-    "goToHome": "Ga naar de startpagina",
-    "pageNotFound": {
-      "errorMessage": "Het lijkt erop dat het verloren is gegaan in de vertaling. We konden de pagina die je zocht niet vinden.",
-      "title": "Pagina niet gevonden"
-    }
-  },
-  "cookies": {
-    "essential": {
-      "description": "We moeten een aantal technische cookies opslaan om de website goed te laten functioneren.",
-      "label": "Essentiële cookies"
-    },
-    "functional": {
-      "description": "We moeten een aantal basisvoorkeuren opslaan, zoals taal.",
-      "label": "Functionele cookies"
-    },
-    "general": {
-      "cookiePolicy": {
-        "label": "Lees de volledige cookieverklaring"
-      },
-      "customizeLabel": "Pas  aan",
-      "essentialLabel": "Altijd aan",
-      "header": {
-        "description": "We weten dat koekjes niet ieders favoriete snack zijn, maar ze helpen mij (de ontwikkelaar van de website) wel om je een zo soepel mogelijke ervaring zonder bugs te geven. Een paar kruimels kunnen al het verschil maken!",
-        "subTitle": "Ja, het is weer zo'n pop-up...",
-        "title": "Koekjes, iemand?"
-      },
-      "permissionLabels": {
-        "accept": "Accepteer",
-        "acceptAll": "Alles accepteren",
-        "decline": "Afwijzen"
-      }
-    },
-    "statistics": {
-      "description": "We moeten een aantal technische cookies opslaan om de website goed te laten functioneren.",
-      "label": "Statistieken"
-    }
-  },
-  "section": {
-    "features": {
-      "automaticKeyExtraction": {
-        "introduction": "Haal onmiddellijk vertaalsleutels uit je codebestanden wanneer je ze opslaat. i18nWeave gebruikt slimme detectie van codewijzigingen, zodat scans alleen plaatsvinden wanneer dat nodig is."
-      },
-      "automaticTranslation": {
-        "introduction": "Automatisch vertalen van ontbrekende toetsen in alle gedefinieerde talen wanneer je een vertaling toevoegt aan een resourcebestand. i18nWeave ondersteunt momenteel vertaling met DeepL (in bèta), met plannen om Google Translate binnenkort toe te voegen."
-      },
-      "easyConfig": {
-        "title": "Eenvoudige configuratie"
-      },
-      "foss": {
-        "title": "Gratis en Open Source"
-      },
-      "introduction": {
-        "description": "Beheer je vertalingen eenvoudig met de i18nWeave VSCode-extensie. i18nWeave biedt een groot aantal functies om je te helpen je vertalingen te beheren en je vertalingen synchroon te houden met je codebase."
-      },
-      "keyExtraction": {
-        "title": "Automatische sleutelextractie"
-      },
-      "support": {
-        "angular": {
-          "description": "Ondersteunt Angular i18next",
-          "title": "Angular"
-        },
-        "custom": {
-          "description": "Ondersteunt alles met i18next",
-          "title": "Custom"
-        },
-        "react": {
-          "description": "Ondersteunt React i18next",
-          "title": "React"
+    "404": {
+        "goToHome": "Ga naar de startpagina",
+        "pageNotFound": {
+            "errorMessage": "Het lijkt erop dat het verloren is gegaan in de vertaling. We konden de pagina die je zocht niet vinden.",
+            "title": "Pagina niet gevonden"
         }
-      },
-      "tableView": {
-        "introduction": "Beheer je vertalingen eenvoudig met de interactieve tabelweergave. Nooit meer eindeloos scrollen door JSON-bestanden - zoek onvertaalde sleutels bovenaan de tabel voor snelle toegang."
-      },
-      "title": "Kenmerken"
     },
-    "gettingStarted": {
-      "buttons": {
-        "features": "Toon me de functies",
-        "getStarted": "Ik wil aan de slag"
-      },
-      "configurationWizard": {
-        "introduction": "Nadat je de VSCode-extensie hebt geïnstalleerd, kun je in een mum van tijd aan de slag met de Configuratiewizard."
-      },
-      "configureProject": {
-        "description": "Open het opdrachtenpalet en voer de opdracht <0>`Configure i18nWeave`</0> uit. Volg de instructies om je project in te stellen. Om het opdrachtenpalet te openen, druk je op <1>Ctrl+Shift+P</1> op Windows/Linux of <2>Cmd+Shift+P</2> op macOS.",
-        "title": "Je project configureren"
-      },
-      "examples": {
-        "introduction": "Als je i18next nog niet gebruikt, geen zorgen! Ik heb voorbeeldapplicaties gemaakt met verschillende benaderingen om je op weg te helpen."
-      },
-      "installExtension": {
-        "description": "Zoek naar de i18nWeave-extensie in het uitbreidingsvenster van Visual Studio Code of ga naar de",
-        "title": "De extensie installeren"
-      },
-      "librarySupport": {
-        "introduction": "i18nWeave ondersteunt een grote verscheidenheid aan projecten, frameworks en bibliotheken. Zolang je i18next gebruikt voor je vertalingen, kan i18nWeave je go-to tool zijn."
-      },
-      "title": "Aan de slag"
+    "cookies": {
+        "essential": {
+            "description": "We moeten een aantal technische cookies opslaan om de website goed te laten functioneren.",
+            "label": "Essentiële cookies"
+        },
+        "functional": {
+            "description": "We moeten een aantal basisvoorkeuren opslaan, zoals taal.",
+            "label": "Functionele cookies"
+        },
+        "general": {
+            "cookiePolicy": {
+                "label": "Lees de volledige cookieverklaring"
+            },
+            "customizeLabel": "Pas  aan",
+            "essentialLabel": "Altijd aan",
+            "header": {
+                "description": "We weten dat koekjes niet ieders favoriete snack zijn, maar ze helpen mij (de ontwikkelaar van de website) wel om je een zo soepel mogelijke ervaring zonder bugs te geven. Een paar kruimels kunnen al het verschil maken!",
+                "subTitle": "Ja, het is weer zo'n pop-up...",
+                "title": "Koekjes, iemand?"
+            },
+            "permissionLabels": {
+                "accept": "Accepteer",
+                "acceptAll": "Alles accepteren",
+                "decline": "Afwijzen"
+            }
+        },
+        "statistics": {
+            "description": "We moeten een aantal technische cookies opslaan om de website goed te laten functioneren.",
+            "label": "Statistieken"
+        }
     },
-    "i18nWeave": {
-      "introduction": {
-        "title": "Naadloos je vertalingen beheren"
-      }
+    "section": {
+        "features": {
+            "automaticKeyExtraction": {
+                "introduction": "Haal onmiddellijk vertaalsleutels uit je codebestanden wanneer je ze opslaat. i18nWeave gebruikt slimme detectie van codewijzigingen, zodat scans alleen plaatsvinden wanneer dat nodig is."
+            },
+            "automaticTranslation": {
+                "introduction": "Automatisch vertalen van ontbrekende toetsen in alle gedefinieerde talen wanneer je een vertaling toevoegt aan een resourcebestand. i18nWeave ondersteunt momenteel vertaling met DeepL (in bèta), met plannen om Google Translate binnenkort toe te voegen."
+            },
+            "easyConfig": {
+                "title": "Eenvoudige configuratie"
+            },
+            "foss": {
+                "title": "Gratis en Open Source"
+            },
+            "introduction": {
+                "description": "Beheer je vertalingen eenvoudig met de i18nWeave VSCode-extensie. i18nWeave biedt een groot aantal functies om je te helpen je vertalingen te beheren en je vertalingen synchroon te houden met je codebase."
+            },
+            "keyExtraction": {
+                "title": "Automatische sleutelextractie"
+            },
+            "support": {
+                "angular": {
+                    "description": "Ondersteunt Angular i18next",
+                    "title": "Angular"
+                },
+                "custom": {
+                    "description": "Ondersteunt alles met i18next",
+                    "title": "Custom"
+                },
+                "react": {
+                    "description": "Ondersteunt React i18next",
+                    "title": "React"
+                }
+            },
+            "tableView": {
+                "introduction": "Beheer je vertalingen eenvoudig met de interactieve tabelweergave. Nooit meer eindeloos scrollen door JSON-bestanden - zoek onvertaalde sleutels bovenaan de tabel voor snelle toegang."
+            },
+            "title": "Kenmerken"
+        },
+        "gettingStarted": {
+            "buttons": {
+                "features": "Toon me de functies",
+                "getStarted": "Ik wil aan de slag"
+            },
+            "configurationWizard": {
+                "introduction": "Nadat je de VSCode-extensie hebt geïnstalleerd, kun je in een mum van tijd aan de slag met de Configuratiewizard."
+            },
+            "configureProject": {
+                "description": "Open het opdrachtenpalet en voer de opdracht <0>`Configure i18nWeave`</0> uit. Volg de instructies om je project in te stellen. Om het opdrachtenpalet te openen, druk je op <1>Ctrl+Shift+P</1> op Windows/Linux of <2>Cmd+Shift+P</2> op macOS.",
+                "title": "Je project configureren"
+            },
+            "examples": {
+                "introduction": "Als je i18next nog niet gebruikt, geen zorgen! Ik heb voorbeeldapplicaties gemaakt met verschillende benaderingen om je op weg te helpen."
+            },
+            "installExtension": {
+                "description": "Zoek naar de i18nWeave-extensie in het uitbreidingsvenster van Visual Studio Code of ga naar de",
+                "title": "De extensie installeren"
+            },
+            "librarySupport": {
+                "introduction": "i18nWeave ondersteunt een grote verscheidenheid aan projecten, frameworks en bibliotheken. Zolang je i18next gebruikt voor je vertalingen, kan i18nWeave je go-to tool zijn."
+            },
+            "title": "Aan de slag"
+        },
+        "i18nWeave": {
+            "introduction": {
+                "title": "Naadloos je vertalingen beheren"
+            }
+        }
     }
-  }
 }

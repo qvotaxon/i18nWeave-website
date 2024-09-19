@@ -38,8 +38,6 @@ export const SEO: React.FC<SEOProps> = ({
   const originalPath = pathname.replace(`/${currentLanguage}`, '') || '/';
   const canonicalUrl = `${origin}${currentLanguage === 'en' ? '' : `/${currentLanguage}`}${originalPath === '/' ? (currentLanguage === 'en' ? '' : '/') : originalPath}`;
 
-  console.log(`${origin}${originalPath === '/' ? '' : originalPath}`);
-
   return (
     <html lang={currentLanguage}>
       <head>

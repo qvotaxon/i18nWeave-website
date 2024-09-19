@@ -108,7 +108,11 @@ const config: GatsbyConfig = {
 
         serialize: ({ path, i18n }: { path: string; i18n: any }) => {
           const { defaultLanguage, languages, originalPath } = i18n;
-          const fullUrl = `${siteUrl}${originalPath || path}`; // Correct URL concatenation
+          let fullUrl = `${siteUrl}${originalPath || path}`; // Correct URL concatenation
+
+          if (fullUrl === 'https://i18nweave.com/') {
+            fullUrl = 'https://i18nweave.com';
+          }
 
           const links = [
             { lang: defaultLanguage || 'en', url: fullUrl },
@@ -118,8 +122,12 @@ const config: GatsbyConfig = {
           languages.forEach((lang: string) => {
             if (lang !== defaultLanguage) {
               links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` });
+
+              console.log('pushing link', `${siteUrl}/${lang}${originalPath}`);
             }
           });
+
+          console.log('fullUrl', fullUrl);
 
           return {
             url: fullUrl,

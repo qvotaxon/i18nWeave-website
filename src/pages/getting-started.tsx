@@ -4,8 +4,12 @@ import { Layout } from '@i18n-weave/ui/ui-layout';
 import { SecureLink } from '@i18n-weave/ui/ui-secure-link';
 import { type PageContext, SEO } from '@i18n-weave/ui/ui-seo';
 
+import { i18nKey } from '@i18n-weave/util/util-i18n-key';
+
 import { type PageProps, graphql } from 'gatsby';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
+
+i18nKey('section.gettingStarted.configureProject.description');
 
 const GettingStartedPage: React.FC<PageProps> = () => {
   const { t } = useTranslation();
@@ -31,18 +35,14 @@ const GettingStartedPage: React.FC<PageProps> = () => {
           <h2 className="text-lg font-bold text-variant-1 pt-4 pb-2">
             {t('section.gettingStarted.configureProject.title')}
           </h2>
-          {t('section.gettingStarted.configureProject.description.partOne')}{' '}
-          <code className="text-secondary">`Configure i18nWeave`</code>{' '}
-          {t('section.gettingStarted.configureProject.description.partTwo')}{' '}
-          <code className="text-secondary">Ctrl+Shift+P</code>
-          {t(
-            'section.gettingStarted.configureProject.description.partThree'
-          )}{' '}
-          <code className="text-secondary">Cmd+Shift+P</code>{' '}
-          {t('section.gettingStarted.configureProject.description.partFour')} .
+          <Trans i18nKey="section.gettingStarted.configureProject.description">
+            <code className="text-secondary"></code>{' '}
+            <code className="text-secondary"></code>{' '}
+            <code className="text-secondary"></code>
+          </Trans>
           <SecureLink
             to="/features"
-            className="button text-center w-full block text-primary p-2 border-4 border-primary text-2xl hover:text-white hover:border-white mt-8 md:w-fit">
+            className="button text-center w-full block text-primary border-4 border-primary text-2xl hover:text-white hover:border-white py-2 px-4 mt-8 mx-0 md:mt-4 md:w-fit">
             {t('section.gettingStarted.buttons.features')}
           </SecureLink>
         </div>

@@ -110,6 +110,10 @@ const config: GatsbyConfig = {
           const { defaultLanguage, languages, originalPath } = i18n;
           let fullUrl = `${siteUrl}${originalPath || path}`; // Correct URL concatenation
 
+          if (fullUrl === 'https://i18nweave.com/') {
+            fullUrl = 'https://i18nweave.com';
+          }
+
           const links = [
             { lang: defaultLanguage || 'en', url: fullUrl },
             { lang: 'x-default', url: fullUrl },
@@ -123,9 +127,7 @@ const config: GatsbyConfig = {
             }
           });
 
-          if (fullUrl === 'https://i18nweave.com/') {
-            fullUrl = 'https://i18nweave.com';
-          }
+          console.log('fullUrl', fullUrl);
 
           return {
             url: fullUrl,

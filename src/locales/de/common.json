@@ -43,7 +43,8 @@
         "introduction": "Extrahiere sofort Übersetzungsschlüssel aus deinen Codedateien, wenn du sie speicherst. i18nWeave nutzt eine intelligente Erkennung von Codeänderungen, um sicherzustellen, dass nur bei Bedarf gescannt wird."
       },
       "automaticTranslation": {
-        "introduction": "Übersetze automatisch fehlende Schlüssel in allen definierten Sprachen, wenn du einer Ressourcendatei eine Übersetzung hinzufügst. i18nWeave unterstützt derzeit die Übersetzung mit DeepL (in der Beta-Phase) und plant, Google Translate bald hinzuzufügen."
+        "introduction": "Übersetze automatisch fehlende Schlüssel in allen definierten Sprachen, wenn du einer Ressourcendatei eine Übersetzung hinzufügst. i18nWeave unterstützt derzeit die Übersetzung mit DeepL (in der Beta-Phase) und plant, Google Translate bald hinzuzufügen.",
+        "limitations": "<0>Einschränkungen:</0> Die DeepL Integration in i18nWeave unterstützt die hier aufgeführten Sprachen: <1>DeepL Dokumentation</1>."
       },
       "easyConfig": {
         "title": "Einfach konfigurieren"

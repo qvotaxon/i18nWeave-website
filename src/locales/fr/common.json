@@ -43,7 +43,8 @@
         "introduction": "Extrait instantanément les clés de traduction de tes fichiers de code à chaque fois que tu les enregistres. i18nWeave utilise une détection intelligente des changements de code, ce qui garantit que les analyses n'ont lieu que lorsque c'est nécessaire."
       },
       "automaticTranslation": {
-        "introduction": "Traduit automatiquement les clés manquantes dans toutes les langues définies chaque fois que tu ajoutes une traduction à un fichier de ressources. i18nWeave prend actuellement en charge la traduction avec DeepL (en version bêta), et prévoit d'ajouter Google Translate prochainement."
+        "introduction": "Traduit automatiquement les clés manquantes dans toutes les langues définies chaque fois que tu ajoutes une traduction à un fichier de ressources. i18nWeave prend actuellement en charge la traduction avec DeepL (en version bêta), et prévoit d'ajouter Google Translate prochainement.",
+        "limitations": "<0>Limitations:</0> L'intégration de DeepL dans i18nWeave prend en charge les langues énumérées ici : <1>DeepL Documentation</1>."
       },
       "easyConfig": {
         "title": "Configuration facile"

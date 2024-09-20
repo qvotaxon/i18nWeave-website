@@ -43,7 +43,8 @@
         "introduction": "Haal onmiddellijk vertaalsleutels uit je codebestanden wanneer je ze opslaat. i18nWeave gebruikt slimme detectie van codewijzigingen, zodat scans alleen plaatsvinden wanneer dat nodig is."
       },
       "automaticTranslation": {
-        "introduction": "Automatisch vertalen van ontbrekende toetsen in alle gedefinieerde talen wanneer je een vertaling toevoegt aan een resourcebestand. i18nWeave ondersteunt momenteel vertaling met DeepL (in bèta), met plannen om Google Translate binnenkort toe te voegen."
+        "introduction": "Automatisch vertalen van ontbrekende toetsen in alle gedefinieerde talen wanneer je een vertaling toevoegt aan een resourcebestand. i18nWeave ondersteunt momenteel vertaling met DeepL (in bèta), met plannen om Google Translate binnenkort toe te voegen.",
+        "limitations": "<0>Beperkingen:</0> De DeepL integratie in i18nWeave ondersteunt de hier genoemde talen: <1>DeepL Documentatie</1>."
       },
       "easyConfig": {
         "title": "Eenvoudige configuratie"

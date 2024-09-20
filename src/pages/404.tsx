@@ -2,7 +2,9 @@ import * as React from 'react';
 
 import { Layout } from '@i18n-weave/ui/ui-layout';
 import { SecureLink } from '@i18n-weave/ui/ui-secure-link';
-import { type PageContext, SEO } from '@i18n-weave/ui/ui-seo';
+import { LocaleLookUpInfo, type PageContext, SEO } from '@i18n-weave/ui/ui-seo';
+
+import { i18nKey } from '@i18n-weave/util/util-i18n-key';
 
 import { PageProps, graphql } from 'gatsby';
 import { useTranslation } from 'react-i18next';
@@ -28,15 +30,27 @@ const NotFoundPage: React.FC<PageProps> = () => {
 
 export default NotFoundPage;
 
-export const Head = (props: PageProps<PageProps, PageContext>) => {
+export const Head = (props: PageProps<LocaleLookUpInfo, PageContext>) => {
+  const pageName = '404';
+
+  // Declare translation keys
+  i18nKey(`seo.404.title`);
+  i18nKey('seo.404.description');
+  i18nKey('seo.404.keywords');
+
   return (
     <SEO
-      title="Developer's i18n Companion"
-      description=""
-      keywords=""
-      pageContext={props.pageContext}
+      pageName={pageName}
+      title={`Page Not Found`}
+      description={
+        'Automatically scan your code and extract translation keys into i18next files. The i18nWeave VS Code extension syncs translations with your codebase.'
+      }
+      keywords={
+        'i18next, vscode extension, scan code, extract translation keys'
+      }
       pathname={props.location.pathname}
-      noIndex={true}
+      pageContext={props.pageContext}
+      pageData={props.data}
     />
   );
 };

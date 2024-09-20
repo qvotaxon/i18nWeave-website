@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Layout } from '@i18n-weave/ui/ui-layout';
 import { SecureLink } from '@i18n-weave/ui/ui-secure-link';
-import { type PageContext, SEO } from '@i18n-weave/ui/ui-seo';
+import { LocaleLookUpInfo, type PageContext, SEO } from '@i18n-weave/ui/ui-seo';
 
 import { i18nKey } from '@i18n-weave/util/util-i18n-key';
 
@@ -53,16 +53,23 @@ const GettingStartedPage: React.FC<PageProps> = () => {
 
 export default GettingStartedPage;
 
-export const Head = (props: PageProps<PageProps, PageContext>) => {
-  const { t } = useTranslation();
+export const Head = (props: PageProps<LocaleLookUpInfo, PageContext>) => {
+  const pageName = 'gettingStarted';
+
+  // Declare translation keys
+  i18nKey(`seo.gettingStarted.title`);
+  i18nKey('seo.gettingStarted.description');
+  i18nKey('seo.gettingStarted.keywords');
 
   return (
     <SEO
-      title="Developer's i18n Companion"
-      description="i18nWeave helps developers efficiently handle i18next translations in their projects. Increase productivity and ensure consistency across multiple languages."
-      keywords="i18next, i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, translations, developer tools"
-      pageContext={props.pageContext}
+      pageName={pageName}
+      title="Getting Started"
+      description="Learn how to install and configure the i18nWeave VS Code extension to scan your code and extract translation keys into i18next files."
+      keywords="i18nWeave, i18next, VS Code extension, extract translation keys, configure i18nWeave, localization, translation sync"
       pathname={props.location.pathname}
+      pageContext={props.pageContext}
+      pageData={props.data}
     />
   );
 };

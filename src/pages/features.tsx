@@ -7,7 +7,9 @@ import { LocaleLookUpInfo, type PageContext, SEO } from '@i18n-weave/ui/ui-seo';
 import { i18nKey } from '@i18n-weave/util/util-i18n-key';
 
 import { type PageProps, graphql } from 'gatsby';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
+
+i18nKey('section.features.automaticTranslation.limitations');
 
 const FeaturesPage: React.FC<PageProps> = () => {
   const { t } = useTranslation();
@@ -32,14 +34,14 @@ const FeaturesPage: React.FC<PageProps> = () => {
             </span>
           </p>
           <p className="my-2">
-            <span className="font-bold">Limitations:</span> The DeepL
-            integration in i18nWeave supports the languages listed here:{' '}
-            <SecureLink
-              className="text-white underline hover:text-highlight hover:border-highlight"
-              to="https://developers.deepl.com/docs/resources/supported-languages">
-              DeepL Docs
-            </SecureLink>
-            .
+            <Trans i18nKey="section.features.automaticTranslation.limitations">
+              <span className="font-bold"></span>
+              <SecureLink
+                className="text-white underline hover:text-highlight hover:border-highlight"
+                to="https://developers.deepl.com/docs/resources/supported-languages">
+                DeepL Documentation
+              </SecureLink>
+            </Trans>
           </p>
 
           <p className="my-4">{t('section.features.tableView.introduction')}</p>

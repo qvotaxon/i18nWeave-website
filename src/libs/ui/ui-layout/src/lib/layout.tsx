@@ -256,7 +256,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
       </div>
 
       {children}
-      <footer className="sticky bottom-0 bg-primary py-4 w-full text-white flex items-center justify-between px-4">
+      <footer className="sticky bottom-0 bg-primary py-2 md:py-4 w-full text-white flex items-center justify-between px-4">
         <div className="flex flex-row items-center space-x-4">
           <SecureLink to="/">
             <StaticImage
@@ -299,12 +299,12 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
         <div className="flex flex-col md:flex-row items-center md:space-x-4">
           <SecureLink
             to="/privacy-policy"
-            className="text-white hover:text-highlight">
+            className="text-white hover:text-highlight py-1">
             Privacy Policy
           </SecureLink>
           <SecureLink
             to="/cookie-policy"
-            className="text-white hover:text-highlight">
+            className="text-white hover:text-highlight py-1">
             Cookie Policy
           </SecureLink>
         </div>

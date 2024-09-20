@@ -63,12 +63,13 @@ export const SEO: React.FC<SEOProps> = ({
     resources[language][ns] = parsedData;
   });
 
-  title = title ?? resources[language]['common']['seo'][pageName]['title'];
+  title = resources[language]['common']['seo'][pageName]['title'] ?? title;
   description =
-    description ??
-    resources[language]['common']['seo'][pageName]['description'];
+    resources[language]['common']['seo'][pageName]['description'] ??
+    description;
   keywords =
-    keywords ?? resources[language]['common']['seo'][pageName]['keywords'];
+    resources[language]['common']['seo'][pageName]['keywords'] ?? keywords;
+
   console.log('title', title);
 
   return (

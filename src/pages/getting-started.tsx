@@ -64,7 +64,7 @@ export const Head = (props: PageProps<LocaleLookUpInfo, PageContext>) => {
   return (
     <SEO
       pageName={pageName}
-      title="Getting Started with i18nWeave"
+      title="Getting Started"
       description="Learn how to install and configure the i18nWeave VS Code extension to scan your code and extract translation keys into i18next files."
       keywords="i18nWeave, i18next, VS Code extension, extract translation keys, configure i18nWeave, localization, translation sync"
       pathname={props.location.pathname}

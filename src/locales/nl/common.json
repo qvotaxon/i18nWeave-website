@@ -107,6 +107,16 @@
     }
   },
   "seo": {
+    "404": {
+      "description": "Automatisch je code scannen en vertaalsleutels uitpakken in i18next bestanden. De i18nWeave VS Code extensie synchroniseert vertalingen met je codebase.",
+      "keywords": "i18next, VS Code-uitbreiding, code scannen, vertaalsleutels ophalen",
+      "title": "Pagina niet gevonden"
+    },
+    "cookiePolicy": {
+      "description": "Automatisch je code scannen en vertaalsleutels uitpakken in i18next bestanden. De i18nWeave VS Code extensie synchroniseert vertalingen met je codebase.",
+      "keywords": "i18next, VS Code-uitbreiding, code scannen, vertaalsleutels ophalen",
+      "title": "Cookiebeleid"
+    },
     "features": {
       "description": "Ontdek de belangrijkste functies van i18nWeave: automatische sleutelextractie, slimme vertaling met DeepL en een interactieve tabel voor naadloos vertaalbeheer.",
       "keywords": "i18nWeave, i18next, VS Code-extensie, vertaalsleutels, automatische vertaling, DeepL, vertaalbeheer, interactieve tabel, lokalisatietools",
@@ -121,6 +131,11 @@
       "description": "Automatisch je code scannen en vertaalsleutels uitpakken in i18next bestanden. De i18nWeave VS Code extensie synchroniseert vertalingen met je codebase.",
       "keywords": "i18next, vscode-uitbreiding, code scannen, vertaalsleutels extraheren",
       "title": "I18next metgezel voor ontwikkelaars"
+    },
+    "privacyPolicy": {
+      "description": "Automatisch je code scannen en vertaalsleutels uitpakken in i18next bestanden. De i18nWeave VS Code extensie synchroniseert vertalingen met je codebase.",
+      "keywords": "i18next, VS Code-uitbreiding, code scannen, vertaalsleutels ophalen",
+      "title": "Privacybeleid"
     }
   }
 }

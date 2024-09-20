@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Layout } from '@i18n-weave/ui/ui-layout';
 import { SecureLink } from '@i18n-weave/ui/ui-secure-link';
-import { type PageContext, SEO } from '@i18n-weave/ui/ui-seo';
+import { LocaleLookUpInfo, type PageContext, SEO } from '@i18n-weave/ui/ui-seo';
 
 import { i18nKey } from '@i18n-weave/util/util-i18n-key';
 
@@ -148,15 +148,27 @@ const CookiePolicyPage: React.FC<PageProps> = () => {
 
 export default CookiePolicyPage;
 
-export const Head = (props: PageProps<PageProps, PageContext>) => {
+export const Head = (props: PageProps<LocaleLookUpInfo, PageContext>) => {
+  const pageName = 'cookiePolicy';
+
+  // Declare translation keys
+  i18nKey(`seo.cookiePolicy.title`);
+  i18nKey('seo.cookiePolicy.description');
+  i18nKey('seo.cookiePolicy.keywords');
+
   return (
     <SEO
-      title="Cookie Policy"
-      description=""
-      keywords=""
-      pageContext={props.pageContext}
+      pageName={pageName}
+      title={'Cookie Policy'}
+      description={
+        'Automatically scan your code and extract translation keys into i18next files. The i18nWeave VS Code extension syncs translations with your codebase.'
+      }
+      keywords={
+        'i18next, vscode extension, scan code, extract translation keys'
+      }
       pathname={props.location.pathname}
-      noIndex={true}
+      pageContext={props.pageContext}
+      pageData={props.data}
     />
   );
 };

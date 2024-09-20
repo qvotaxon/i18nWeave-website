@@ -107,6 +107,16 @@
     }
   },
   "seo": {
+    "404": {
+      "description": "Scanne deinen Code automatisch und extrahiere Übersetzungsschlüssel in i18next-Dateien. Die i18nWeave VS Code Erweiterung synchronisiert die Übersetzungen mit deiner Codebasis.",
+      "keywords": "i18next, VS Code Erweiterung, Code scannen, Übersetzungsschlüssel extrahieren",
+      "title": "Seite nicht gefunden"
+    },
+    "cookiePolicy": {
+      "description": "Scanne deinen Code automatisch und extrahiere Übersetzungsschlüssel in i18next-Dateien. Die i18nWeave VS Code Erweiterung synchronisiert die Übersetzungen mit deiner Codebasis.",
+      "keywords": "i18next, VS Code Erweiterung, Code scannen, Übersetzungsschlüssel extrahieren",
+      "title": "Cookie-Richtlinie"
+    },
     "features": {
       "description": "Entdecke die wichtigsten Funktionen von i18nWeave: automatische Schlüsselextraktion, intelligente Übersetzung mit DeepL und eine interaktive Tabelle für nahtloses Übersetzungsmanagement.",
       "keywords": "i18nWeave, i18next, VS Code-Erweiterung, Übersetzungstasten, automatische Übersetzung, DeepL, Übersetzungsmanagement, interaktive Tabelle, Lokalisierungswerkzeuge",
@@ -121,6 +131,11 @@
       "description": "Scanne deinen Code automatisch und extrahiere Übersetzungsschlüssel in i18next-Dateien. Die i18nWeave VS Code-Erweiterung synchronisiert die Übersetzungen mit deiner Codebasis.",
       "keywords": "i18next, vscode Erweiterung, Code scannen, Übersetzungsschlüssel extrahieren",
       "title": "I18next Companion für Entwickler"
+    },
+    "privacyPolicy": {
+      "description": "Scanne deinen Code automatisch und extrahiere Übersetzungsschlüssel in i18next-Dateien. Die i18nWeave VS Code Erweiterung synchronisiert die Übersetzungen mit deiner Codebasis.",
+      "keywords": "i18next, VS Code Erweiterung, Code scannen, Übersetzungsschlüssel extrahieren",
+      "title": "Datenschutzrichtlinie"
     }
   }
 }

@@ -107,6 +107,16 @@
     }
   },
   "seo": {
+    "404": {
+      "description": "Automatically scan your code and extract translation keys into i18next files. The i18nWeave VS Code extension syncs translations with your codebase.",
+      "keywords": "i18next, VS Code extension, scan code, extract translation keys",
+      "title": "Page Not Found"
+    },
+    "cookiePolicy": {
+      "description": "Automatically scan your code and extract translation keys into i18next files. The i18nWeave VS Code extension syncs translations with your codebase.",
+      "keywords": "i18next, VS Code extension, scan code, extract translation keys",
+      "title": "Cookie Policy"
+    },
     "features": {
       "description": "Discover i18nWeave's key features: automatic key extraction, smart translation with DeepL, and an interactive table for seamless translation management.",
       "keywords": "i18nWeave, i18next, VS Code extension, translation keys, automatic translation, DeepL, translation management, interactive table, localization tools",
@@ -121,6 +131,11 @@
       "description": "Automatically scan your code and extract translation keys into i18next files. The i18nWeave VS Code extension syncs translations with your codebase.",
       "keywords": "i18next, VS Code extension, scan code, extract translation keys",
       "title": "Developer's i18next Companion"
+    },
+    "privacyPolicy": {
+      "description": "Automatically scan your code and extract translation keys into i18next files. The i18nWeave VS Code extension syncs translations with your codebase.",
+      "keywords": "i18next, VS Code extension, scan code, extract translation keys",
+      "title": "Privacy Policy"
     }
   }
 }

@@ -105,5 +105,22 @@
         "title": "Gère tes traductions en toute transparence"
       }
     }
+  },
+  "seo": {
+    "features": {
+      "description": "Découvre les principales fonctionnalités d'i18nWeave : l'extraction automatique des clés, la traduction intelligente avec DeepL et un tableau interactif pour une gestion transparente des traductions.",
+      "keywords": "i18nWeave, i18next, US Code extension, clés de traduction, traduction automatique, DeepL, gestion de la traduction, tableau interactif, outils de localisation",
+      "title": "Caractéristiques"
+    },
+    "gettingStarted": {
+      "description": "Apprends à installer et à configurer l'extension i18nWeave VS Code pour scanner ton code et extraire les clés de traduction dans les fichiers i18next.",
+      "keywords": "i18nWeave, i18next, VS Code extension, extraire les clés de traduction, configurer i18nWeave, localisation, synchronisation des traductions",
+      "title": "Pour commencer"
+    },
+    "home": {
+      "description": "Analyse automatiquement ton code et extrait les clés de traduction dans des fichiers i18next. L'extension i18nWeave VS Code synchronise les traductions avec ta base de code.",
+      "keywords": "i18next, extension vscode, scanner le code, extraire les clés de traduction",
+      "title": "Compagnon i18next du développeur"
+    }
   }
 }

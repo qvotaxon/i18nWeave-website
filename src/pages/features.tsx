@@ -2,10 +2,12 @@ import * as React from 'react';
 
 import { Layout } from '@i18n-weave/ui/ui-layout';
 import { SecureLink } from '@i18n-weave/ui/ui-secure-link';
-import { type PageContext, SEO } from '@i18n-weave/ui/ui-seo';
+import { LocaleLookUpInfo, type PageContext, SEO } from '@i18n-weave/ui/ui-seo';
+
+import { i18nKey } from '@i18n-weave/util/util-i18n-key';
 
 import { type PageProps, graphql } from 'gatsby';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 const FeaturesPage: React.FC<PageProps> = () => {
   const { t } = useTranslation();
@@ -55,14 +57,27 @@ const FeaturesPage: React.FC<PageProps> = () => {
 
 export default FeaturesPage;
 
-export const Head = (props: PageProps<PageProps, PageContext>) => {
+export const Head = (props: PageProps<LocaleLookUpInfo, PageContext>) => {
+  const pageName = 'features';
+
+  // Declare translation keys
+  i18nKey(`seo.features.title`);
+  i18nKey('seo.features.description');
+  i18nKey('seo.features.keywords');
+
   return (
     <SEO
-      title="Developer's i18n Companion"
-      description="Install and configure the i18nWeave extension for Visual Studio Code. Instructions for Windows, Linux, and macOS."
-      keywords="i18next, i18n, react, next.js, angular, i18n-next, deepl, internationalization, VSCode extension, Windows, Linux, macOS"
-      pageContext={props.pageContext}
+      pageName={pageName}
+      title={'Features'}
+      description={
+        'Automatically scan your code and extract translation keys into i18next files. The i18nWeave VS Code extension syncs translations with your codebase.'
+      }
+      keywords={
+        'i18next, vscode extension, scan code, extract translation keys'
+      }
       pathname={props.location.pathname}
+      pageContext={props.pageContext}
+      pageData={props.data}
     />
   );
 };

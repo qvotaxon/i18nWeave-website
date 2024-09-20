@@ -1,5 +1,13 @@
 import React from 'react';
 
+export type LocaleLookUpInfo = {
+  translationStrings: any;
+  locales: {
+    edges: Array<{ node: { ns: string; data: string; language: string } }>;
+  };
+} & { langKey: string; slug: string };
+type Resources = { [key: string]: { [key: string]: any } };
+
 export type PageContext = {
   language: string;
   i18n: {
@@ -14,20 +22,24 @@ export type PageContext = {
 };
 
 type SEOProps = {
+  pageName: string;
   title: string;
   description: string;
   keywords: string;
   pathname: string;
   pageContext: PageContext;
+  pageData: LocaleLookUpInfo;
   noIndex?: boolean;
 };
 
 export const SEO: React.FC<SEOProps> = ({
+  pageName,
   title,
   description,
   keywords,
   pathname,
   pageContext,
+  pageData,
   noIndex,
 }) => {
   const currentLanguage = pageContext.language;
@@ -37,6 +49,27 @@ export const SEO: React.FC<SEOProps> = ({
       : 'https://i18nweave.com';
   const originalPath = pathname.replace(`/${currentLanguage}`, '') || '/';
   const canonicalUrl = `${origin}${currentLanguage === 'en' ? '' : `/${currentLanguage}`}${originalPath === '/' ? (currentLanguage === 'en' ? '' : '/') : originalPath}`;
+
+  const resources: Resources = {};
+  const language = pageContext.language;
+
+  pageData.locales.edges.forEach(edge => {
+    const { ns, data, language } = edge.node;
+    const parsedData = JSON.parse(data);
+
+    if (!resources[language]) {
+      resources[language] = {};
+    }
+    resources[language][ns] = parsedData;
+  });
+
+  title = title ?? resources[language]['common']['seo'][pageName]['title'];
+  description =
+    description ??
+    resources[language]['common']['seo'][pageName]['description'];
+  keywords =
+    keywords ?? resources[language]['common']['seo'][pageName]['keywords'];
+  console.log('title', title);
 
   return (
     <html lang={currentLanguage}>

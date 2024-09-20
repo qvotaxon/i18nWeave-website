@@ -105,5 +105,22 @@
         "title": "Verwalte deine Übersetzungen nahtlos"
       }
     }
+  },
+  "seo": {
+    "features": {
+      "description": "Entdecke die wichtigsten Funktionen von i18nWeave: automatische Schlüsselextraktion, intelligente Übersetzung mit DeepL und eine interaktive Tabelle für nahtloses Übersetzungsmanagement.",
+      "keywords": "i18nWeave, i18next, VS Code-Erweiterung, Übersetzungstasten, automatische Übersetzung, DeepL, Übersetzungsmanagement, interaktive Tabelle, Lokalisierungswerkzeuge",
+      "title": "Eigenschaften"
+    },
+    "gettingStarted": {
+      "description": "Lerne, wie du die i18nWeave VS Code-Erweiterung installierst und konfigurierst, um deinen Code zu scannen und Übersetzungsschlüssel in i18next-Dateien zu extrahieren.",
+      "keywords": "i18nWeave, i18next, VS Code Erweiterung, Übersetzungsschlüssel extrahieren, i18nWeave konfigurieren, Lokalisierung, Übersetzungssynchronisation",
+      "title": "Erste Schritte"
+    },
+    "home": {
+      "description": "Scanne deinen Code automatisch und extrahiere Übersetzungsschlüssel in i18next-Dateien. Die i18nWeave VS Code-Erweiterung synchronisiert die Übersetzungen mit deiner Codebasis.",
+      "keywords": "i18next, vscode Erweiterung, Code scannen, Übersetzungsschlüssel extrahieren",
+      "title": "I18next Companion für Entwickler"
+    }
   }
 }

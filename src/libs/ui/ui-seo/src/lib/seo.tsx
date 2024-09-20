@@ -70,8 +70,6 @@ export const SEO: React.FC<SEOProps> = ({
   keywords =
     resources[language]['common']['seo'][pageName]['keywords'] ?? keywords;
 
-  console.log('title', title);
-
   return (
     <html lang={currentLanguage}>
       <head>

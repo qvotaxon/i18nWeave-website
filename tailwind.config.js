@@ -19,6 +19,9 @@ module.exports = {
         'variant-2': '#7c9f48',
         'variant-3': '#e0564c',
         'variant-4': '#f2b34c',
+      },
+      height: {
+        'section-h': 'calc(100vh - 9rem)',
       }
     },
   },

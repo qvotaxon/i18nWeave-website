@@ -91,7 +91,7 @@ const IndexPage: React.FC<PageProps> = () => {
       </section>
       <section
         id="getting-started"
-        className="h-screen flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8 [@media_(max-height:666px)]:h-fit [@media_(max-height:666px)]:py-8">
+        className="h-section-h flex flex-col items-center bg-variant-2 snap-start scroll-mt-16 pt-8 [@media_(max-height:666px)]:h-fit [@media_(max-height:666px)]:py-8">
         <h3 className="text-primary text-4xl mb-8 text-center max-w-screen-xl">
           {t('section.gettingStarted.title')}
         </h3>

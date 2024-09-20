@@ -43,7 +43,8 @@
         "introduction": "Instantly extract translation keys from your code files whenever you save. i18nWeave uses smart detection of code changes, ensuring scans only happen when necessary."
       },
       "automaticTranslation": {
-        "introduction": "Automatically translate missing keys in all defined languages whenever you add a translation to a resource file. i18nWeave currently supports translation with DeepL (in beta), with plans to add Google Translate soon."
+        "introduction": "Automatically translate missing keys in all defined languages whenever you add a translation to a resource file. i18nWeave currently supports translation with DeepL (in beta), with plans to add Google Translate soon.",
+        "limitations": "<0>Limitations:</0> The DeepL integration in i18nWeave supports the languages listed here: <1>DeepL Documentation</1>."
       },
       "easyConfig": {
         "title": "Easy Config"

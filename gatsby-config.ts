@@ -4,10 +4,6 @@ const siteUrl = process.env.URL || `https://i18nweave.com`;
 
 /** @type {*} */
 const config: GatsbyConfig = {
-  siteMetadata: {
-    title: `i18nWeave - Developer's i18n Companion`,
-    siteUrl: siteUrl,
-  },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
